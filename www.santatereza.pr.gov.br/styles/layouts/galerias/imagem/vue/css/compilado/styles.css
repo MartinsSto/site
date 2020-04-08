@@ -1,0 +1,115 @@
+/** unset padding na amvali */
+.galeria > div {
+  padding: unset !important;
+}
+.galeria-vue-multimtia {
+  display: flex;
+  flex-wrap: wrap;
+}
+.galeria-vue-multimtia .galeria-vue {
+  background-color: #F2F2F2;
+  padding: 15px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow-y: hidden;
+  height: auto;
+  width: 100%;
+  word-break: break-word;
+}
+.galeria-vue-multimtia .galeria-vue .titulo {
+  font-size: 18px;
+  margin-left: 0px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 22px;
+  padding-bottom: 10px;
+}
+.galeria-vue {
+  font-size: 14px;
+}
+.galeria-vue ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+.galeria-vue .list-thumbs li {
+  display: flex;
+  width: CALC(20% - 3px);
+  float: left;
+  margin-right: 3px;
+  margin-bottom: 3px;
+  position: relative;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+}
+.galeria-vue .list-thumbs li.video-vue {
+  background-repeat: no-repeat;
+  background-size: 100% CALC(100% - 3px);
+}
+.galeria-vue .list-thumbs li img {
+  width: 100%;
+  height: 100%;
+}
+.galeria-vue .list-thumbs li .veja-mais {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  color: #FFFFFF;
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  opacity: 0.7;
+  font-size: 2.1em;
+}
+.galeria-vue .list-thumbs li .veja-mais span {
+  width: 100%;
+}
+.galeria-vue .list-thumbs li:nth-child(1) {
+  width: CALC(40% - 3px);
+}
+.galeria-vue .list-thumbs.num-imagens-veja-mais li:nth-child(1) {
+  width: CALC(40% - 3px);
+}
+.galeria-vue .list-thumbs.num-imagens-veja-mais li:nth-child(12) .veja-mais {
+  display: flex;
+}
+.galeria-vue .list-thumbs.num-imagens-veja-mais li:nth-child(n+13) {
+  display: none;
+}
+.galeria-vue .list-thumbs.num-imagens-12 li:nth-child(n + 13) {
+  display: none;
+}
+.galeria-vue .list-thumbs.num-imagens-11 li:nth-child(n + 12) {
+  display: none;
+}
+.galeria-vue .list-thumbs.num-imagens-10 li:nth-child(n + 11) {
+  display: none;
+}
+.galeria-vue .list-thumbs.num-imagens-9 li:nth-child(n + 10) {
+  display: none;
+}
+.galeria-vue .list-thumbs.num-imagens-8 li:nth-child(n + 9) {
+  display: none;
+}
+.galeria-vue .list-thumbs.num-imagens-7 li:nth-child(n + 8) {
+  display: none;
+}
+.galeria-vue .list-thumbs.num-imagens-6 li:nth-child(n + 7) {
+  display: none;
+}
+.galeria-vue .list-thumbs.num-imagens-5 li:nth-child(n + 6) {
+  display: none;
+}
+.galeria-vue .list-thumbs.num-imagens-4 li:nth-child(n + 5) {
+  display: none;
+}
+.galeria-vue .list-thumbs.num-imagens-3 li:nth-child(n + 4) {
+  display: none;
+}
+.galeria-vue .list-thumbs.num-imagens-2 li:nth-child(n + 3) {
+  display: none;
+}
+.galeria-vue .list-thumbs.num-imagens-1 li:nth-child(n + 2) {
+  display: none;
+}

@@ -1,0 +1,821 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.1//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-2.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<!-- Mirrored from www.modelo.sc.gov.br/contatos/index/detalhes-contato/codMapaItem/8504/codContato/5309 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Apr 2020 14:06:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>Contato - Município de Modelo</title><link href="../../../../../../styles/zbox/todos_sites.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../../../../zbox/css/index/cor/%234191f4/layout/pm_landscape/css/personalizado.css" media="" rel="stylesheet" type="text/css" /><script type="text/javascript" src="../../../../../../../ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../../scripts/json.js"></script>
+<script type="text/javascript" src="../../../../../../scripts/ajax.js"></script>
+<script type="text/javascript" src="../../../../../../scripts/test-navigator.js"></script>
+<script type="text/javascript" src="../../../../../../../www.google.com/recaptcha/api.js"></script>
+<script type="text/javascript" src="../../../../../../styles/layouts/pm/landscape/js/landscape.js"></script>
+<script type="text/javascript" src="../../../../../../scripts/abas.js"></script><meta property="og:image" content="/images/municipios/brasao/90x90/modelo.png" />
+</head>
+
+<body id="">
+<style>
+	.loading-site:after {
+		background-image: url("../../../../../../images/municipios/brasao/90x90/modelo.png");
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+</style>
+<style>
+.header {
+	background-image: url("../../../../../../../static.fecam.net.br/thumbs/404/1615402_resize_1999_807.jpg");
+}
+.img-footer {
+	background-image: url("../../../../../../../static.fecam.net.br/thumbs/404/1615401_resize_2000_45.png");
+}
+</style>
+	<div class="loading-site"></div>
+	<div class="header">
+        <div class="container-barra">
+            <div id="container-sistema-fecam"></div>
+        </div>
+		<div class="container-head">
+			<div class="cabecalho">
+				<div id="atalhosAcessibilidade">
+					<a href="#ancoraConteudo" accesskey="1">Ir para conteúdo <span>1</span></a>
+					<a href="#ancoraMenu" accesskey="2">Ir para menu <span>2</span></a>
+											<a href="#q">Ir para busca <span>3</span></a>
+										<a href="#ancoraRodape" accesskey="4">Ir para rodapé <span>4</span></a>
+										<a href="../../../../../../zbox/acessibilidade.html" accesskey="5">Acessibilidade <span>5</span></a>
+											<a href="5309/contraste/ativar.html" accesskey="6">Alto
+											contraste <span>6</span>
+									</a>
+									</div>
+				<div class="cabecalho-cima" style="background:url(../../../../../../../static.fecam.net.br/thumbs/404/1616752_resize_937_287.jpg) no-repeat 50% 0;">
+					<div class="logo">
+						<a href="../../../../../../index.html">
+							<img src="../../../../../../images/municipios/brasao/90x90/modelo.png">
+						</a>
+						<br>
+						<h1>
+							<span>Município de</span>
+							<br>Modelo						</h1>
+					</div>
+					<div id="topo-tempo">
+						<div class="tempo-hoje">
+				    	<span id="previsao-tempo-dia-1-icone"><img src="../../../../../../images/loading.png" /></span>
+						<div class="info">
+							<div class="dia">
+								<p class='titulo-previsao' id="previsao-tempo-dia-1"></p>
+								<p class='condicao' id="previsao-tempo-dia-1-previsao">---</p>
+							</div>
+    						<ul class='temperaturas'>
+
+    							<li class="min" id="previsao-tempo-dia-1-min">?</li>
+    							<li class="max" id="previsao-tempo-dia-1-max">?</li>
+
+    						</ul>
+						</div>
+					</div>
+
+					<div class="tempo-amanha">
+						<span id="previsao-tempo-dia-2-icone"><img src="../../../../../../images/loading.png" width="35" height="34" /></span>
+						<div class="info">
+							<div class="dia">
+								<p class='titulo-previsao' id="previsao-tempo-dia-2"></p>
+								<p class='condicao' id="previsao-tempo-dia-2-previsao">---</p>
+							</div>
+    						<ul class='temperaturas'>
+    							<li class="min" id="previsao-tempo-dia-2-min">?</li>
+    							<li class="max" id="previsao-tempo-dia-2-max">?</li>
+
+    						</ul>
+						</div>
+					</div>
+						<script type="text/javascript">
+							$(function() {
+
+								//$('#topo-tempo').hide();
+								console.log('https://www.fecam.org.br/tempo.php?codPrevisao=3299');
+								$.ajax({
+									url: 'https://www.fecam.org.br/tempo.php?codPrevisao=3299',
+								    jsonpCallback: 'jsonCallback',
+								    contentType: "application/json",
+    								dataType: 'jsonp',
+                                    cache: 'false',
+
+									success: function(data){
+										data = data['tempo'];
+                                        dc = 0; //Contador de dias;
+										while(dc <= 1){
+											prefix = "#previsao-tempo-dia-"+(dc+1);
+											dia = data['previsao'][dc];
+											$(prefix).html(dia['diaSemana']);
+											$(prefix+'-max').html(dia['maxima']+"C");
+											$(prefix+"-min").html(dia['minima']+"C");
+											$(prefix+"-icone img").attr("src","/styles/layouts/pm/default/images/previsao-tempo/"+dia['tempo']+".png");
+											$(prefix+"-previsao").html(dia['condicao']);
+											console.log(dia);
+											dc++;
+										}
+
+									}
+								});
+							});
+							</script>
+		        	</div>
+						<span id="ancoraMenu"><ul class="navigation">
+    <li>
+        <a class="paginaInicialPm" href="../../../../../../index.html">Início</a>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8498.html">Município</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/9060.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/9049.html">Histórico</a>
+            </li>
+            <li>
+                <a class="agenda" href="../../../../../../agenda/index/index/codMapaItem/9164.html">Agenda</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10377.html">Poder Executivo Municipal</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10380.html">Economia</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10381.html">Dados Geográficos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/19169.html">Plano Diretor Participativo</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8499.html">Governo</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10383.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/129750.html">Secretaria de Agricultura</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134901.html">Secretaria de Educação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134906.html">Secretaria de Saúde</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134907.html">Departamento Municipal de Estradas e Rodagem</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134912.html">Departamento Municipal de Assistência Social</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134919.html">Departamento de Obras e Serviços Urbanos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134923.html">Departamento Municipal de Esportes</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134927.html">Secretaria de Administração e Fazenda</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a>
+        <ul>
+            <li>
+                <a class="concursos" href="../../../../../../concursos/index/index/codMapaItem/9098.html">Concursos Públicos </a>
+            </li>
+            <li>
+                <a class="licitacoes" href="../../../../../../licitacoes/index/index/codMapaItem/9110.html">Licitações</a>
+            </li>
+            <li>
+                <a class="contasPublicas" href="../../../../../../contaspublicas/index/index/codMapaItem/9081.html">Contas Públicas e LRF</a>
+            </li>
+            <li>
+                <a class="legislacao" href="../../../../../../legislacao/index/index/codMapaItem/9154.html">Legislação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/54599.html">Parecer Tribunal de Contas</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/69227.html">Contratos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/90738.html">Atas de Registro de Preços</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/105584.html">RELATORIOS IN 20 TCE </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/105690.html">Kit Proposta </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/121341.html">CONTROLADORIA MUNICIPAL</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/131944.html">FISCALIZAÇÃO DE CONTRATOS</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/134834.html">DESPESAS COM EDUCAÇÃO</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="noticia" href="../../../../../../noticias/index/listar/codMapaItem/8501.html">Notícias</a>
+    </li>
+    <li>
+        <a class="links" href="http://servicos.modelo.sc.gov.br/">Carta de Serviços</a>
+    </li>
+    <li>
+        <a class="links" href="../../../../../../turismo/index.html">Turismo</a>
+    </li>
+    <li>
+        <a class="contatos" href="../../../../index/codMapaItem/8504.html">Contato</a>
+    </li>
+</ul></span>
+					</ul>
+				</div>
+				<div class="cabecalho-baixo">
+					<div class="busca-site">
+													<div id="busca">
+							<form method="GET" action="https://www.modelo.sc.gov.br/pesquisa/">
+    <input class="input-texto" type="text"  name="q" id="q" value="" placeholder="Pesquisar..." accesskey="3" />
+	<button class="input-botao" type="submit"><span></span></button>
+</form>							</div>
+											</div>
+					<div class="social">
+					<h3>Compartilhe: </h3>
+
+					<!-- AddThis Button BEGIN -->
+										    <div class="addthis_toolbox addthis_default_style " >
+					    	<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                    <a class="a2a_button_whatsapp"></a>
+                 </div>
+                 <script async src="../../../../../../../static.addtoany.com/menu/page.js"></script>                            <a class="addthis_button_facebook"></a>
+							<a class="addthis_button_twitter"></a>
+							<a class="addthis_button_email" addthis:title="Contato - Munic%EDpio de Modelo"></a>
+						<a class="addthis_button_compact"></a>
+						<a class="addthis_counter addthis_bubble_style"></a>
+					</div>
+					<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+					<script type="text/javascript" src="../../../../../../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-524f08ae420d606b"></script>
+					<!-- AddThis Button END -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content" id="ancoraConteudo">
+		<div>
+			<!-- COLUNA LATERAL - INICIO -->
+				    	<div class="col4">
+		    		<a name="ancoraConteudo" id="ancoraConteudo"></a>
+					<div class="contatos detalhes">
+    <h1>Contatos<a href="../../../../../../feed/contatos/codMapaItem/8504.html"><img
+                    src="../../../../../../images/rss.png" align="right"></a></h1>
+
+
+    
+    <div class="dados">
+        <dl>
+            <dt>Departamento Municipal de Esportes</dt>
+
+            
+                            <dd class="endereco"><strong>Endereço:</strong>
+                    Rua XV de Novembro, 234, Centro                </dd>
+                                    <dd class="cep"><strong>CEP:</strong> 89872-000</dd>
+                                    
+
+                                <dd class="email"><strong>E-mail:</strong> <a
+                                href="mailto:esporte@modelo.sc.gov.br">esporte@modelo.sc.gov.br</a>
+                    </dd>
+                                                <dd class="site"><strong>Site:</strong> <a href="#"
+                                                           target="_blank"></a>
+                </dd>
+                                                                <dd class="telefones">
+                        <strong>Telefones:</strong>
+                        <ul>
+                                                            <li>
+                                    <span class="numero">(49) 3365-3452</span>
+                                                                            <span class="identificacao">Principal</span>
+                                    
+                                </li>
+                                                            <li>
+                                    <span class="numero">(49) 99924-0308</span>
+                                                                            <span class="identificacao">Celular</span>
+                                    
+                                </li>
+                                                    </ul>
+                    </dd>
+                            
+
+        </dl>
+    </div>
+
+    <div class="mapa">
+<iframe id="map_canvas" width="100%" height="100%" frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAdSaQ8URf_ECVpY_fNomKj6pamt457mwA&amp;q=-26.7774866707972,-53.0533432960510&amp;center=-26.7774866707972,-53.0533432960510&amp;maptype=satellite&amp;zoom=17" allowfullscreen>
+</iframe>
+</div>
+    <br clear="all"/>
+
+            <fieldset>
+            <legend>Entre em contato</legend>
+            <form id="frmEmailContato" enctype="application/x-www-form-urlencoded" method="post" action="#" class="zend_form"><script type="text/javascript">
+if(alterouForm == undefined)
+{
+	var alterouForm = false;
+}
+
+function getUlErrorElement( element )
+{
+	if( element.parent().children('.errors').html() == null)
+	{
+		element.parent().append('<ul class="errors"></ul>');
+	}
+
+	return element.parent().children('.errors');
+}
+
+function validaCampos_frmEmailContato()
+{
+	var validar = true;
+	if( $('#frmEmailContato #nome').val() == "")
+{
+    var element = $('#frmEmailContato #nome');
+
+	var ulErrors = getUlErrorElement(element);
+
+	ulErrors.append('<li>Este campo &eacute; obrigat&oacute;rio.</li>');
+	
+	validar = false;
+}
+if( $('#frmEmailContato #email').val() == "")
+{
+    var element = $('#frmEmailContato #email');
+
+	var ulErrors = getUlErrorElement(element);
+
+	ulErrors.append('<li>Este campo &eacute; obrigat&oacute;rio.</li>');
+	
+	validar = false;
+}
+
+if( $('#frmEmailContato #email').val() != "" )
+{
+	var regExp = /^[\w!#$%&'*+\/=?^`{|}~-]+(\.[\w!#$%&'*+\/=?^`{|}~-]+)*@(([\w-]+\.)+[A-Za-z]{2,6}|\[\d{1,3}(\.\d{1,3}){3}\])$/;
+
+	if( !regExp.test($('#frmEmailContato #email').val()) )
+	{
+		var element = $('#frmEmailContato #email');
+		var ulErrors = getUlErrorElement(element);
+
+		ulErrors.append('<li>O e-mail inserido é inválido.</li>');
+				validar = false;
+	}
+}
+if( $('#frmEmailContato #telefone').val() == "")
+{
+    var element = $('#frmEmailContato #telefone');
+
+	var ulErrors = getUlErrorElement(element);
+
+	ulErrors.append('<li>Este campo &eacute; obrigat&oacute;rio.</li>');
+	
+	validar = false;
+}
+if( $('#frmEmailContato #assunto').val() == "")
+{
+    var element = $('#frmEmailContato #assunto');
+
+	var ulErrors = getUlErrorElement(element);
+
+	ulErrors.append('<li>Este campo &eacute; obrigat&oacute;rio.</li>');
+	
+	validar = false;
+}
+if( $('#frmEmailContato #mensagem').val() == "")
+{
+    var element = $('#frmEmailContato #mensagem');
+
+	var ulErrors = getUlErrorElement(element);
+
+	ulErrors.append('<li>Este campo &eacute; obrigat&oacute;rio.</li>');
+	
+	validar = false;
+}
+
+	return validar;
+}
+
+jQuery(function($)
+{
+	$(document).ready(function(){
+		$('#frmEmailContato :input').each(function(){
+			var valor = "";
+
+			if( $(this).attr('type') == 'text' ||
+				$(this).attr('type') == 'select' )
+			{
+	    		$(this).bind('keypress', function(e) {
+	    			if(e.keyCode==13){
+	    				return false;
+	    			}
+	    		});
+			}
+			$(this).focus(function(){
+				valor = $(this).val();
+			});
+
+			$(this).blur(function(){
+				if( valor != $(this).val() )
+				{
+					alterouForm = true;
+				}
+			});
+		});
+	});
+
+	$('#frmEmailContato').submit(function()
+	{
+		$('.erroAba').removeClass('erroAba');
+		$('.errors').remove();
+
+		var validar = validaCampos_frmEmailContato();
+
+		if(validar == false)
+		{
+			$("#msgErroSalvar").fadeIn('slow');
+			// $("#msgErroSalvar").animate(
+			// 	{top: 300+$(document).scrollTop()+"px"},
+			//     {duration:0,queue:false}
+			// );
+
+			// $(window).scroll(function()
+			// {
+			// 	$("#msgErroSalvar").animate(
+			//     	{top: 300+$(document).scrollTop()+"px"},
+			//     	{duration:0,queue:false}
+			// 	);
+			// });
+
+			setTimeout( function(){ $('#msgErroSalvar').fadeOut('normal'); }, 2000);
+		}
+		else
+		{
+			alterouForm = false;
+		}
+		return validar;
+	});
+
+	$('#frmEmailContato .required').append('&nbsp;*');
+
+
+	$(window).bind('beforeunload', function(evt){
+		if(alterouForm == true )
+		{
+			var target = null
+
+			if(evt.target.activeElement.nodeName == 'BUTTON')
+			{
+				/* RegExp created via www.regexp.com.br */
+				var regExp = new RegExp('"(.*)"');
+				var myString = evt.target.activeElement.attributes.onclick.value;
+				myString = myString.match(regExp);
+				target = myString[1];
+			}
+			else if(evt.target.activeElement.nodeName == 'A')
+			{
+				target = evt.target.activeElement.href;
+			}
+			else if(evt.target.activeElement.nodeName == 'BODY')
+			{
+				target = '';
+			}
+
+			if(target != null)
+			{
+				$('#_urlRedirect').val(target);
+				//$('#frmEmailContato').submit();
+				return null;
+			}
+			else{
+				return 'Você perderá todos os dados que não foram salvos.';
+			}
+		}
+	});
+
+			if($('#frmEmailContato .errors').size() > 0){
+			$("#msgErroSalvar").fadeIn('slow');
+			setTimeout( function(){ $('#msgErroSalvar').fadeOut('normal'); }, 4000);
+		}
+
+	});
+
+</script>
+
+<div id="msgErroSalvar">
+	<div>
+		<img src="../../../../../../images/ico_alerta_grande.png" align="left">
+		<span>Atenção! <br>Há campos a serem revisados.</span>
+	</div>
+</div>
+<script>
+
+    $('#frmEmailContato').submit(function(evt){
+        $(this).find('[type="submit"]').each(function(){
+            if (validaCampos_frmEmailContato() &&
+				!$(this).hasClass('not-disabled') ) {
+                $(this).attr('disabled', 'disabled').addClass("salvando");
+            }
+        });
+    });
+</script>
+
+<div id="nome-element" class="formElement formText"><div class="label"><label for="nome" class="required">Nome</label>
+</div>
+<input type="text" name="nome" id="nome" value="" /></div>
+<div id="email-element" class="formElement formText"><div class="label"><label for="email" class="required">E-mail</label>
+</div>
+<input type="text" name="email" id="email" value="" regExpJs="/^[\w!#$%&amp;'*+\/=?^`{|}~-]+(\.[\w!#$%&amp;'*+\/=?^`{|}~-]+)*@(([\w-]+\.)+[A-Za-z]{2,6}|\[\d{1,3}(\.\d{1,3}){3}\])$/" /></div>
+<div id="telefone-element" class="formElement formText"><div class="label"><label for="telefone" class="required">Telefone</label>
+</div>
+<input type="text" name="telefone" id="telefone" value="" /></div>
+<div id="assunto-element" class="formElement formText"><div class="label"><label for="assunto" class="required">Assunto</label>
+</div>
+<input type="text" name="assunto" id="assunto" value="" /></div>
+<div id="mensagem-element" class="formElement formTextArea"><div class="label"><label for="mensagem" class="required">Mensagem</label>
+</div><div class="formTextAreaContador">
+	<div class="formContadorDeCaracteres" id="contador_mensagem"></div>
+    
+<textarea name="mensagem" id="mensagem" rows="7" maxLength="2500" cols="80"></textarea></div>
+<br clear="all">
+<script type="text/javascript">
+jQuery(function($)
+{
+	$('#mensagem').keyup(function(){
+		var html = $('#mensagem').val().length + " de 2500";
+		$('#contador_mensagem').html( html );
+	});
+
+	$('#mensagem').keypress(function( event ){
+		if( event.keyCode == 8 ||
+			event.keyCode == 9 ||
+			event.keyCode == 46  )
+			return true;
+
+		/*
+		 * É validado com >= pq o caracter ainda não foi inserido
+		 */
+		if( $('#mensagem').val().length >= 2500 )
+		{
+			//alert('São permitidos apenas 2500 caracteres para o campo resumo.');
+			return false;
+		}
+	});
+
+	$('#mensagem').blur(function(){
+
+		if( $('#mensagem').val().length > 2500 )
+		{
+			alert('São permitidos apenas 2500 caracteres para o campo resumo.');
+			$('#mensagem').val( $('#mensagem').val().substring(0, 2500) );
+
+			var html = $('#mensagem').val().length + " de 2500";
+			$('#contador_mensagem').html( html );
+		}
+	});
+
+	var html = $('#mensagem').val().length + " de 2500";
+	$('#contador_mensagem').html( html );
+
+});
+
+</script>
+
+</div>
+<div id="recaptcha-element" class="formElement formCaptcha"><div class="label">Verificação de segurança.<b>*</b></div>
+<br>
+<div class="g-recaptcha" data-sitekey="6LfAKFwUAAAAAFGP2udltpso15so7C286dT12O3e"></div>
+
+</div>
+
+<input type="submit" name="enviar" id="enviar" value="Enviar" /></form>        </fieldset>
+        
+</div>
+
+<div class="clear"></div>
+					<div class="informacoes-relacionadas">
+											</div>
+				</div>
+				<!-- COLUNA LATERAL - FIM -->
+		<br class="clear">
+		</div>
+
+		<div></div>
+	</div>
+	<div class="footer" id="ancoraRodape">
+		<div class="img-footer">
+		</div>
+		<div class="footer-content">
+				<div class="info-municipio" itemscope itemtype="https://schema.org/Organization">
+					<ul>
+						<li><h2 itemprop="name">Município de Modelo<h2></li>
+						<li itemprop="streetAddress">Rua do Comércio, 1304 - Centro</li>
+                        						<li>CEP: <span  itemprop="postalCode">89872-000 </span></li>
+                        						<li>CNPJ: 83.021.832/0001-11</li>
+
+								                    <li class="telefone">
+								<strong>Telefones:</strong>
+								<div>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3137 </span>
+                                        		                            	<span class="identificacao">Principal</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98854-3327 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-5346 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-1136 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-9560 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3272 </span>
+                                        		                            	<span class="identificacao">Comercial</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3121 </span>
+                                        		                            	<span class="identificacao">Comercial</span>
+                                        		                            </span>
+		                        		                        </div>
+		                    </li>
+		                
+					</ul>
+				</div>
+									<div class="horario">
+						<h2>Horário de </br> funcionamento</h2>
+						<p>
+							De segunda a sexta-feira<br />
+das 7h30 às 11h30 e das 13h00 às 17h00.						</p>
+					</div>
+				
+			<div class="logos">
+                					<a target="_blank" href="#"><img src="../../../../../../styles/layouts/pm/landscape/images/redecim.png"></a>
+					<a target="_blank" href="http://www.fecam.org.br/"><img src="../../../../../../styles/layouts/pm/landscape/images/fecam.png"></a>
+								<a target="_blank" href="http://www.amerios.org.br/"><img src="../../../../../../styles/layouts/pm/landscape/images/amerios.png"></a>
+				<br class="clear">
+			</div>
+            <div class="corona-banner">
+                <a href="https://www.fecam.org.br/noticias/index/ver/codMapaItem/74947/codNoticia/606128" target="_blank">
+                    <img src="../../../../../../images/fecam/corona.png">
+                </a>
+            </div>
+			<div class="mapa-site">
+				<span></span>
+				<ul class="navigation">
+    <li>
+        <a class="paginaInicialPm" href="../../../../../../index.html">Início</a>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8498.html">Município</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/9060.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/9049.html">Histórico</a>
+            </li>
+            <li>
+                <a class="agenda" href="../../../../../../agenda/index/index/codMapaItem/9164.html">Agenda</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10377.html">Poder Executivo Municipal</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10380.html">Economia</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10381.html">Dados Geográficos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/19169.html">Plano Diretor Participativo</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8499.html">Governo</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10383.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/129750.html">Secretaria de Agricultura</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134901.html">Secretaria de Educação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134906.html">Secretaria de Saúde</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134907.html">Departamento Municipal de Estradas e Rodagem</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134912.html">Departamento Municipal de Assistência Social</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134919.html">Departamento de Obras e Serviços Urbanos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134923.html">Departamento Municipal de Esportes</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134927.html">Secretaria de Administração e Fazenda</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a>
+        <ul>
+            <li>
+                <a class="concursos" href="../../../../../../concursos/index/index/codMapaItem/9098.html">Concursos Públicos </a>
+            </li>
+            <li>
+                <a class="licitacoes" href="../../../../../../licitacoes/index/index/codMapaItem/9110.html">Licitações</a>
+            </li>
+            <li>
+                <a class="contasPublicas" href="../../../../../../contaspublicas/index/index/codMapaItem/9081.html">Contas Públicas e LRF</a>
+            </li>
+            <li>
+                <a class="legislacao" href="../../../../../../legislacao/index/index/codMapaItem/9154.html">Legislação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/54599.html">Parecer Tribunal de Contas</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/69227.html">Contratos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/90738.html">Atas de Registro de Preços</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/105584.html">RELATORIOS IN 20 TCE </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/105690.html">Kit Proposta </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/121341.html">CONTROLADORIA MUNICIPAL</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/131944.html">FISCALIZAÇÃO DE CONTRATOS</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/134834.html">DESPESAS COM EDUCAÇÃO</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="noticia" href="../../../../../../noticias/index/listar/codMapaItem/8501.html">Notícias</a>
+    </li>
+    <li>
+        <a class="links" href="http://servicos.modelo.sc.gov.br/">Carta de Serviços</a>
+    </li>
+    <li>
+        <a class="links" href="../../../../../../turismo/index.html">Turismo</a>
+    </li>
+    <li>
+        <a class="contatos" href="../../../../index/codMapaItem/8504.html">Contato</a>
+    </li>
+</ul>				<br class="clear">
+			</div>
+		</div>
+	</div>
+	<script type='text/javascript'> 
+var _gaq = _gaq || []; 
+_gaq.push(['_setAccount', 'UA-20438101-23']);
+_gaq.push(['_trackPageview'], '/contatos/index/detalhes-contato/codMapaItem/8504/codContato/5309');
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+jQuery(document).ajaxComplete(function(e, xhr, settings){
+_gaq.push(['_trackPageview', settings.url]);
+});
+</script>    

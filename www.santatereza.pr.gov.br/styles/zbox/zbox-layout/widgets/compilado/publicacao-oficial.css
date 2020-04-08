@@ -1,0 +1,11 @@
+.conteudo-item.publicacoes-oficiais li a {
+  color: #4E4E4E;
+  display: block;
+  margin-bottom: 1px;
+  padding: 8px 0 8px 50px;
+  width: 173px;
+}
+.conteudo-item.publicacoes-oficiais li a:hover {
+  background-color: #B4B4B4;
+  color: #FFFFFF;
+}

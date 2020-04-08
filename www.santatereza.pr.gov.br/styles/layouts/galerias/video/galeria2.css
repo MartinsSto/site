@@ -1,0 +1,185 @@
+
+#embedVideo{
+	width: 550px;
+	height: 300px;
+	float: left;
+}
+
+.legendaGaleriaVideo{
+	width: 550px; 
+	border: 0px solid red;
+	float: left;
+}
+
+
+.thumbVideos {
+	
+	width: 100px; 
+	height: 309px; 
+	float: right;
+	overflow: hidden;
+}
+
+button {
+	width: 100px;
+	float: right;
+}
+
+.thumbVideos img {
+	
+	width: 100px;
+	height: 100px;
+	float: right;
+	margin-bottom: 3px;
+	cursor: pointer;
+}
+
+.scroll
+{
+	position: relative;
+	width: 100px;
+	display: block;
+}
+
+element.style {
+    -moz-border-radius: 3px 3px 3px 3px;
+}
+
+.clear {
+    clear: both;
+    font-size: 1px;
+    height: 0;
+    line-height: 0;
+}
+
+
+
+/*  NOVO   */
+
+.video dl {
+	margin:0;
+	}
+	
+.video dl dt {
+	height:360px;
+	}
+.video dl dd {
+	margin:0;
+	padding:0px 0px 5px 22px;
+	color:#ccc;
+	font-size:12px;
+	background:#1b1b1b;
+	}
+	
+.video dl dd.descricao {
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
+	}
+	
+.video-lista {
+	margin-top:10px;
+	}
+
+.video-lista #left {
+	float:left;
+	background:#ccc url(images/anterior.png) no-repeat 50% 50%;
+	border-top-left-radius:10px;
+	border-bottom-left-radius:10px;
+	}
+
+.video-lista #right {
+	float:right;
+	background:#ccc url(images/proximo.png) no-repeat 50% 50%;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+	}
+
+.video-lista button {
+	width:30px;
+	height:53px;
+	border:none;
+	display:block;
+	color:#fff;
+	cursor:pointer;}
+
+.video-lista button:hover {
+	background-color:#525252 !important;
+	}	
+	
+.video-lista button span {
+	display:none;
+	}
+
+.video-lista .rolagem {
+	width:600px;
+	float:left;
+	margin-left:10px;
+	background:url(images/bg_video.png) repeat-x;
+}
+
+.video .rolagem img {
+	width:70px;
+	}
+
+.embedVideo {
+    height: 346px;
+    padding: 7px;
+    width: 570px;
+}
+
+
+.thumbVideos img {
+    float: left;
+    margin-right: 10px;
+	height:53px;
+    width: 70px !important;
+}
+
+
+.container-thumb {
+	width:100%;
+	margin-top:10px;
+	}
+
+
+.container-thumb button {
+	width: 30px;
+     height:53px;
+	border:none;
+	display:block;}
+
+.container-thumb button span{
+	display:none;
+	}
+
+.container-thumb button.top {
+	float:left;
+	border-top-left-radius:10px;
+	border-bottom-left-radius:10px;
+	background:#ccc url(images/anterior.png) no-repeat 50% 50%;
+	}
+
+.container-thumb button.bottom {
+	float:right;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+	background:#ccc url(images/proximo.png) no-repeat 50% 50%;
+	}
+.container-thumb button:hover {
+	background-color:#525252;
+}
+
+.scroll {
+    display: block;
+	width:100%;
+}
+
+
+.thumbVideos {
+    float: left;
+    height:52px;
+    overflow: hidden;
+	width: calc(100% - 80px) !important;
+	margin-left:10px;
+}
+

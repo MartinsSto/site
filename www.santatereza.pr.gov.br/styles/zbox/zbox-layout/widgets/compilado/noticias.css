@@ -1,0 +1,46 @@
+.noticias.widget ul {
+  padding: 0;
+  position: relative;
+}
+.noticias.widget ul li {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  list-style: none;
+}
+.noticias.widget ul .data {
+  float: left !important;
+  margin-right: 10px;
+  padding: 1px;
+}
+.noticias.widget ul .data .dia {
+  font-size: 18px;
+  display: block;
+  text-align: center;
+}
+.noticias.widget ul .data .mes {
+  text-transform: uppercase;
+  font-size: 12px;
+  display: block;
+  text-align: center;
+}
+.noticias.widget ul .data .ano {
+  font-size: 10px;
+  display: block;
+  text-align: center;
+}
+.noticias.widget ul .data .strong {
+  display: none !important;
+}
+.noticias.widget ul img {
+  float: left;
+  margin-right: 8px;
+}
+.noticias.widget ul h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.noticias.widget .linkMais a {
+  background: #999;
+  color: #fff;
+  padding: 2px 5px;
+}

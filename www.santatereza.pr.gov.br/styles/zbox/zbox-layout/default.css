@@ -1,0 +1,599 @@
+
+/********************************************************************************/
+/************************************ para todo LAYOUT ***********************************/
+/********************************************************************************/
+
+#conteudoLayout {
+	position: relative;
+	width: 940px;
+	padding: 0px;
+	min-height: 30px;
+	margin: 0px auto;
+}
+
+.conteudo-3colunas #conteudoLayout {
+	width: 690px !important;
+}
+
+.zl-conteudoWidget {
+	overflow: hidden;
+}
+
+.zl-carregando-conteudo {
+	height: 40px;
+	background: url(images/carregando.gif) no-repeat center;
+}
+
+.zl-list-widGet {
+	margin: 0px;
+	padding: 0px;
+	min-height: 30px;
+}
+
+.zl-list-widGet > li {
+	list-style-type: none;
+	min-height: 40px;
+	padding: 5px;
+	position: relative;
+	margin-bottom:30px;
+}
+
+#conteudoLayout.bordasWidgets .zl-divisao .zl-list-widGet > li,  #conteudoLayout.isEdit .zl-list-widGet > li:HOVER {
+	outline: 1px solid #009;
+	cursor: pointer;
+}
+
+.zl-list-widGet .zl-tituloWidget {
+	background-color: none;
+}
+
+.zl-celula .zl-list-widGet .zl-tituloWidget {
+	display: none;
+	background-color: #009;
+	color: #FFFFFF;
+	font-size: 10px;
+	line-height: 16px;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0 1px 1px 4px;
+	position: absolute;
+	right: 0;
+	top: 0px;
+	z-index: 100000;
+	box-shadow: -1px 1px 1px #000;
+}
+
+.zl-celula .zl-list-widGet > li:HOVER .zl-tituloWidget {
+	display: block;
+}
+
+.zl-helper {
+	border: 1px solid #999;
+	background-color: #000;
+}
+
+.ui-sortable-helper {
+	background-color: #FFF;
+}
+
+#conteudoLayout .placeHolder {
+	border: 2px dashed #009;
+	border-radius: 8px;
+	margin: 10px;
+	height: 30px;
+	max-height: 30px;
+	clear: both;
+	outline: none !important;
+}
+
+.zl-divisao > .placeHolder {
+	border: 2px dashed #F00 !important;
+	height: 100px;
+	display: block;
+}
+
+#conteudoLayout .zl-bloco {
+	display: block;
+}
+
+#conteudoLayout.isEdit .zl-bloco {
+	margin: 3px 3px 10px;
+	position: relative;
+}
+
+.zl-bloco {
+}
+
+.isEdit .zl-divisao .zl-bloco:HOVER, .bordasBlocos .zl-divisao .zl-bloco, .bordasBlocosDrag .zl-divisao .zl-bloco {
+	border: 1px dotted red;
+}
+
+/*
+#conteudoLayout .zl-bloco .zl-draggable
+{
+	background:#F00;
+	color:#FFFFFF;
+	padding:3px;
+	cursor:move;
+	display: none;
+	z-index: 10000;
+}
+*/
+
+.zl-celula {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	min-height: 50px;
+	float: left;
+}
+
+#conteudoLayout .zl-celula.ui-resizable {
+	border-right: 1px solid #F8F8F8
+}
+
+.bordasBlocos zl-divisao .zl-celula.ui-resizable, .bordasBlocosDrag zl-divisao .zl-celula.ui-resizable, #conteudoLayout .zl-bloco.bordasVazio:hover .zl-celula.ui-resizable, #conteudoLayout .zl-bloco:hover .zl-celula.ui-resizable, #conteudoLayout.bordasBlocosDrag .zl-celula.ui-resizable, #conteudoLayout.bordasBlocos .zl-celula.ui-resizable {
+	border-right: 1px dotted red;
+}
+
+/********************************************************************************/
+/************************************ apenas zl-divisão ***********************************/
+/********************************************************************************/
+
+
+#conteudoLayout .zl-divisao {
+	margin: 0px;
+	padding: 0px;
+}
+
+#conteudoLayout.bordasLayout .zl-divisao {
+	border: 2px solid green;
+}
+
+#conteudoLayout .zl-divisao.notValid {
+	background-color: #FFA8A8;
+}
+
+#conteudoLayout .zl-bloco .msgExcluir {
+	display: none;
+}
+
+#conteudoLayout.isEdit .zl-bloco .msgExcluir {
+	border-radius: 5px;
+	display: block;
+	margin: 0px;
+	padding: 3px 1%;
+	width: 98%;
+	background: #f0f0f0;
+	text-align: center;
+}
+
+#conteudoLayout .zl-bloco .zl-fechar {
+	font-size: 10px;
+	float: right;
+	cursor: pointer;
+	color: #F00;
+	padding: 1px 3px;
+}
+
+#conteudoLayout .zl-bloco .zl-fechar:hover {
+	font-size: 10px;
+	float: right;
+	cursor: pointer;
+	color: #FFF;
+	background: #f00;
+}
+
+.zl-config-widget, .zl-delete-widget {
+	background: url(images/config.png) no-repeat;
+	width: 16px;
+	height: 16px;
+	float: right;
+	cursor: pointer;
+	margin-left: 3px;
+}
+
+.zl-delete-widget {
+	background-image: url(images/close-2.png);
+}
+
+/********************************************************************************/
+/************************************ apenas z-dialog ***********************************/
+/********************************************************************************/
+
+/* zl-elementos = blocosDisponiveis > div */
+
+#conteudoLayout .zl-elementos {
+	margin: 0;
+	padding: 0;
+	clear: none;
+}
+
+#zl-list-dialog {
+	background: url(images/bg_barra_editor.png) repeat-x;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 145px;
+	padding-top: 48px;
+	margin: 0px;
+	z-index: 1000000000;
+}
+
+#zl-list-dialog .fechar-ferramentas {
+	position: absolute;
+	right: 10px;
+	top: 19px;
+	width: 32px;
+	height: 16px;
+	z-index: 10000;
+	cursor: pointer;
+	background: url(images/minimizar.png) no-repeat center;
+}
+
+#zl-list-dialog.minimizado, #zl-list-dialog.drag-minimizado {
+	height: 0px;
+}
+
+#zl-list-dialog.minimizado .fechar-ferramentas {
+	background-image: url(images/maximizar.png)
+}
+
+#zl-list-dialog .zl-list-widGet {
+	height: 74px;
+	background-color: #FFF;
+	margin-top: 8px;
+}
+
+#zl-list-dialog .zl-list-widGet li {
+	float: left;
+	width: 78px;
+	height: 58px;
+	background: url(images/bg_widget_azul.png) no-repeat;
+	border: 1px solid #4288ea;
+	border-radius: 5px;
+	margin: 0px 18px 0px 0px;
+	outline: none !important;
+}
+
+#zl-list-dialog .zl-list-widGet li.disable {
+	border: 1px solid #ccc;
+	background: url(images/bg_widget.png) no-repeat;
+}
+
+#zl-list-dialog .zl-list-widGet li.ui-sortable-helper,  #zl-list-dialog .zl-list-widGet li.ui-draggable-dragging {
+	background: url(images/bg_widget_draggin.png) no-repeat center;
+	border: none;
+	width: 78px;
+	height: 58px;
+	display: block;
+	cursor: move;
+}
+
+#zl-list-dialog .ui-sortable-helper .zl-tituloWidget,  #zl-list-dialog .ui-draggable-dragging .zl-tituloWidget {
+	display: none;
+}
+
+#zl-list-dialog .zl-tituloWidget {
+	color: #0054c9;
+	text-transform: uppercase;
+	line-height: 10px;
+	margin-top: 35px;
+	font-size: 10px;
+	text-align: center;
+}
+
+#zl-list-dialog .disable .zl-tituloWidget {
+	color: #999;
+}
+
+#zl-list-dialog .zl-elementos .zl-bloco {
+	float: left;
+}
+
+#zl-list-dialog .zl-elementos .zl-bloco {
+	width: 140px;
+	height: 57px;
+	float: left;
+	margin: 0px 10px;
+	background-position: 0px 0px;
+	cursor: move;
+}
+
+#zl-list-dialog .bloco1 {
+	background: url(images/bloco1.png) no-repeat;
+}
+
+#zl-list-dialog .bloco2 {
+	background: url(images/bloco2.png) no-repeat;
+}
+
+#zl-list-dialog .bloco3 {
+	background: url(images/bloco3.png) no-repeat;
+}
+
+#zl-list-dialog .bloco4 {
+	background: url(images/bloco4.png) no-repeat;
+}
+
+#blocosDisponiveis {
+	margin-top: 15px;
+}
+
+#zl-list-dialog .zl-celula, #blocosDisponiveis .zl-elementos .zl-bloco .msgExcluir {
+	display: none;
+}
+
+#zl-list-dialog .zl-list-widGet .zl-config-widget, #zl-list-dialog .zl-list-widGet .zl-delete-widget {
+	display: none;
+}
+
+#zl-list-dialog .zl-list-widGet .zl-conteudoWidget {
+	display: none;
+}
+
+#zl-list-dialog #layout {
+	padding: 8px 0px 8px 9px;
+}
+
+#zl-list-dialog #codLayoutConteudo-element {
+	clear: none;
+	padding: 0px;
+	margin-top: 3px;
+	background: none;
+	border: none;
+}
+
+#zl-list-dialog .box-layout-conteudo {
+	height: 63px;
+}
+
+#zl-list-dialog .div-layout-conteudo .label {
+	display: none;
+}
+
+#FerramentasTabs {
+	width: 990px;
+	margin: 0 auto;
+}
+
+#FerramentasTabs > ul {
+	margin: 0px 10px 0px 0px;
+	padding: 0;
+	list-style: none;
+	float: left;
+	width: 162px;
+}
+
+#FerramentasTabs.ui-widget-content, #FerramentasTabs .ui-tabs-nav, #FerramentasTabs .ui-tabs-nav > li {
+	background: none;
+	border: none;
+}
+
+#FerramentasTabs .ui-tabs-nav > li {
+	height: 24px;
+	width: 151px;
+	margin-bottom: 4px;
+}
+
+#FerramentasTabs .ui-tabs-anchor {
+	background: url(images/bt_azul.png) no-repeat;
+	display: block;
+	height: 24px;
+	width: 151px;
+	margin: 0 0 4px;
+	line-height: 24px;
+	font-size: 12px;
+	color: #fff;
+	padding: 0 0 0 10px;
+}
+
+.widgetEsquerda, .widgetDireita {
+	margin-top: 6px;
+	width: 20px;
+	height: 70px;
+	cursor: pointer;
+}
+
+.widgetEsquerda {
+	float: left;
+	z-index: 1000000;
+	position: absolute;
+	background: url(images/left_off.png) no-repeat 0 0;
+}
+
+.widgetEsquerda:hover {
+	background: url(images/left_on.png) no-repeat 0 0;
+}
+
+.widgetDireita {
+	right: 10px;
+	z-index: 1000000;
+	position: absolute;
+	background: url(images/right_off.png) no-repeat 0 0;
+}
+
+.widgetDireita:hover {
+	background: url(images/right_on.png) no-repeat 0 0;
+}
+
+.contentScroll {
+	position: relative;
+	width: 738px;
+	height: 90px;
+	margin: 0 0 0 30px;
+	overflow: hidden;
+}
+
+.contentScroll .scroll {
+	position: absolute;
+	padding-right: 50px;
+	float: left;
+}
+
+#widgetsDisponiveis {
+	width: 799px;
+}
+
+#widgetsDisponiveis .zl-list-widGet {
+	background: none;
+}
+
+#FerramentasTabs ul li.ui-tabs-active a {
+	background: url(images/bt_preto.png) no-repeat;
+}
+
+#FerramentasTabs .ui-tabs-panel {
+	clear: none;
+	background: #FFFFFF url(images/bg_tab.png) no-repeat;
+	border: 1px solid #aeaeae;
+	border-radius: 5px;
+	padding: 8px 0px 8px 9px;
+	height: 97px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #777;
+	position: relative;
+	margin: 0px 0px 0px 171px;
+}
+
+.checkBordas {
+	position: absolute;
+	top: 6px;
+	right: 7px;
+	width: 200px;
+	text-align: right;
+	font-size: 10px;
+	font-style: italic;
+	line-height: 20px;
+}
+
+.checkBordas input {
+	float: right;
+}
+
+#zl-list-widGet .ui-draggable.ui-draggable-dragging {
+	width: 90px;
+	height: 60px;
+	display: block;
+}
+
+/********************************************************************************/
+/************************************ Declarações Específicas ***********************************/
+/********************************************************************************/
+
+#conteudoLayout .zl-clear-conteudoLayout, #conteudoLayout .zl-divisao .zl-clear-divisao {
+	clear: both;
+}
+
+/********************************************************************************/
+/******************************* REMOVENDO HOVERS *******************************/
+/********************************************************************************/
+
+
+
+.bordasBlocos .zl-list-dialog .zl-bloco:HOVER #conteudoLayout.bordasBlocosDrag .zl-list-widGet > li:HOVER {
+	border: none;
+}
+
+#conteudoLayout.bordasBlocosDrag .zl-celula .zl-list-widGet > li:HOVER .zl-tituloWidget {
+	display: none !important;
+}
+
+#zl-list-dialog .zl-bloco:hover {
+	border: none;
+!important;
+}
+
+/********************************************************************************/
+/************************************ Titulos ***********************************/
+/********************************************************************************/
+
+
+#conteudoLayout h1 {
+	margin: 0px 0px 1px;
+	border-bottom: 1px solid #999;
+	font-size: 16px;
+	font-style: italic;
+	font-weight: bold;
+	padding: 0px 0px 2px 2px;
+	background: none !important;
+}
+
+/********************************************************************************/
+/****************** Definição DEFAULT DO TAMANHO DAS DIVISOES *******************/
+/********************************************************************************/
+
+
+#conteudoLayout #zl-divisao-1 {
+	width: 100%;
+}
+
+#conteudoLayout #zl-divisao-2 {
+	width: 680px;
+}
+.conteudo-3colunas #conteudoLayout #zl-divisao-2 {
+	width: auto;
+}
+
+#conteudoLayout #zl-divisao-3 {
+	width: 250px;
+}
+
+#conteudo.home #conteudo-destaque h1 {
+	display: none;
+}
+
+.zl-bloco .transparencia,.transparencia-estrutura {
+	margin-top: 20px;
+}
+
+.zl-bloco .transparencia h2 ,.transparencia-estrutura h2 {
+	display: none;
+}
+
+/********************************************************************************/
+/****************** Espaçamento e padding blocos  *******************/
+/********************************************************************************/
+.celula1,.celula2,.celula3,.celula4 {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.bloco1 .celula1 {
+	padding: 0;
+}
+
+.bloco2 .celula1 {
+	padding-right: 2px;
+}
+.bloco2 .celula2 {
+	padding-left: 2px;
+}
+
+.bloco3 .celula1 {
+	padding-right:4px;
+}
+.bloco3 .celula2 {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.bloco3 .celula3 {
+	padding-left: 4px;
+}
+
+.bloco4 .celula1 {
+	padding-right: 3px;
+}
+.bloco4 .celula2 {
+	padding-left: 1px;
+	padding-right: 2px;
+}
+.bloco4 .celula3 {
+	padding-left: 2px;
+	padding-right: 1px;
+}
+.bloco4 .celula4 {
+	padding-left: 3px;
+}

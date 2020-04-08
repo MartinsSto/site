@@ -1,0 +1,669 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.1//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-2.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<!-- Mirrored from www.modelo.sc.gov.br/concursos/index/detalhes/codMapaItem/9098/codConcurso/435 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Apr 2020 14:22:09 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>CONCURSO PÚBLICO 001/2014 - Concursos Públicos  - Município de Modelo</title><link href="../../../../../../styles/zbox/todos_sites.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../../../../styles/layouts/galerias/arquivo/galeria2.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../../../../zbox/css/index/cor/%234191f4/layout/pm_landscape/css/personalizado.css" media="" rel="stylesheet" type="text/css" /><script type="text/javascript" src="../../../../../../../ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../../scripts/json.js"></script>
+<script type="text/javascript" src="../../../../../../scripts/ajax.js"></script>
+<script type="text/javascript" src="../../../../../../scripts/test-navigator.js"></script>
+<script type="text/javascript" src="../../../../../../styles/layouts/pm/landscape/js/landscape.js"></script>
+<script type="text/javascript" src="../../../../../../scripts/abas.js"></script><meta property="og:image" content="/images/municipios/brasao/90x90/modelo.png" />
+</head>
+
+<body id="">
+<style>
+	.loading-site:after {
+		background-image: url("../../../../../../images/municipios/brasao/90x90/modelo.png");
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+</style>
+<style>
+.header {
+	background-image: url("../../../../../../../static.fecam.net.br/thumbs/404/1615402_resize_1999_807.jpg");
+}
+.img-footer {
+	background-image: url("../../../../../../../static.fecam.net.br/thumbs/404/1615401_resize_2000_45.png");
+}
+</style>
+	<div class="loading-site"></div>
+	<div class="header">
+        <div class="container-barra">
+            <div id="container-sistema-fecam"></div>
+        </div>
+		<div class="container-head">
+			<div class="cabecalho">
+				<div id="atalhosAcessibilidade">
+					<a href="#ancoraConteudo" accesskey="1">Ir para conteúdo <span>1</span></a>
+					<a href="#ancoraMenu" accesskey="2">Ir para menu <span>2</span></a>
+											<a href="#q">Ir para busca <span>3</span></a>
+										<a href="#ancoraRodape" accesskey="4">Ir para rodapé <span>4</span></a>
+										<a href="../../../../../../zbox/acessibilidade.html" accesskey="5">Acessibilidade <span>5</span></a>
+											<a href="435/contraste/ativar.html" accesskey="6">Alto
+											contraste <span>6</span>
+									</a>
+									</div>
+				<div class="cabecalho-cima" style="background:url(../../../../../../../static.fecam.net.br/thumbs/404/1616752_resize_937_287.jpg) no-repeat 50% 0;">
+					<div class="logo">
+						<a href="../../../../../../index.html">
+							<img src="../../../../../../images/municipios/brasao/90x90/modelo.png">
+						</a>
+						<br>
+						<h1>
+							<span>Município de</span>
+							<br>Modelo						</h1>
+					</div>
+					<div id="topo-tempo">
+						<div class="tempo-hoje">
+				    	<span id="previsao-tempo-dia-1-icone"><img src="../../../../../../images/loading.png" /></span>
+						<div class="info">
+							<div class="dia">
+								<p class='titulo-previsao' id="previsao-tempo-dia-1"></p>
+								<p class='condicao' id="previsao-tempo-dia-1-previsao">---</p>
+							</div>
+    						<ul class='temperaturas'>
+
+    							<li class="min" id="previsao-tempo-dia-1-min">?</li>
+    							<li class="max" id="previsao-tempo-dia-1-max">?</li>
+
+    						</ul>
+						</div>
+					</div>
+
+					<div class="tempo-amanha">
+						<span id="previsao-tempo-dia-2-icone"><img src="../../../../../../images/loading.png" width="35" height="34" /></span>
+						<div class="info">
+							<div class="dia">
+								<p class='titulo-previsao' id="previsao-tempo-dia-2"></p>
+								<p class='condicao' id="previsao-tempo-dia-2-previsao">---</p>
+							</div>
+    						<ul class='temperaturas'>
+    							<li class="min" id="previsao-tempo-dia-2-min">?</li>
+    							<li class="max" id="previsao-tempo-dia-2-max">?</li>
+
+    						</ul>
+						</div>
+					</div>
+						<script type="text/javascript">
+							$(function() {
+
+								//$('#topo-tempo').hide();
+								console.log('https://www.fecam.org.br/tempo.php?codPrevisao=3299');
+								$.ajax({
+									url: 'https://www.fecam.org.br/tempo.php?codPrevisao=3299',
+								    jsonpCallback: 'jsonCallback',
+								    contentType: "application/json",
+    								dataType: 'jsonp',
+                                    cache: 'false',
+
+									success: function(data){
+										data = data['tempo'];
+                                        dc = 0; //Contador de dias;
+										while(dc <= 1){
+											prefix = "#previsao-tempo-dia-"+(dc+1);
+											dia = data['previsao'][dc];
+											$(prefix).html(dia['diaSemana']);
+											$(prefix+'-max').html(dia['maxima']+"C");
+											$(prefix+"-min").html(dia['minima']+"C");
+											$(prefix+"-icone img").attr("src","/styles/layouts/pm/default/images/previsao-tempo/"+dia['tempo']+".png");
+											$(prefix+"-previsao").html(dia['condicao']);
+											console.log(dia);
+											dc++;
+										}
+
+									}
+								});
+							});
+							</script>
+		        	</div>
+						<span id="ancoraMenu"><ul class="navigation">
+    <li>
+        <a class="paginaInicialPm" href="../../../../../../index.html">Início</a>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8498.html">Município</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/9060.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/9049.html">Histórico</a>
+            </li>
+            <li>
+                <a class="agenda" href="../../../../../../agenda/index/index/codMapaItem/9164.html">Agenda</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10377.html">Poder Executivo Municipal</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10380.html">Economia</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10381.html">Dados Geográficos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/19169.html">Plano Diretor Participativo</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8499.html">Governo</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10383.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/129750.html">Secretaria de Agricultura</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134901.html">Secretaria de Educação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134906.html">Secretaria de Saúde</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134907.html">Departamento Municipal de Estradas e Rodagem</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134912.html">Departamento Municipal de Assistência Social</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134919.html">Departamento de Obras e Serviços Urbanos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134923.html">Departamento Municipal de Esportes</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134927.html">Secretaria de Administração e Fazenda</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a>
+        <ul>
+            <li>
+                <a class="concursos" href="../../../../index/codMapaItem/9098.html">Concursos Públicos </a>
+            </li>
+            <li>
+                <a class="licitacoes" href="../../../../../../licitacoes/index/index/codMapaItem/9110.html">Licitações</a>
+            </li>
+            <li>
+                <a class="contasPublicas" href="../../../../../../contaspublicas/index/index/codMapaItem/9081.html">Contas Públicas e LRF</a>
+            </li>
+            <li>
+                <a class="legislacao" href="../../../../../../legislacao/index/index/codMapaItem/9154.html">Legislação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/54599.html">Parecer Tribunal de Contas</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/69227.html">Contratos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/90738.html">Atas de Registro de Preços</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/105584.html">RELATORIOS IN 20 TCE </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/105690.html">Kit Proposta </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/121341.html">CONTROLADORIA MUNICIPAL</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/131944.html">FISCALIZAÇÃO DE CONTRATOS</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/134834.html">DESPESAS COM EDUCAÇÃO</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="noticia" href="../../../../../../noticias/index/listar/codMapaItem/8501.html">Notícias</a>
+    </li>
+    <li>
+        <a class="links" href="http://servicos.modelo.sc.gov.br/">Carta de Serviços</a>
+    </li>
+    <li>
+        <a class="links" href="../../../../../../turismo/index.html">Turismo</a>
+    </li>
+    <li>
+        <a class="contatos" href="../../../../../../contatos/index/index/codMapaItem/8504.html">Contato</a>
+    </li>
+</ul></span>
+					</ul>
+				</div>
+				<div class="cabecalho-baixo">
+					<div class="busca-site">
+													<div id="busca">
+							<form method="GET" action="https://www.modelo.sc.gov.br/pesquisa/">
+    <input class="input-texto" type="text"  name="q" id="q" value="" placeholder="Pesquisar..." accesskey="3" />
+	<button class="input-botao" type="submit"><span></span></button>
+</form>							</div>
+											</div>
+					<div class="social">
+					<h3>Compartilhe: </h3>
+
+					<!-- AddThis Button BEGIN -->
+										    <div class="addthis_toolbox addthis_default_style " >
+					    	<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                    <a class="a2a_button_whatsapp"></a>
+                 </div>
+                 <script async src="../../../../../../../static.addtoany.com/menu/page.js"></script>                            <a class="addthis_button_facebook"></a>
+							<a class="addthis_button_twitter"></a>
+							<a class="addthis_button_email" addthis:title="CONCURSO P%DABLICO 001%2F2014 - Concursos P%FAblicos  - Munic%EDpio de Modelo"></a>
+						<a class="addthis_button_compact"></a>
+						<a class="addthis_counter addthis_bubble_style"></a>
+					</div>
+					<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+					<script type="text/javascript" src="../../../../../../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-524f08ae420d606b"></script>
+					<!-- AddThis Button END -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content" id="ancoraConteudo">
+		<div>
+			<!-- COLUNA LATERAL - INICIO -->
+			        		            <div class="col1">
+	            	<h3 class="titulo"><a href="../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a></h3><ul class="navigation"><li><a href='../../../../index/codMapaItem/9098.html' target='_self'  class='ativo'  >Concursos Públicos </a></li><li><a href='../../../../../../licitacoes/index/index/codMapaItem/9110.html' target='_self'  >Licitações</a></li><li><a href='../../../../../../contaspublicas/index/index/codMapaItem/9081.html' target='_self'  >Contas Públicas e LRF</a></li><li><a href='../../../../../../legislacao/index/index/codMapaItem/9154.html' target='_self'  >Legislação</a></li><li><a href='../../../../../../cms/pagina/ver/codMapaItem/54599.html' target='_self'  >Parecer Tribunal de Contas</a></li><li><a href='../../../../../../cms/pagina/ver/codMapaItem/69227.html' target='_self'  >Contratos</a></li><li><a href='../../../../../../cms/pagina/ver/codMapaItem/90738.html' target='_self'  >Atas de Registro de Preços</a></li><li><a href='../../../../../../cms/pagina/ver/codMapaItem/105584.html' target='_self'  >RELATORIOS IN 20 TCE </a></li><li><a href='../../../../../../cms/pagina/ver/codMapaItem/105690.html' target='_self'  >Kit Proposta </a></li><li><a href='../../../../../../cms/pagina/ver/codMapaItem/121341.html' target='_self'  >CONTROLADORIA MUNICIPAL</a></li><li><a href='../../../../../../cms/diretorio/index/codMapaItem/131944.html' target='_self'  >FISCALIZAÇÃO DE CONTRATOS</a></li><li><a href='../../../../../../cms/diretorio/index/codMapaItem/134834.html' target='_self'  >DESPESAS COM EDUCAÇÃO</a></li></ul>	            </div>
+	            <div class="col3">
+	            	<a name="ancoraConteudo" id="ancoraConteudo"></a>
+					
+<div class="concursos detalhes">
+	<h1>Concursos Públicos </h1>
+	<h2>CONCURSO PÚBLICO 001/2014<span>Nº CONCURSO PÚBLICO 001/2014</span></h2>
+
+	<h3 class="info-basicas">Informações Básicas</h3>
+	<dl class="info-basicas">
+					<dt class="data">
+				<strong>Data do Concurso:</strong>
+				<span class="dia">17</span>
+				<span class="mes">jan</span>
+				<span class="ano">2014</span>
+			</dt>
+		
+					<dd class="status finalizado"><strong>Finalizado</strong></dd>
+							<dd class="descricao">
+				<div class="texto-editor"><p><strong>EDITAL DE CONCURSO P&Uacute;BLICO N&deg; 001/2014.</strong> O Prefeito do Munic&iacute;pio de Modelo, Estado de Santa Catarina, no uso de suas atribui&ccedil;&otilde;es legais, de acordo com art. 37, II da Constitui&ccedil;&atilde;o Federal e demais legisla&ccedil;&otilde;es pertinentes, TORNA P&Uacute;BLICO a realiza&ccedil;&atilde;o de Processo Seletivo destinado &agrave; provis&atilde;o de vagas no quadro dos servidores efetivos do Munic&iacute;pio, que se reger&aacute; pelas regras determinadas no edital.</p>
+<p><strong>CARGOS: </strong></p>
+<p><strong>Professor Ensino Superior Disciplina Artes; Auxiliar Educacional; Agente Comunit&aacute;rio de Sa&uacute;de P&uacute;blica &ndash; ESF 01.</strong></p>
+<p><strong>INSCRI&Ccedil;&Otilde;ES:</strong> as inscri&ccedil;&otilde;es estar&atilde;o abertas no per&iacute;odo de<strong> 20/01/2014 a 18/02/2014</strong>, pela internet atrav&eacute;s do site <a href="http://www.icap.net.br/">www.icap.net.br</a>. As exig&ecirc;ncias para a realiza&ccedil;&atilde;o das inscri&ccedil;&otilde;es e dados inerentes constam no edital. Os candidatos poder&atilde;o obter a &iacute;ntegra do Edital e informa&ccedil;&otilde;es na Prefeitura Municipal de Modelo (SC), Rua do Com&eacute;rcio 1304, atendimento nos dias &uacute;teis, das 7h30min &agrave;s 11h30min e das 13h30min &agrave;s 17h30min, e no site da empresa organizadora do certame <a href="http://www.icap.net.br/">www.icap.net.br</a>. Modelo (SC), 17/01/2014, Ricardo Luis Maldaner, Prefeito Municipal.</p></div>
+			</dd>
+					<br class="absoluta" clear="all" />
+	</dl>
+
+
+<br class="absoluta" class="clear" />
+
+<script type="text/javascript">
+
+$(function(){
+	$('#abasContainer').abas({classSelected: 'ativo'});
+});
+
+</script>
+
+<!-- a lista de abas 
+ <div id="abasContainer">
+    <ul class="listAbas">
+                <li><a href="#aba1">Aba 1</a></li>
+                <li><a href="#aba2">Aba 2</a></li>
+    </ul>
+ 
+    <div id="aba1" class="abas">
+       Conteudo 1
+    </div>
+    <div id="aba2" class="abas">
+       Conteudo 2
+    </div>
+</div>
+-->
+
+ <div id="abasContainer">
+        <ul class="listAbas">
+				<li><a href="#aba1">Mais informações</a></li>
+				 
+		    </ul>
+        <div id="aba1" class="abas">
+					<dl class="mais-info">
+												<dt>ANEXOS</dt>
+												<dd class="data-publicacao">Publicado em <span>20/01/2014</span></dd>
+
+						
+												<dd><ul class="arquivos">
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/42568_EDITAL_CONCURSO__1_.pdf">
+			<span class="legenda">EDITAL CONCURSO _1_</span>
+            <span class="extensao-tamanho">pdf[329 KB]</span>
+            <span class="data-publicacao">[20/01/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/42569_ANEXO_I_ATRIBUICOES.pdf">
+			<span class="legenda">ANEXO I ATRIBUIÇÕES</span>
+            <span class="extensao-tamanho">pdf[33 KB]</span>
+            <span class="data-publicacao">[20/01/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/42570_ANEXO_II_CONTEUDO.pdf">
+			<span class="legenda">ANEXO II CONTEÚDO</span>
+            <span class="extensao-tamanho">pdf[36 KB]</span>
+            <span class="data-publicacao">[20/01/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/42571_ANEXO_III__REQUERIMENTO_ISENCAO_TAXA_DE_INSCRICAO.pdf">
+			<span class="legenda">ANEXO III  REQUERIMENTO ISENÇÃO TAXA DE INSCRIÇÃO</span>
+            <span class="extensao-tamanho">pdf[11 KB]</span>
+            <span class="data-publicacao">[20/01/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/42572_ANEXO_IV_FORMULARIO_TITULOS.pdf">
+			<span class="legenda">ANEXO IV FORMULÁRIO TÍTULOS</span>
+            <span class="extensao-tamanho">pdf[24 KB]</span>
+            <span class="data-publicacao">[20/01/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/42573_ANEXO_V_CRONOGRAMA_MODELO_CONCURSO.pdf">
+			<span class="legenda">ANEXO V CRONOGRAMA MODELO CONCURSO</span>
+            <span class="extensao-tamanho">pdf[30 KB]</span>
+            <span class="data-publicacao">[20/01/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/85391_HOMOLOGACAO_DAS_INSCRICOES.pdf">
+			<span class="legenda">HOMOLOGAÇÃO DAS INSCRIÇÕES</span>
+            <span class="extensao-tamanho">pdf[53 KB]</span>
+            <span class="data-publicacao">[21/02/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/86086_RELACAO_DE_ENSALAMENTO.pdf">
+			<span class="legenda">RELAÇÃO DE ENSALAMENTO</span>
+            <span class="extensao-tamanho">pdf[258 KB]</span>
+            <span class="data-publicacao">[27/02/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/92826_GABARITO_DEFINITIVO.pdf">
+			<span class="legenda">GABARITO DEFINITIVO</span>
+            <span class="extensao-tamanho">pdf[50 KB]</span>
+            <span class="data-publicacao">[10/03/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/92827_RESULTADO_RECURSO_GABARITO_MODELO.pdf">
+			<span class="legenda">RESULTADO RECURSO GABARITO MODELO</span>
+            <span class="extensao-tamanho">pdf[15 KB]</span>
+            <span class="data-publicacao">[10/03/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/92828_NOTA_E_CLASSIFICACAO_PRELIMINAR.pdf">
+			<span class="legenda">NOTA E CLASSIFICAÇÃO PRELIMINAR</span>
+            <span class="extensao-tamanho">pdf[60 KB]</span>
+            <span class="data-publicacao">[10/03/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/94625_NOTA_E_CLASSIFICACAO_PARA_HOMOLOGACAO.pdf">
+			<span class="legenda">NOTA E CLASSIFICAÇÃO PARA HOMOLOGAÇÃO</span>
+            <span class="extensao-tamanho">pdf[59 KB]</span>
+            <span class="data-publicacao">[17/03/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/94626_DECRETO_N_097___17032014___Homologa_Concurso_Publico_001_2014.pdf">
+			<span class="legenda">DECRETO Nº 097 - 17.03.2014 - Homologa Concurso Público 001_2014</span>
+            <span class="extensao-tamanho">pdf[177 KB]</span>
+            <span class="data-publicacao">[17/03/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+</ul>
+</dd>
+											</dl>
+    </div><!--Fim da #aba1-->
+    <div id="aba2" class="abas">
+    
+    </div><!--Fim #aba2-->
+</div>
+
+</div><!--Fim .concursos-->
+<div class="clear"></div>
+<br class="absoluta" />
+<br class="absoluta" />
+<br class="absoluta" />
+					<div class="informacoes-relacionadas">
+											</div>
+	            </div>
+				<!-- COLUNA LATERAL - FIM -->
+		<br class="clear">
+		</div>
+
+		<div></div>
+	</div>
+	<div class="footer" id="ancoraRodape">
+		<div class="img-footer">
+		</div>
+		<div class="footer-content">
+				<div class="info-municipio" itemscope itemtype="https://schema.org/Organization">
+					<ul>
+						<li><h2 itemprop="name">Município de Modelo<h2></li>
+						<li itemprop="streetAddress">Rua do Comércio, 1304 - Centro</li>
+                        						<li>CEP: <span  itemprop="postalCode">89872-000 </span></li>
+                        						<li>CNPJ: 83.021.832/0001-11</li>
+
+								                    <li class="telefone">
+								<strong>Telefones:</strong>
+								<div>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3137 </span>
+                                        		                            	<span class="identificacao">Principal</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98854-3327 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-5346 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-1136 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-9560 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3272 </span>
+                                        		                            	<span class="identificacao">Comercial</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3121 </span>
+                                        		                            	<span class="identificacao">Comercial</span>
+                                        		                            </span>
+		                        		                        </div>
+		                    </li>
+		                
+					</ul>
+				</div>
+									<div class="horario">
+						<h2>Horário de </br> funcionamento</h2>
+						<p>
+							De segunda a sexta-feira<br />
+das 7h30 às 11h30 e das 13h00 às 17h00.						</p>
+					</div>
+				
+			<div class="logos">
+                					<a target="_blank" href="#"><img src="../../../../../../styles/layouts/pm/landscape/images/redecim.png"></a>
+					<a target="_blank" href="http://www.fecam.org.br/"><img src="../../../../../../styles/layouts/pm/landscape/images/fecam.png"></a>
+								<a target="_blank" href="http://www.amerios.org.br/"><img src="../../../../../../styles/layouts/pm/landscape/images/amerios.png"></a>
+				<br class="clear">
+			</div>
+            <div class="corona-banner">
+                <a href="https://www.fecam.org.br/noticias/index/ver/codMapaItem/74947/codNoticia/606128" target="_blank">
+                    <img src="../../../../../../images/fecam/corona.png">
+                </a>
+            </div>
+			<div class="mapa-site">
+				<span></span>
+				<ul class="navigation">
+    <li>
+        <a class="paginaInicialPm" href="../../../../../../index.html">Início</a>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8498.html">Município</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/9060.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/9049.html">Histórico</a>
+            </li>
+            <li>
+                <a class="agenda" href="../../../../../../agenda/index/index/codMapaItem/9164.html">Agenda</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10377.html">Poder Executivo Municipal</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10380.html">Economia</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10381.html">Dados Geográficos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/19169.html">Plano Diretor Participativo</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8499.html">Governo</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10383.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/129750.html">Secretaria de Agricultura</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134901.html">Secretaria de Educação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134906.html">Secretaria de Saúde</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134907.html">Departamento Municipal de Estradas e Rodagem</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134912.html">Departamento Municipal de Assistência Social</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134919.html">Departamento de Obras e Serviços Urbanos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134923.html">Departamento Municipal de Esportes</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134927.html">Secretaria de Administração e Fazenda</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a>
+        <ul>
+            <li>
+                <a class="concursos" href="../../../../index/codMapaItem/9098.html">Concursos Públicos </a>
+            </li>
+            <li>
+                <a class="licitacoes" href="../../../../../../licitacoes/index/index/codMapaItem/9110.html">Licitações</a>
+            </li>
+            <li>
+                <a class="contasPublicas" href="../../../../../../contaspublicas/index/index/codMapaItem/9081.html">Contas Públicas e LRF</a>
+            </li>
+            <li>
+                <a class="legislacao" href="../../../../../../legislacao/index/index/codMapaItem/9154.html">Legislação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/54599.html">Parecer Tribunal de Contas</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/69227.html">Contratos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/90738.html">Atas de Registro de Preços</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/105584.html">RELATORIOS IN 20 TCE </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/105690.html">Kit Proposta </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/121341.html">CONTROLADORIA MUNICIPAL</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/131944.html">FISCALIZAÇÃO DE CONTRATOS</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/134834.html">DESPESAS COM EDUCAÇÃO</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="noticia" href="../../../../../../noticias/index/listar/codMapaItem/8501.html">Notícias</a>
+    </li>
+    <li>
+        <a class="links" href="http://servicos.modelo.sc.gov.br/">Carta de Serviços</a>
+    </li>
+    <li>
+        <a class="links" href="../../../../../../turismo/index.html">Turismo</a>
+    </li>
+    <li>
+        <a class="contatos" href="../../../../../../contatos/index/index/codMapaItem/8504.html">Contato</a>
+    </li>
+</ul>				<br class="clear">
+			</div>
+		</div>
+	</div>
+	<script type='text/javascript'> 
+var _gaq = _gaq || []; 
+_gaq.push(['_setAccount', 'UA-20438101-23']);
+_gaq.push(['_trackPageview'], '/concursos/index/detalhes/codMapaItem/9098/codConcurso/435');
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+jQuery(document).ajaxComplete(function(e, xhr, settings){
+_gaq.push(['_trackPageview', settings.url]);
+});
+</script>    

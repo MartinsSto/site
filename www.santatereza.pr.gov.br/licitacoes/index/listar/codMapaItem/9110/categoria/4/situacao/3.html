@@ -1,0 +1,769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.1//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-2.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<!-- Mirrored from www.modelo.sc.gov.br/licitacoes/index/listar/codMapaItem/9110/categoria/4/situacao/3 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Apr 2020 14:01:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>Licitações - Município de Modelo</title><link href="../../../../../../../../styles/zbox/todos_sites.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../../../../../../zbox/css/index/cor/%234191f4/layout/pm_landscape/css/personalizado.css" media="" rel="stylesheet" type="text/css" /><script type="text/javascript" src="../../../../../../../../../ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../../../../scripts/json.js"></script>
+<script type="text/javascript" src="../../../../../../../../scripts/ajax.js"></script>
+<script type="text/javascript" src="../../../../../../../../scripts/test-navigator.js"></script>
+<script type="text/javascript" src="../../../../../../../../styles/layouts/pm/landscape/js/landscape.js"></script>
+<script type="text/javascript" src="../../../../../../../../scripts/abas.js"></script><meta property="og:image" content="/images/municipios/brasao/90x90/modelo.png" />
+</head>
+
+<body id="">
+<style>
+	.loading-site:after {
+		background-image: url("../../../../../../../../images/municipios/brasao/90x90/modelo.png");
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+</style>
+<style>
+.header {
+	background-image: url("../../../../../../../../../static.fecam.net.br/thumbs/404/1615402_resize_1999_807.jpg");
+}
+.img-footer {
+	background-image: url("../../../../../../../../../static.fecam.net.br/thumbs/404/1615401_resize_2000_45.png");
+}
+</style>
+	<div class="loading-site"></div>
+	<div class="header">
+        <div class="container-barra">
+            <div id="container-sistema-fecam"></div>
+        </div>
+		<div class="container-head">
+			<div class="cabecalho">
+				<div id="atalhosAcessibilidade">
+					<a href="#ancoraConteudo" accesskey="1">Ir para conteúdo <span>1</span></a>
+					<a href="#ancoraMenu" accesskey="2">Ir para menu <span>2</span></a>
+											<a href="#q">Ir para busca <span>3</span></a>
+										<a href="#ancoraRodape" accesskey="4">Ir para rodapé <span>4</span></a>
+										<a href="../../../../../../../../zbox/acessibilidade.html" accesskey="5">Acessibilidade <span>5</span></a>
+											<a href="3/contraste/ativar.html" accesskey="6">Alto
+											contraste <span>6</span>
+									</a>
+									</div>
+				<div class="cabecalho-cima" style="background:url(../../../../../../../../../static.fecam.net.br/thumbs/404/1616752_resize_937_287.jpg) no-repeat 50% 0;">
+					<div class="logo">
+						<a href="../../../../../../../../index.html">
+							<img src="../../../../../../../../images/municipios/brasao/90x90/modelo.png">
+						</a>
+						<br>
+						<h1>
+							<span>Município de</span>
+							<br>Modelo						</h1>
+					</div>
+					<div id="topo-tempo">
+						<div class="tempo-hoje">
+				    	<span id="previsao-tempo-dia-1-icone"><img src="../../../../../../../../images/loading.png" /></span>
+						<div class="info">
+							<div class="dia">
+								<p class='titulo-previsao' id="previsao-tempo-dia-1"></p>
+								<p class='condicao' id="previsao-tempo-dia-1-previsao">---</p>
+							</div>
+    						<ul class='temperaturas'>
+
+    							<li class="min" id="previsao-tempo-dia-1-min">?</li>
+    							<li class="max" id="previsao-tempo-dia-1-max">?</li>
+
+    						</ul>
+						</div>
+					</div>
+
+					<div class="tempo-amanha">
+						<span id="previsao-tempo-dia-2-icone"><img src="../../../../../../../../images/loading.png" width="35" height="34" /></span>
+						<div class="info">
+							<div class="dia">
+								<p class='titulo-previsao' id="previsao-tempo-dia-2"></p>
+								<p class='condicao' id="previsao-tempo-dia-2-previsao">---</p>
+							</div>
+    						<ul class='temperaturas'>
+    							<li class="min" id="previsao-tempo-dia-2-min">?</li>
+    							<li class="max" id="previsao-tempo-dia-2-max">?</li>
+
+    						</ul>
+						</div>
+					</div>
+						<script type="text/javascript">
+							$(function() {
+
+								//$('#topo-tempo').hide();
+								console.log('https://www.fecam.org.br/tempo.php?codPrevisao=3299');
+								$.ajax({
+									url: 'https://www.fecam.org.br/tempo.php?codPrevisao=3299',
+								    jsonpCallback: 'jsonCallback',
+								    contentType: "application/json",
+    								dataType: 'jsonp',
+                                    cache: 'false',
+
+									success: function(data){
+										data = data['tempo'];
+                                        dc = 0; //Contador de dias;
+										while(dc <= 1){
+											prefix = "#previsao-tempo-dia-"+(dc+1);
+											dia = data['previsao'][dc];
+											$(prefix).html(dia['diaSemana']);
+											$(prefix+'-max').html(dia['maxima']+"C");
+											$(prefix+"-min").html(dia['minima']+"C");
+											$(prefix+"-icone img").attr("src","/styles/layouts/pm/default/images/previsao-tempo/"+dia['tempo']+".png");
+											$(prefix+"-previsao").html(dia['condicao']);
+											console.log(dia);
+											dc++;
+										}
+
+									}
+								});
+							});
+							</script>
+		        	</div>
+						<span id="ancoraMenu"><ul class="navigation">
+    <li>
+        <a class="paginaInicialPm" href="../../../../../../../../index.html">Início</a>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8498.html">Município</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/9060.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/9049.html">Histórico</a>
+            </li>
+            <li>
+                <a class="agenda" href="../../../../../../../../agenda/index/index/codMapaItem/9164.html">Agenda</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10377.html">Poder Executivo Municipal</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10380.html">Economia</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10381.html">Dados Geográficos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/19169.html">Plano Diretor Participativo</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8499.html">Governo</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10383.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/129750.html">Secretaria de Agricultura</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134901.html">Secretaria de Educação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134906.html">Secretaria de Saúde</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134907.html">Departamento Municipal de Estradas e Rodagem</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134912.html">Departamento Municipal de Assistência Social</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134919.html">Departamento de Obras e Serviços Urbanos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134923.html">Departamento Municipal de Esportes</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134927.html">Secretaria de Administração e Fazenda</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a>
+        <ul>
+            <li>
+                <a class="concursos" href="../../../../../../../../concursos/index/index/codMapaItem/9098.html">Concursos Públicos </a>
+            </li>
+            <li>
+                <a class="licitacoes" href="../../../../../../index/codMapaItem/9110.html">Licitações</a>
+            </li>
+            <li>
+                <a class="contasPublicas" href="../../../../../../../../contaspublicas/index/index/codMapaItem/9081.html">Contas Públicas e LRF</a>
+            </li>
+            <li>
+                <a class="legislacao" href="../../../../../../../../legislacao/index/index/codMapaItem/9154.html">Legislação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/54599.html">Parecer Tribunal de Contas</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/69227.html">Contratos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/90738.html">Atas de Registro de Preços</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/105584.html">RELATORIOS IN 20 TCE </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/105690.html">Kit Proposta </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/121341.html">CONTROLADORIA MUNICIPAL</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/131944.html">FISCALIZAÇÃO DE CONTRATOS</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/134834.html">DESPESAS COM EDUCAÇÃO</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="noticia" href="../../../../../../../../noticias/index/listar/codMapaItem/8501.html">Notícias</a>
+    </li>
+    <li>
+        <a class="links" href="http://servicos.modelo.sc.gov.br/">Carta de Serviços</a>
+    </li>
+    <li>
+        <a class="links" href="../../../../../../../../turismo/index.html">Turismo</a>
+    </li>
+    <li>
+        <a class="contatos" href="../../../../../../../../contatos/index/index/codMapaItem/8504.html">Contato</a>
+    </li>
+</ul></span>
+					</ul>
+				</div>
+				<div class="cabecalho-baixo">
+					<div class="busca-site">
+													<div id="busca">
+							<form method="GET" action="https://www.modelo.sc.gov.br/pesquisa/">
+    <input class="input-texto" type="text"  name="q" id="q" value="" placeholder="Pesquisar..." accesskey="3" />
+	<button class="input-botao" type="submit"><span></span></button>
+</form>							</div>
+											</div>
+					<div class="social">
+					<h3>Compartilhe: </h3>
+
+					<!-- AddThis Button BEGIN -->
+										    <div class="addthis_toolbox addthis_default_style " >
+					    	<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                    <a class="a2a_button_whatsapp"></a>
+                 </div>
+                 <script async src="../../../../../../../../../static.addtoany.com/menu/page.js"></script>                            <a class="addthis_button_facebook"></a>
+							<a class="addthis_button_twitter"></a>
+							<a class="addthis_button_email" addthis:title="Licita%E7%F5es - Munic%EDpio de Modelo"></a>
+						<a class="addthis_button_compact"></a>
+						<a class="addthis_counter addthis_bubble_style"></a>
+					</div>
+					<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+					<script type="text/javascript" src="../../../../../../../../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-524f08ae420d606b"></script>
+					<!-- AddThis Button END -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content" id="ancoraConteudo">
+		<div>
+			<!-- COLUNA LATERAL - INICIO -->
+			        		            <div class="col1">
+	            	<h3 class="titulo"><a href="../../../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a></h3><ul class="navigation"><li><a href='../../../../../../../../concursos/index/index/codMapaItem/9098.html' target='_self'  >Concursos Públicos </a></li><li><a href='../../../../../../index/codMapaItem/9110.html' target='_self'  class='ativo'  >Licitações</a></li><li><a href='../../../../../../../../contaspublicas/index/index/codMapaItem/9081.html' target='_self'  >Contas Públicas e LRF</a></li><li><a href='../../../../../../../../legislacao/index/index/codMapaItem/9154.html' target='_self'  >Legislação</a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/54599.html' target='_self'  >Parecer Tribunal de Contas</a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/69227.html' target='_self'  >Contratos</a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/90738.html' target='_self'  >Atas de Registro de Preços</a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/105584.html' target='_self'  >RELATORIOS IN 20 TCE </a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/105690.html' target='_self'  >Kit Proposta </a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/121341.html' target='_self'  >CONTROLADORIA MUNICIPAL</a></li><li><a href='../../../../../../../../cms/diretorio/index/codMapaItem/131944.html' target='_self'  >FISCALIZAÇÃO DE CONTRATOS</a></li><li><a href='../../../../../../../../cms/diretorio/index/codMapaItem/134834.html' target='_self'  >DESPESAS COM EDUCAÇÃO</a></li></ul>	            </div>
+	            <div class="col3">
+	            	<a name="ancoraConteudo" id="ancoraConteudo"></a>
+					
+<div class="licitacoes lista">
+	<h1>Licitações		<a href="../../../../../../../../feed/licitacoes/codMapaItem/9110.html"><img src="../../../../../../../../images/rss.png" align="right"></a>
+		</h1>
+	<h2>Buscar Licitações</h2>
+<div class="busca">
+	<form method="get" id="helperBuscaLicitacoes" action="https://www.modelo.sc.gov.br/licitacoes/index/listar/codMapaItem/9110">
+		<fieldset>
+			<label class="palavraChave">Palavra chave: </label>
+			
+<input type="text" name="palavraChave" id="palavraChave" value="" />			<label class="modalidade">Modalidade: </label>
+			
+<select name="categoria" id="categoria">
+    <option value="" label="Todas">Todas</option>
+    <option value="8" label="Chamada Pública">Chamada Pública</option>
+    <option value="12" label="Chamamento Público">Chamamento Público</option>
+    <option value="1" label="Concorrência Pública ">Concorrência Pública </option>
+    <option value="10" label="Concurso">Concurso</option>
+    <option value="2" label="Convite">Convite</option>
+    <option value="9" label="Credenciamento">Credenciamento</option>
+    <option value="7" label="Dispensa">Dispensa</option>
+    <option value="6" label="Inexigibilidade">Inexigibilidade</option>
+    <option value="5" label="Leilão">Leilão</option>
+    <option value="4" label="Pregão">Pregão</option>
+    <option value="11" label="RDC">RDC</option>
+    <option value="3" label="Tomada de Preços">Tomada de Preços</option>
+</select>			<input type="submit" value="Buscar" />
+		</fieldset>
+	</form>
+</div>
+	<div class="paginas"><strong>535</strong> licitações encontradas. Exibindo de <strong>1</strong> até <strong>10</strong>.</div>
+
+	</ul><br><br><h2>Encerrada</h2><ul  class='item-lista'>
+			<li>
+				<div class="data">
+					<strong>Data de Abertura:</strong>
+					<span class="dia">18</span>
+					<span class="mes">mar</span>
+					<span class="ano">2020</span>
+				 </div>
+				<div class="nome-objeto">
+					 <h3><a href="../../../../../../detalhes/codMapaItem/9110/codLicitacao/160503.html">Pregão - N.º 014/2020</a></h3>
+					 					 <p class="objeto"><strong>Objeto: </strong>PREGÃO PRESENCIAL DESTINADO A CONTRATAÇÃO DE PROFISSIONAIS PARA PRESTAÇÃO DE AULAS DE VIOLÃO VOZ E CANTO, BALLET, ACORDEON, DANÇAS, TAEKWON-DO E PATINAÇÃO PARA O MUNICÍPIO DE MODELO/SC</p>
+				</div>
+				
+				
+				
+		
+
+				 <br class="clear" />
+			  </li>
+	
+			<li>
+				<div class="data">
+					<strong>Data de Abertura:</strong>
+					<span class="dia">12</span>
+					<span class="mes">mar</span>
+					<span class="ano">2020</span>
+				 </div>
+				<div class="nome-objeto">
+					 <h3><a href="../../../../../../detalhes/codMapaItem/9110/codLicitacao/160175.html">Pregão - N.º 013/2020</a></h3>
+					 					 <p class="objeto"><strong>Objeto: </strong>PREGÃO PRESENCIAL DESTINADO A EXECUÇÃO DE OBRA, COMPREENDENDO MÃO DE OBRA, FORNECIMENTO DE MATERIAIS, RETIRADA E COLOCAÇÃO DE TELAS, POSTES E ESCORAS PARA CERCAMENTO DOS CAMPOS MUNICIPAIS</p>
+				</div>
+				
+				
+				
+		
+
+				 <br class="clear" />
+			  </li>
+	
+			<li>
+				<div class="data">
+					<strong>Data de Abertura:</strong>
+					<span class="dia">11</span>
+					<span class="mes">mar</span>
+					<span class="ano">2020</span>
+				 </div>
+				<div class="nome-objeto">
+					 <h3><a href="../../../../../../detalhes/codMapaItem/9110/codLicitacao/160067.html">Pregão - N.º 012/2020</a></h3>
+					 					 <p class="objeto"><strong>Objeto: </strong>REGISTRO DE PREÇOS DESTINADO A AQUISIÇÃO DE SERVIÇOS DE  PERFURAÇÃO E DETONAÇÃO DE ROCHAS, INCLUÍDO MÃO DE OBRA E TODO O MATERIAL NECESSÁRIO A EXECUÇÃO</p>
+				</div>
+				
+				
+				
+		
+
+				 <br class="clear" />
+			  </li>
+	
+			<li>
+				<div class="data">
+					<strong>Data de Abertura:</strong>
+					<span class="dia">11</span>
+					<span class="mes">mar</span>
+					<span class="ano">2020</span>
+				 </div>
+				<div class="nome-objeto">
+					 <h3><a href="../../../../../../detalhes/codMapaItem/9110/codLicitacao/160065.html">Pregão - N.º 011/2020</a></h3>
+					 					 <p class="objeto"><strong>Objeto: </strong>REGISTRO DE PREÇOS DESTINADO A AQUISIÇÃO DE SERVIÇO DE HORA MÁQUINA PARA O MUNICÍPIO DE MODELO/SC</p>
+				</div>
+				
+				
+				
+		
+
+				 <br class="clear" />
+			  </li>
+	
+			<li>
+				<div class="data">
+					<strong>Data de Abertura:</strong>
+					<span class="dia">05</span>
+					<span class="mes">mar</span>
+					<span class="ano">2020</span>
+				 </div>
+				<div class="nome-objeto">
+					 <h3><a href="../../../../../../detalhes/codMapaItem/9110/codLicitacao/159613.html">Pregão - N.º 010/2020</a></h3>
+					 					 <p class="objeto"><strong>Objeto: </strong>REGISTRO DE PREÇOS DESTINADO A AQUISIÇÃO DE MATERIAL DE EXPEDIENTE DESTINADOS AOS DEPARTAMENTOS DE ADMINISTRAÇÃO E FUNDO MUNICIPAL DE SAÚDE DE MODELO/SC</p>
+				</div>
+				
+				
+				
+		
+
+				 <br class="clear" />
+			  </li>
+	
+			<li>
+				<div class="data">
+					<strong>Data de Abertura:</strong>
+					<span class="dia">02</span>
+					<span class="mes">mar</span>
+					<span class="ano">2020</span>
+				 </div>
+				<div class="nome-objeto">
+					 <h3><a href="../../../../../../detalhes/codMapaItem/9110/codLicitacao/159334.html">Pregão - N.º 009/2020</a></h3>
+					 					 <p class="objeto"><strong>Objeto: </strong>PREGÃO PRESENCIAL DESTINADO A CONTRATAÇÃO DE MÃO DE OBRA PARA O SERVIÇO DE VARRIÇÃO DE RUAS, CALÇADAS, LOGRADOUROS, PRAÇAS, CANTEIROS ENTRE OUTROS LOCAIS PÚBLICOS, COMPREENDENDO AINDA A COLETA DOS MATERIAIS (LIXO)</p>
+				</div>
+				
+				
+				
+		
+
+				 <br class="clear" />
+			  </li>
+	
+			<li>
+				<div class="data">
+					<strong>Data de Abertura:</strong>
+					<span class="dia">18</span>
+					<span class="mes">fev</span>
+					<span class="ano">2020</span>
+				 </div>
+				<div class="nome-objeto">
+					 <h3><a href="../../../../../../detalhes/codMapaItem/9110/codLicitacao/158546.html">Pregão - N.º 008/2020</a></h3>
+					 					 <p class="objeto"><strong>Objeto: </strong>PREGÃO PRESENCIAL DESTINADO A CONTRATAÇÃO DE PROFISSIONAL PARA PRESTAÇÃO DE SERVIÇO PARA ATUAR EM OFICINA DE DANÇA, COM CRIANÇAS ADOLESCENTES E IDOSOS E PARA REALIZAÇÃO DE ATIVIDADES FÍSICAS COM IDOSOS</p>
+				</div>
+				
+				
+				
+		
+
+				 <br class="clear" />
+			  </li>
+	
+			<li>
+				<div class="data">
+					<strong>Data de Abertura:</strong>
+					<span class="dia">11</span>
+					<span class="mes">fev</span>
+					<span class="ano">2020</span>
+				 </div>
+				<div class="nome-objeto">
+					 <h3><a href="../../../../../../detalhes/codMapaItem/9110/codLicitacao/157938.html">Pregão - N.º 007/2020</a></h3>
+					 					 <p class="objeto"><strong>Objeto: </strong>REGISTRO DE PREÇOS DESTINADO A AQUISIÇÃO DE SERVIÇOS DE MECÂNICA PARA MANUTENÇÃO E CONSERTO DOS VEÍCULOS DO FUNDO MUNICIPAL DE SAÚDE DO MUNICÍPIO DE MODELO/SC</p>
+				</div>
+				
+				
+				
+		
+
+				 <br class="clear" />
+			  </li>
+	
+			<li>
+				<div class="data">
+					<strong>Data de Abertura:</strong>
+					<span class="dia">10</span>
+					<span class="mes">fev</span>
+					<span class="ano">2020</span>
+				 </div>
+				<div class="nome-objeto">
+					 <h3><a href="../../../../../../detalhes/codMapaItem/9110/codLicitacao/157937.html">Pregão - N.º 006/2020</a></h3>
+					 					 <p class="objeto"><strong>Objeto: </strong>REGISTRO DE PREÇOS PARA EVENTUAL E FRACIONADA AQUISIÇÃO DE MATERIAL ESPORTIVO, DESTINADO AO DEPARTAMENTO DE ESPORTES DO MUNICÍPIO DE MODELO</p>
+				</div>
+				
+				
+				
+		
+
+				 <br class="clear" />
+			  </li>
+	
+			<li>
+				<div class="data">
+					<strong>Data de Abertura:</strong>
+					<span class="dia">10</span>
+					<span class="mes">fev</span>
+					<span class="ano">2020</span>
+				 </div>
+				<div class="nome-objeto">
+					 <h3><a href="../../../../../../detalhes/codMapaItem/9110/codLicitacao/157822.html">Pregão - N.º 005/2020</a></h3>
+					 					 <p class="objeto"><strong>Objeto: </strong>REGISTRO DE PREÇOS DESTINADO A AQUISIÇÃO DE SERVIÇOS PARA MANUTENÇÃO DOS VEÍCULOS DO DEPARTAMENTO MUNICIPAL DE EDUCAÇÃO DO MUNICÍPIO DE MODELO/SC</p>
+				</div>
+				
+				
+				
+		
+
+				 <br class="clear" />
+			  </li>
+	
+	<script type="text/javascript">
+
+    jQuery(function ($) {
+        var url = '/licitacoes/index/listar/codMapaItem/9110/categoria/4/situacao/3/pagina/%pagina%';
+
+        $('.botaoIrPagina').click(function () {
+            var paginaRedirect = parseInt($(this).parent().children('.pagina').val());
+
+            if (paginaRedirect <= 0)
+                paginaRedirect = 1;
+
+            if (paginaRedirect > 54 )
+                paginaRedirect = 54;
+
+
+            if (paginaRedirect > 0 && paginaRedirect <= 54) {
+                var urlRedirect = url.replace('%pagina%', paginaRedirect);
+                window.location = urlRedirect;
+            }
+            else {
+                alert('Página inválida!');
+            }
+        });
+
+        $('.pagina').keypress(function (e) {
+            if (e.which == 13) {
+                $(this).parent().children('.botaoIrPagina').click();
+            }
+        });
+    });
+
+</script>
+
+<div id="paginacao" class="paginacao-default">
+
+    
+            <div class="exibirCampoPagina">
+                            <span>535 registros encontrados.</span>
+                        <br/>
+            Página <input type="text" size="1" class="pagina" value="1"/> de 54            <input type="button" value="Ir" name="ir" class="botaoIrPagina"/>
+        </div>
+        
+    <div class="paginacaoConteiner">
+        <ul>
+
+            
+                            <div class="listaPagina">
+                    <li class="paginaAtiva"><span class="paginaAtiva" ><a href="3/pagina/1.html">1</a></span></li><li><span class="" ><a href="3/pagina/2.html">2</a></span></li><li><span class="" ><a href="3/pagina/3.html">3</a></span></li><li><span class="" ><a href="3/pagina/4.html">4</a></span></li><li><span class="" ><a href="3/pagina/5.html">5</a></span></li><li><span class="" ><a href="3/pagina/6.html">6</a></span></li><li><span class="" ><a href="3/pagina/7.html">7</a></span></li><li class="pontos"><span>...</span></li><li><span class="" ><a href="3/pagina/54.html">54</a></span></li>                </div>
+                
+                            <li class="proximo">
+                    <a href="3/pagina/2.html">Próxima</a>
+                </li>
+            
+        </ul>
+    </div>
+    <br class="clear"/>
+</div>
+</div>
+<div class="clear"></div>
+					<div class="informacoes-relacionadas">
+											</div>
+	            </div>
+				<!-- COLUNA LATERAL - FIM -->
+		<br class="clear">
+		</div>
+
+		<div></div>
+	</div>
+	<div class="footer" id="ancoraRodape">
+		<div class="img-footer">
+		</div>
+		<div class="footer-content">
+				<div class="info-municipio" itemscope itemtype="https://schema.org/Organization">
+					<ul>
+						<li><h2 itemprop="name">Município de Modelo<h2></li>
+						<li itemprop="streetAddress">Rua do Comércio, 1304 - Centro</li>
+                        						<li>CEP: <span  itemprop="postalCode">89872-000 </span></li>
+                        						<li>CNPJ: 83.021.832/0001-11</li>
+
+								                    <li class="telefone">
+								<strong>Telefones:</strong>
+								<div>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3137 </span>
+                                        		                            	<span class="identificacao">Principal</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98854-3327 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-5346 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-1136 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-9560 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3272 </span>
+                                        		                            	<span class="identificacao">Comercial</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3121 </span>
+                                        		                            	<span class="identificacao">Comercial</span>
+                                        		                            </span>
+		                        		                        </div>
+		                    </li>
+		                
+					</ul>
+				</div>
+									<div class="horario">
+						<h2>Horário de </br> funcionamento</h2>
+						<p>
+							De segunda a sexta-feira<br />
+das 7h30 às 11h30 e das 13h00 às 17h00.						</p>
+					</div>
+				
+			<div class="logos">
+                					<a target="_blank" href="#"><img src="../../../../../../../../styles/layouts/pm/landscape/images/redecim.png"></a>
+					<a target="_blank" href="http://www.fecam.org.br/"><img src="../../../../../../../../styles/layouts/pm/landscape/images/fecam.png"></a>
+								<a target="_blank" href="http://www.amerios.org.br/"><img src="../../../../../../../../styles/layouts/pm/landscape/images/amerios.png"></a>
+				<br class="clear">
+			</div>
+            <div class="corona-banner">
+                <a href="https://www.fecam.org.br/noticias/index/ver/codMapaItem/74947/codNoticia/606128" target="_blank">
+                    <img src="../../../../../../../../images/fecam/corona.png">
+                </a>
+            </div>
+			<div class="mapa-site">
+				<span></span>
+				<ul class="navigation">
+    <li>
+        <a class="paginaInicialPm" href="../../../../../../../../index.html">Início</a>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8498.html">Município</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/9060.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/9049.html">Histórico</a>
+            </li>
+            <li>
+                <a class="agenda" href="../../../../../../../../agenda/index/index/codMapaItem/9164.html">Agenda</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10377.html">Poder Executivo Municipal</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10380.html">Economia</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10381.html">Dados Geográficos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/19169.html">Plano Diretor Participativo</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8499.html">Governo</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10383.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/129750.html">Secretaria de Agricultura</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134901.html">Secretaria de Educação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134906.html">Secretaria de Saúde</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134907.html">Departamento Municipal de Estradas e Rodagem</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134912.html">Departamento Municipal de Assistência Social</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134919.html">Departamento de Obras e Serviços Urbanos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134923.html">Departamento Municipal de Esportes</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134927.html">Secretaria de Administração e Fazenda</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a>
+        <ul>
+            <li>
+                <a class="concursos" href="../../../../../../../../concursos/index/index/codMapaItem/9098.html">Concursos Públicos </a>
+            </li>
+            <li>
+                <a class="licitacoes" href="../../../../../../index/codMapaItem/9110.html">Licitações</a>
+            </li>
+            <li>
+                <a class="contasPublicas" href="../../../../../../../../contaspublicas/index/index/codMapaItem/9081.html">Contas Públicas e LRF</a>
+            </li>
+            <li>
+                <a class="legislacao" href="../../../../../../../../legislacao/index/index/codMapaItem/9154.html">Legislação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/54599.html">Parecer Tribunal de Contas</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/69227.html">Contratos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/90738.html">Atas de Registro de Preços</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/105584.html">RELATORIOS IN 20 TCE </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/105690.html">Kit Proposta </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/121341.html">CONTROLADORIA MUNICIPAL</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/131944.html">FISCALIZAÇÃO DE CONTRATOS</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/134834.html">DESPESAS COM EDUCAÇÃO</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="noticia" href="../../../../../../../../noticias/index/listar/codMapaItem/8501.html">Notícias</a>
+    </li>
+    <li>
+        <a class="links" href="http://servicos.modelo.sc.gov.br/">Carta de Serviços</a>
+    </li>
+    <li>
+        <a class="links" href="../../../../../../../../turismo/index.html">Turismo</a>
+    </li>
+    <li>
+        <a class="contatos" href="../../../../../../../../contatos/index/index/codMapaItem/8504.html">Contato</a>
+    </li>
+</ul>				<br class="clear">
+			</div>
+		</div>
+	</div>
+	<script type='text/javascript'> 
+var _gaq = _gaq || []; 
+_gaq.push(['_setAccount', 'UA-20438101-23']);
+_gaq.push(['_trackPageview'], '/licitacoes/index/listar/codMapaItem/9110/categoria/4/situacao/3');
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+jQuery(document).ajaxComplete(function(e, xhr, settings){
+_gaq.push(['_trackPageview', settings.url]);
+});
+</script>    

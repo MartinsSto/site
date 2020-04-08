@@ -1,0 +1,274 @@
+#admContentWrapper .galeria-multi-arquivos .titulo-galeria {
+  font-size: 1.1em;
+  color: #3D4C64;
+  float: left;
+  width: 100%;
+}
+.galeria-multi-arquivos .titulo-galeria {
+  font-size: 1.1em;
+  color: #3D4C64;
+  float: left;
+  width: 100%;
+}
+#admContentWrapper .galeria-multi-arquivos .titulo-galeria h2 {
+  float: left;
+  font-size: 1.3em;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 7px;
+  width: 80%;
+}
+#admContentWrapper .galeria-multi-arquivos .titulo-galeria h2[contentEditable=true]:focus {
+  box-shadow: none;
+  outline: none;
+  color: #000;
+}
+#admContentWrapper .galeria-multi-arquivos .titulo-galeria h2[contentEditable=true] {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  cursor: text;
+  border: 1px solid #ddd;
+}
+#admContentWrapper .galeria-multi-arquivos .titulo-galeria button.fa-plus {
+  float: right;
+  border: none;
+}
+#admContentWrapper .galeria-multi-arquivos .galeria-grupo-nome input {
+  display: none;
+}
+#admContentWrapper .galeria-multi-arquivos .galeria-grupo-nome i {
+  margin-left: 10px;
+  visibility: hidden;
+}
+#admContentWrapper .galeria-multi-arquivos .galeria-grupo-nome i.visible {
+  visibility: visible;
+}
+#admContentWrapper .galeria-multi-arquivos .galeria-grupo-nome:hover i {
+  visibility: visible;
+}
+#admContentWrapper .galeria-multi-arquivos .grupo {
+  width: 100%;
+  display: block;
+  clear: both;
+  box-sizing: border-box;
+  padding-top: 20px;
+  background: #fff;
+}
+#admContentWrapper .galeria-multi-arquivos .grupo.active {
+  border: 1px solid #5499F5;
+}
+#admContentWrapper .galeria-multi-arquivos .grupo.ui-sortable-helper {
+  height: auto !important;
+}
+#admContentWrapper .galeria-multi-arquivos .grupo.ui-sortable-helper .arquivos {
+  zoom: 0.3;
+  transition: all 0.3s;
+}
+#admContentWrapper .galeria-multi-arquivos .grupo .titulo-grupo {
+  padding-bottom: 5px;
+  border-bottom: 2px solid #777;
+}
+#admContentWrapper .galeria-multi-arquivos .grupo .titulo-grupo button {
+  float: right;
+  margin-left: 10px;
+  color: #666;
+  background: url('../../images/botoes/padrao.png') no-repeat #999;
+  border: none;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 0;
+  line-height: 30px;
+  font-size: 16px;
+}
+#admContentWrapper .galeria-multi-arquivos .grupo .titulo-grupo button:hover {
+  background-color: #DDDDDD;
+}
+#admContentWrapper .galeria-multi-arquivos .grupo .titulo-grupo .toggle,
+#admContentWrapper .galeria-multi-arquivos .grupo .titulo-grupo .ordem {
+  cursor: pointer;
+  float: left;
+  margin-right: 7px;
+  font-size: 20px;
+}
+#admContentWrapper .galeria-multi-arquivos .grupo .titulo-grupo .ordem {
+  transition: all 0.3s;
+  opacity: 0;
+  cursor: move;
+  color: #333;
+  padding: 0 5px;
+}
+#admContentWrapper .galeria-multi-arquivos .grupo .titulo-grupo h3 {
+  margin-top: 7px;
+  margin-bottom: 0;
+  color: #777;
+  float: left;
+  cursor: pointer;
+  padding: 5px;
+  width: 80%;
+}
+#admContentWrapper .galeria-multi-arquivos .grupo .titulo-grupo h3[contentEditable=true]:focus {
+  box-shadow: none;
+  outline: none;
+  color: #000;
+}
+#admContentWrapper .galeria-multi-arquivos .grupo .titulo-grupo h3[contentEditable=true] {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  cursor: text;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+#admContentWrapper .galeria-multi-arquivos .grupo .titulo-grupo:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+#admContentWrapper .galeria-multi-arquivos .grupo .titulo-grupo:hover .ordem {
+  opacity: 1;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos {
+  padding-left: 10px;
+  min-height: 30px;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo {
+  cursor: move;
+  list-style: none;
+  float: left;
+  width: 100%;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo .info {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo .info > span {
+  display: inline-block;
+  line-height: 30px;
+  float: left;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo .info .ordem {
+  float: left;
+  margin-right: 7px;
+  font-size: 20px;
+  transition: all 0.3s;
+  opacity: 0;
+  cursor: move;
+  color: #333;
+  padding: 0 5px;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo .info:hover .ordem {
+  opacity: 1;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo:nth-child(odd) {
+  background: #fafafa;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo:hover {
+  background: #E7EEF8;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo .nome {
+  width: 60%;
+  cursor: pointer;
+  color: #333;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo .nome .fa {
+  margin-right: 3px;
+  display: inline-block;
+  font-size: 16px;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo .tamanho {
+  width: 13%;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo .acoes {
+  float: right;
+  width: 13%;
+  text-align: right;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo .acoes button {
+  opacity: 0;
+  transition: all 0.3s;
+  background: #507FBE;
+  color: #fff;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  padding: 0;
+  font-weight: normal;
+  font-size: 14px;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo:hover .acoes button {
+  opacity: 1;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo .form {
+  display: none;
+  width: 100%;
+  padding-left: 20px;
+  border-top: 1px solid #ccc;
+  box-sizing: border-box;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo .form label {
+  width: 100px;
+  display: inline-block;
+  color: #666;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo .form input,
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo .form select {
+  width: 250px;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo .form .campo {
+  margin-top: 10px;
+  width: 100%;
+  display: block;
+  float: left;
+  clear: both;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo .form .acoes {
+  width: 100%;
+  display: block;
+  clear: both;
+  float: left;
+  margin: 10px 0;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo .form .acoes button {
+  float: left;
+  margin-right: 6px;
+  width: auto;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  opacity: 1;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos .arquivo:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+#admContentWrapper .galeria-multi-arquivos .arquivos:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+#admContentWrapper .galeria-multi-arquivos .fa:before {
+  font-family: "FontAwesome";
+}

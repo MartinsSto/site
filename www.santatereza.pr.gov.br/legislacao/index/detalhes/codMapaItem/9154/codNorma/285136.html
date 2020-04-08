@@ -1,0 +1,2766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.1//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-2.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<!-- Mirrored from www.modelo.sc.gov.br/legislacao/index/detalhes/codMapaItem/9154/codNorma/285136 by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Apr 2020 14:35:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>Lei Complementar 2057/2012 - Legislação - Município de Modelo</title><link href="../../../../../../styles/zbox/todos_sites.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../../../../styles/layouts/galerias/arquivo/galeria2.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../../../../zbox/css/index/cor/%234191f4/layout/pm_landscape/css/personalizado.css" media="" rel="stylesheet" type="text/css" /><script type="text/javascript" src="../../../../../../../ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../../scripts/json.js"></script>
+<script type="text/javascript" src="../../../../../../scripts/ajax.js"></script>
+<script type="text/javascript" src="../../../../../../scripts/test-navigator.js"></script>
+<script type="text/javascript" src="../../../../../../styles/layouts/pm/landscape/js/landscape.js"></script>
+<script type="text/javascript" src="../../../../../../scripts/abas.js"></script><meta property="og:image" content="/images/municipios/brasao/90x90/modelo.png" />
+</head>
+
+<body id="">
+<style>
+	.loading-site:after {
+		background-image: url("../../../../../../images/municipios/brasao/90x90/modelo.png");
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+</style>
+<style>
+.header {
+	background-image: url("../../../../../../../static.fecam.net.br/thumbs/404/1615402_resize_1999_807.jpg");
+}
+.img-footer {
+	background-image: url("../../../../../../../static.fecam.net.br/thumbs/404/1615401_resize_2000_45.png");
+}
+</style>
+	<div class="loading-site"></div>
+	<div class="header">
+        <div class="container-barra">
+            <div id="container-sistema-fecam"></div>
+        </div>
+		<div class="container-head">
+			<div class="cabecalho">
+				<div id="atalhosAcessibilidade">
+					<a href="#ancoraConteudo" accesskey="1">Ir para conteúdo <span>1</span></a>
+					<a href="#ancoraMenu" accesskey="2">Ir para menu <span>2</span></a>
+											<a href="#q">Ir para busca <span>3</span></a>
+										<a href="#ancoraRodape" accesskey="4">Ir para rodapé <span>4</span></a>
+										<a href="../../../../../../zbox/acessibilidade.html" accesskey="5">Acessibilidade <span>5</span></a>
+											<a href="285136/contraste/ativar.html" accesskey="6">Alto
+											contraste <span>6</span>
+									</a>
+									</div>
+				<div class="cabecalho-cima" style="background:url(../../../../../../../static.fecam.net.br/thumbs/404/1616752_resize_937_287.jpg) no-repeat 50% 0;">
+					<div class="logo">
+						<a href="../../../../../../index.html">
+							<img src="../../../../../../images/municipios/brasao/90x90/modelo.png">
+						</a>
+						<br>
+						<h1>
+							<span>Município de</span>
+							<br>Modelo						</h1>
+					</div>
+					<div id="topo-tempo">
+						<div class="tempo-hoje">
+				    	<span id="previsao-tempo-dia-1-icone"><img src="../../../../../../images/loading.png" /></span>
+						<div class="info">
+							<div class="dia">
+								<p class='titulo-previsao' id="previsao-tempo-dia-1"></p>
+								<p class='condicao' id="previsao-tempo-dia-1-previsao">---</p>
+							</div>
+    						<ul class='temperaturas'>
+
+    							<li class="min" id="previsao-tempo-dia-1-min">?</li>
+    							<li class="max" id="previsao-tempo-dia-1-max">?</li>
+
+    						</ul>
+						</div>
+					</div>
+
+					<div class="tempo-amanha">
+						<span id="previsao-tempo-dia-2-icone"><img src="../../../../../../images/loading.png" width="35" height="34" /></span>
+						<div class="info">
+							<div class="dia">
+								<p class='titulo-previsao' id="previsao-tempo-dia-2"></p>
+								<p class='condicao' id="previsao-tempo-dia-2-previsao">---</p>
+							</div>
+    						<ul class='temperaturas'>
+    							<li class="min" id="previsao-tempo-dia-2-min">?</li>
+    							<li class="max" id="previsao-tempo-dia-2-max">?</li>
+
+    						</ul>
+						</div>
+					</div>
+						<script type="text/javascript">
+							$(function() {
+
+								//$('#topo-tempo').hide();
+								console.log('https://www.fecam.org.br/tempo.php?codPrevisao=3299');
+								$.ajax({
+									url: 'https://www.fecam.org.br/tempo.php?codPrevisao=3299',
+								    jsonpCallback: 'jsonCallback',
+								    contentType: "application/json",
+    								dataType: 'jsonp',
+                                    cache: 'false',
+
+									success: function(data){
+										data = data['tempo'];
+                                        dc = 0; //Contador de dias;
+										while(dc <= 1){
+											prefix = "#previsao-tempo-dia-"+(dc+1);
+											dia = data['previsao'][dc];
+											$(prefix).html(dia['diaSemana']);
+											$(prefix+'-max').html(dia['maxima']+"C");
+											$(prefix+"-min").html(dia['minima']+"C");
+											$(prefix+"-icone img").attr("src","/styles/layouts/pm/default/images/previsao-tempo/"+dia['tempo']+".png");
+											$(prefix+"-previsao").html(dia['condicao']);
+											console.log(dia);
+											dc++;
+										}
+
+									}
+								});
+							});
+							</script>
+		        	</div>
+						<span id="ancoraMenu"><ul class="navigation">
+    <li>
+        <a class="paginaInicialPm" href="../../../../../../index.html">Início</a>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8498.html">Município</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/9060.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/9049.html">Histórico</a>
+            </li>
+            <li>
+                <a class="agenda" href="../../../../../../agenda/index/index/codMapaItem/9164.html">Agenda</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10377.html">Poder Executivo Municipal</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10380.html">Economia</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10381.html">Dados Geográficos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/19169.html">Plano Diretor Participativo</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8499.html">Governo</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10383.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/129750.html">Secretaria de Agricultura</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134901.html">Secretaria de Educação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134906.html">Secretaria de Saúde</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134907.html">Departamento Municipal de Estradas e Rodagem</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134912.html">Departamento Municipal de Assistência Social</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134919.html">Departamento de Obras e Serviços Urbanos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134923.html">Departamento Municipal de Esportes</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134927.html">Secretaria de Administração e Fazenda</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a>
+        <ul>
+            <li>
+                <a class="concursos" href="../../../../../../concursos/index/index/codMapaItem/9098.html">Concursos Públicos </a>
+            </li>
+            <li>
+                <a class="licitacoes" href="../../../../../../licitacoes/index/index/codMapaItem/9110.html">Licitações</a>
+            </li>
+            <li>
+                <a class="contasPublicas" href="../../../../../../contaspublicas/index/index/codMapaItem/9081.html">Contas Públicas e LRF</a>
+            </li>
+            <li>
+                <a class="legislacao" href="../../../../index/codMapaItem/9154.html">Legislação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/54599.html">Parecer Tribunal de Contas</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/69227.html">Contratos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/90738.html">Atas de Registro de Preços</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/105584.html">RELATORIOS IN 20 TCE </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/105690.html">Kit Proposta </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/121341.html">CONTROLADORIA MUNICIPAL</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/131944.html">FISCALIZAÇÃO DE CONTRATOS</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/134834.html">DESPESAS COM EDUCAÇÃO</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="noticia" href="../../../../../../noticias/index/listar/codMapaItem/8501.html">Notícias</a>
+    </li>
+    <li>
+        <a class="links" href="http://servicos.modelo.sc.gov.br/">Carta de Serviços</a>
+    </li>
+    <li>
+        <a class="links" href="../../../../../../turismo/index.html">Turismo</a>
+    </li>
+    <li>
+        <a class="contatos" href="../../../../../../contatos/index/index/codMapaItem/8504.html">Contato</a>
+    </li>
+</ul></span>
+					</ul>
+				</div>
+				<div class="cabecalho-baixo">
+					<div class="busca-site">
+													<div id="busca">
+							<form method="GET" action="https://www.modelo.sc.gov.br/pesquisa/">
+    <input class="input-texto" type="text"  name="q" id="q" value="" placeholder="Pesquisar..." accesskey="3" />
+	<button class="input-botao" type="submit"><span></span></button>
+</form>							</div>
+											</div>
+					<div class="social">
+					<h3>Compartilhe: </h3>
+
+					<!-- AddThis Button BEGIN -->
+										    <div class="addthis_toolbox addthis_default_style " >
+					    	<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                    <a class="a2a_button_whatsapp"></a>
+                 </div>
+                 <script async src="../../../../../../../static.addtoany.com/menu/page.js"></script>                            <a class="addthis_button_facebook"></a>
+							<a class="addthis_button_twitter"></a>
+							<a class="addthis_button_email" addthis:title="Lei Complementar 2057%2F2012 - Legisla%E7%E3o - Munic%EDpio de Modelo"></a>
+						<a class="addthis_button_compact"></a>
+						<a class="addthis_counter addthis_bubble_style"></a>
+					</div>
+					<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+					<script type="text/javascript" src="../../../../../../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-524f08ae420d606b"></script>
+					<!-- AddThis Button END -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content" id="ancoraConteudo">
+		<div>
+			<!-- COLUNA LATERAL - INICIO -->
+			        		            <div class="col1">
+	            	<h3 class="titulo"><a href="../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a></h3><ul class="navigation"><li><a href='../../../../../../concursos/index/index/codMapaItem/9098.html' target='_self'  >Concursos Públicos </a></li><li><a href='../../../../../../licitacoes/index/index/codMapaItem/9110.html' target='_self'  >Licitações</a></li><li><a href='../../../../../../contaspublicas/index/index/codMapaItem/9081.html' target='_self'  >Contas Públicas e LRF</a></li><li><a href='../../../../index/codMapaItem/9154.html' target='_self'  class='ativo'  >Legislação</a></li><li><a href='../../../../../../cms/pagina/ver/codMapaItem/54599.html' target='_self'  >Parecer Tribunal de Contas</a></li><li><a href='../../../../../../cms/pagina/ver/codMapaItem/69227.html' target='_self'  >Contratos</a></li><li><a href='../../../../../../cms/pagina/ver/codMapaItem/90738.html' target='_self'  >Atas de Registro de Preços</a></li><li><a href='../../../../../../cms/pagina/ver/codMapaItem/105584.html' target='_self'  >RELATORIOS IN 20 TCE </a></li><li><a href='../../../../../../cms/pagina/ver/codMapaItem/105690.html' target='_self'  >Kit Proposta </a></li><li><a href='../../../../../../cms/pagina/ver/codMapaItem/121341.html' target='_self'  >CONTROLADORIA MUNICIPAL</a></li><li><a href='../../../../../../cms/diretorio/index/codMapaItem/131944.html' target='_self'  >FISCALIZAÇÃO DE CONTRATOS</a></li><li><a href='../../../../../../cms/diretorio/index/codMapaItem/134834.html' target='_self'  >DESPESAS COM EDUCAÇÃO</a></li></ul>	            </div>
+	            <div class="col3">
+	            	<a name="ancoraConteudo" id="ancoraConteudo"></a>
+					<div class="legislacao detalhes">
+	<h1>Legislação</h1>
+	<h2>Lei Complementar 2057/2012</h2>
+
+	<script type="text/javascript">
+		$(function(){
+			$('#abasContainer').abas({classSelected: 'ativo'});
+		});
+	</script>
+
+	<div id="abasContainer">
+		<ul class="listAbas">
+			<li><a href="#aba1">Ementa</a></li>
+			<li><a href="#aba2">Integra da norma</a></li>
+			<li><a href="#aba3">Arquivos anexos</a></li>
+			<li><a href="#aba4">Normas relacionadas</a></li>
+		</ul>
+		<div id="aba1" class="abas">
+			<!---ementa-->
+			<div class="data">
+				<strong>Publicada em:</strong> <span class="dia">12</span>
+				<span class="mes">dez</span>
+				<span class="ano">2012</span>
+			</div>
+			<p class="ementa">
+				<strong>Ementa</strong>:
+			DISPÕE SOBRE O TRATAMENTO DIFERENCIADO, SIMPLIFICADO,
+FAVORECIDO E DE INCENTIVO ÀS MICROEMPRESAS, ÀS
+EMPRESAS DE PEQUENO PORTE E AOS MICROEMPREENDEDORES
+INDIVIDUAIS DE QUE TRATA A LEI COMPLEMENTAR FEDERAL Nº.
+123, DE 14 DE DEZEMBRO DE 2006, NO MUNICÍPIO DE MODELO SC,
+CONFORME ESPECIFICA E DÁ OUTRAS PROVIDÊNCIAS.			</p>
+			<br clear="all" />
+		</div>
+		<!---fim ementa-->
+		<div id="aba2" class="abas">
+			<!---integra norma-->
+						<dl class="download">
+				<dt>0.150124001355412708_lei_complementar_nBA_2057_12.pdf</dt>
+				<dd>[203,3 KB] <a
+						href="https://static.fecam.net.br/uploads/404/arquivos/809590_0.150124001355412708_lei_complementar_nBA_2057_12.pdf"
+						nome="0.150124001355412708_lei_complementar_nBA_2057_12.pdf">Baixar Arquivo</a></span>
+
+			</dl>
+						<div class="texto-editor">
+				<p align="left">
+1
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+L EI COMPLEMENTAR N&ordm; 2057/2012 DE 12.12.2012.
+</p>
+<p align="left">
+DISP&Otilde;E SOBRE O TRATAMENTO DIFERENCIADO, SIMPLIFICADO,
+</p>
+<p align="left">
+FAVORECIDO E DE INCENTIVO &Agrave;S MICROEMPRESAS, &Agrave;S
+</p>
+<p align="left">
+EMPRESAS DE PEQUENO PORTE E AOS MICROEMPREENDEDORES
+</p>
+<p align="left">
+INDIVIDUAIS DE QUE TRATA A LEI COMPLEMENTAR FEDERAL N&ordm;.
+</p>
+<p align="left">
+123, DE 14 DE DEZEMBRO DE 2006, NO MUNIC&Iacute;PIO DE MODELO SC,
+</p>
+<p align="left">
+CONFORME ESPECIFICA E D&Aacute; OUTRAS PROVID&Ecirc;NCIAS.
+</p>
+<p align="left">
+IMILIO AVILA, Prefeito Municipal de Modelo, Estado de Santa Catarina, no
+</p>
+<p align="left">
+uso das atribui&ccedil;&otilde;es legais,
+</p>
+<p align="left">
+FAZ SABER a todos os habitantes do Munic&iacute;pio, que a C&acirc;mara Municipal de
+</p>
+<p align="left">
+Vereadores Aprovou e Ele sanciona a seguinte Lei Complementar:
+</p>
+<p align="left">
+CAP&Iacute;TULO I
+</p>
+<p align="left">
+DISPOSI&Ccedil;&Otilde;ES GERAIS
+</p>
+<p align="left">
+Art. 1&ordm; A presente Lei Complementar, denominada Lei Geral Municipal da Microempresa,
+</p>
+<p align="left">
+Empresa de Pequeno Porte e do Microempreendedor Individual, do Munic&iacute;pio de Modelo SC,
+</p>
+<p align="left">
+disp&otilde;e sobre a regulamenta&ccedil;&atilde;o e consolida&ccedil;&atilde;o do tratamento jur&iacute;dico diferenciado, simplificado,
+</p>
+<p align="left">
+favorecido e de incentivo para as tais empreendimentos, em conformidade com o disposto no artigo
+</p>
+<p align="left">
+146, inciso III, al&iacute;nea &quot;d&quot;, artigo 170, inciso IX, e artigo 179 todos da Constitui&ccedil;&atilde;o Federal e as
+</p>
+<p align="left">
+disposi&ccedil;&otilde;es contidas na Lei Complementar Federal n&ordm;. 123, de 14 de dezembro de 2006,
+</p>
+<p align="left">
+consolidada.
+</p>
+<p align="left">
+&sect; 1&ordm; Para os efeitos desta Lei Complementar, consideram-se Microempresa (ME) e Empresa
+</p>
+<p align="left">
+de Pequeno Porte (EPP), as sociedades empresariais ou empres&aacute;rios enquadrados pelo artigo 3&ordm; da
+</p>
+<p align="left">
+Lei Complementar Federal 123/2006, no que couber, inclusive quanto &agrave;s veda&ccedil;&otilde;es e penalidades.
+</p>
+<p align="left">
+&sect; 2&ordm; Considera-se Microempreendedor Individual (MEI), aquele enquadrado pelo artigo 18-
+</p>
+<p align="left">
+A da Lei Complementar 123/2006, inclusive quanto &agrave;s veda&ccedil;&otilde;es e penalidades, cominado com a
+</p>
+<p align="left">
+Resolu&ccedil;&atilde;o CGSN N&ordm;. 58, de 27 de abril de 2009 e altera&ccedil;&otilde;es posteriores.
+</p>
+<p align="left">
+Art. 2&ordm;. O tratamento diferenciado, simplificado, favorecido e de incentivo &agrave;s
+</p>
+<p align="left">
+microempresas, &agrave;s empresas de pequeno porte e ao microempreendedor individual incluir&aacute;, entre
+</p>
+<p align="left">
+outras a&ccedil;&otilde;es dos &oacute;rg&atilde;os e entes da administra&ccedil;&atilde;o municipal:
+</p>
+<p align="left">
+I - os incentivos fiscais;
+</p>
+<p align="left">
+II - a inova&ccedil;&atilde;o tecnol&oacute;gica e a educa&ccedil;&atilde;o empreendedora;
+</p>
+<p align="left">
+III - o associativismo e as regras de inclus&atilde;o;
+</p>
+<p align="left">
+IV - o incentivo &agrave; gera&ccedil;&atilde;o de empregos;
+</p>
+<p align="left">
+V - o incentivo &agrave; formaliza&ccedil;&atilde;o de empreendimentos;
+</p>
+<p align="left">
+VI - a unicidade e a simplifica&ccedil;&atilde;o do processo de registro e de legaliza&ccedil;&atilde;o de empres&aacute;rios e
+</p>
+<p align="left">
+de pessoas jur&iacute;dicas;
+</p>
+<p align="left">
+VII - a cria&ccedil;&atilde;o de banco de dados com informa&ccedil;&otilde;es, orienta&ccedil;&otilde;es e instrumentos &agrave;
+</p>
+<p align="left">
+2
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+disposi&ccedil;&atilde;o dos usu&aacute; rios;
+</p>
+<p align="left">
+VIII - a simplifica&ccedil;&atilde;o, racionaliza&ccedil;&atilde;o e uniformiza&ccedil;&atilde;o dos requisitos de seguran&ccedil;a sanit&aacute;ria,
+</p>
+<p align="left">
+metrologia, controle ambiental e preven&ccedil;&atilde;o contra inc&ecirc;ndios, para os fins de registro, legaliza&ccedil;&atilde;o e
+</p>
+<p align="left">
+funcionamento de empres&aacute;rios e pessoas jur&iacute;dicas, inclusive com a defini&ccedil;&atilde;o das atividades
+</p>
+<p align="left">
+consideradas de alto risco;
+</p>
+<p align="left">
+IX - a regulamenta&ccedil;&atilde;o do parcelamento de d&eacute;bitos relativos ao Imposto Sobre Servi&ccedil;os de
+</p>
+<p align="left">
+Qualquer Natureza (ISSQN);
+</p>
+<p align="left">
+X - a prefer&ecirc;ncia nas aquisi&ccedil;&otilde;es de bens e servi&ccedil;os pelos &oacute;rg&atilde;os p&uacute;blicos municipais.
+</p>
+<p align="left">
+Art. 3&ordm;. Fica criado o Comit&ecirc; Gestor Municipal das Microempresas, Empresas de Pequeno
+</p>
+<p align="left">
+Porte e Micro Empreendedor Individual - COGEMPE, ao qual caber&aacute; gerenciar o tratamento
+</p>
+<p align="left">
+diferenciado e favorecido ao MEI, &agrave;s ME e &agrave;s EPP de que trata esta Lei Complementar,
+</p>
+<p align="left">
+competindo a ele:
+</p>
+<p align="left">
+I - regulamentar, mediante resolu&ccedil;&otilde;es, a aplica&ccedil;&atilde;o e a observ&acirc;ncia desta Lei Complementar;
+</p>
+<p align="left">
+II - gerenciar os subcomit&ecirc;s t&eacute;cnicos que atender&atilde;o &agrave;s demandas espec&iacute;ficas que foram
+</p>
+<p align="left">
+julgadas necess&aacute;rias;
+</p>
+<p align="left">
+III - estabelecer o regimento interno do Comit&ecirc; Gestor Municipal.
+</p>
+<p align="left">
+Art. 4&ordm;. O Comit&ecirc; Gestor Municipal das Microempresas de Pequeno Porte e Micro
+</p>
+<p align="left">
+empreendedor Individual - COGEMPE, de que trata a presente Lei Complementar, ser&aacute; constitu&iacute;do
+</p>
+<p align="left">
+por 10 (dez) membros titulares, com direito a voto, cada qual com seu respectivo suplente,
+</p>
+<p align="left">
+representantes dos seguintes &oacute;rg&atilde;os e institui&ccedil;&otilde;es, indicados pelos mesmos:
+</p>
+<p align="left">
+I - O Secret&aacute;rio Municipal da Administra&ccedil;&atilde;o ou equivalente;
+</p>
+<p align="left">
+II - O Secret&aacute;rio Municipal de Agricultura ou equivalente;
+</p>
+<p align="left">
+III - Um representante da Secretaria de Finan&ccedil;as do Munic&iacute;pio
+</p>
+<p align="left">
+IV - Um representante da ACIMO- Associa&ccedil;&atilde;o Comercial e Industrial de Modelo
+</p>
+<p align="left">
+V - Um representante da Secretaria Municipal de Educa&ccedil;&atilde;o;
+</p>
+<p align="left">
+VI - Um representante dos contadores do Munic&iacute;pio inscritos no Conselho Regional de
+</p>
+<p align="left">
+Contabilidade;
+</p>
+<p align="left">
+VII - Um representante das Empresas de Pequeno Porte;
+</p>
+<p align="left">
+VIII - Um representante das Microempresas;
+</p>
+<p align="left">
+IX - Um representante dos Microempreendedores Individuais.
+</p>
+<p align="left">
+X - Um representante do Conselho do Desenvolvimento econ&ocirc;mico do Munic&iacute;pio
+</p>
+<p align="left">
+&sect; 1&ordm; O Comit&ecirc; Gestor Municipal das Microempresas, Empresas de Pequeno Porte e
+</p>
+<p align="left">
+Microempreendedor Individual - COGEMPE ser&aacute; presidido pelo Secret&aacute;rio Municipal da
+</p>
+<p align="left">
+Administra&ccedil;&atilde;o que &eacute; considerado membro-nato.
+</p>
+<p align="left">
+&sect; 2&ordm; O COGEMPE promover&aacute; pelo menos uma confer&ecirc;ncia anual, a ser realizada
+</p>
+<p align="left">
+preferencialmente no m&ecirc;s de novembro, para a qual ser&atilde;o convocadas as entidades envolvidas no
+</p>
+<p align="left">
+processo de gera&ccedil;&atilde;o de emprego e renda e qualifica&ccedil;&atilde;o profissional, inclu&iacute;dos os outros Conselhos
+</p>
+<p align="left">
+Municipais.
+</p>
+<p align="left">
+&sect; 3&ordm; O COGEMPE ter&aacute; uma secretaria executiva, &agrave; qual competem as a&ccedil;&otilde;es de cunho
+</p>
+<p align="left">
+operacional emanadas pelo conselho e o fornecimento das informa&ccedil;&otilde;es necess&aacute;rias &agrave;s suas
+</p>
+<p align="left">
+delibera&ccedil;&otilde;es.
+</p>
+<p align="left">
+&sect; 4&ordm; A secretaria executiva mencionada no par&aacute;grafo anterior ser&aacute; constitu&iacute;da por dois
+</p>
+<p align="left">
+membros indicados pelo Presidente do COGEMPE, denominados Primeiro Secret&aacute;rio Executivo e
+</p>
+<p align="left">
+3
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+Segundo Secret&aacute;rio Executivo do COGEMPE.
+</p>
+<p align="left">
+&sect; 5&ordm; O Munic&iacute;pio, com recursos pr&oacute;prios e/ou em parceria com outras entidades p&uacute;blicas ou
+</p>
+<p align="left">
+privadas, assegurar&aacute; recursos suficientes para garantir a estrutura f&iacute;sica e a de pessoal necess&aacute;ria &agrave;
+</p>
+<p align="left">
+implanta&ccedil;&atilde;o e ao funcionamento do COGEMPE e de sua secretaria executiva.
+</p>
+<p align="left">
+Art. 5&ordm; Os membros do COGEMPE ser&atilde;o indicados pelos &oacute;rg&atilde;os ou pelas entidades a que
+</p>
+<p align="left">
+perten&ccedil;am e nomeados por Portaria do Chefe do Poder Executivo Municipal.
+</p>
+<p align="left">
+&sect; 1&ordm; Cada representante efetivo ter&aacute; um suplente e mandato por um per&iacute;odo de 02 (dois)
+</p>
+<p align="left">
+anos, sendo permitida recondu&ccedil;&atilde;o.
+</p>
+<p align="left">
+&sect; 2&ordm; Os representantes das secretarias municipais, no caso de serem os pr&oacute;prios titulares das
+</p>
+<p align="left">
+respectivas pastas, ter&atilde;o seus mandatos coincidentes com o per&iacute;odo em que estiverem no exerc&iacute;cio
+</p>
+<p align="left">
+do cargo.
+</p>
+<p align="left">
+&sect; 3&ordm; O suplente poder&aacute; participar das reuni&otilde;es com direito a voto, devendo exerc&ecirc;-lo,
+</p>
+<p align="left">
+quando representar a categoria na aus&ecirc;ncia do titular efetivo.
+</p>
+<p align="left">
+&sect; 4&ordm; As decis&otilde;es e as delibera&ccedil;&otilde;es do COGEMPE ser&atilde;o tomadas sempre pela maioria
+</p>
+<p align="left">
+absoluta de seus membros.
+</p>
+<p align="left">
+&sect; 5&ordm; O mandato dos conselheiros n&atilde;o ser&aacute; remunerado a qualquer t&iacute;tulo, sendo seus servi&ccedil;os
+</p>
+<p align="left">
+considerados relevantes ao Munic&iacute;pio.
+</p>
+<p align="left">
+CAP&Iacute;TULO II
+</p>
+<p align="left">
+DA INSCRI&Ccedil;&Atilde;O, LEGALIZA&Ccedil;&Atilde;O E BAIXA.
+</p>
+<p align="left">
+SE&Ccedil;&Atilde;O I
+</p>
+<p align="left">
+DAS DIRETRIZES
+</p>
+<p align="left">
+Art. 6&ordm; Os &oacute;rg&atilde;os p&uacute;blicos municipais envolvidos no processo de abertura e fechamento de
+</p>
+<p align="left">
+empresas observar&atilde;o a unicidade do processo de registro e de legaliza&ccedil;&atilde;o, devendo para tanto
+</p>
+<p align="left">
+articular as compet&ecirc;ncias pr&oacute;prias com aquelas dos demais &oacute;rg&atilde;os das outras esferas envolvidas na
+</p>
+<p align="left">
+formaliza&ccedil;&atilde;o empresarial, buscando compatibilizar e integrar procedimentos, de modo a evitar a
+</p>
+<p align="left">
+duplicidade de exig&ecirc;ncias e garantir a linearidade do processo, da perspectiva do empres&aacute;rio.
+</p>
+<p align="left">
+Art. 7&ordm; Dever&atilde;o ser mantidas &agrave; disposi&ccedil;&atilde;o dos empres&aacute;rios, de forma presencial e pela rede
+</p>
+<p align="left">
+mundial de computadores, informa&ccedil;&otilde;es, orienta&ccedil;&otilde;es e instrumentos que permitam pesquisa pr&eacute;via &agrave;
+</p>
+<p align="left">
+etapa de inscri&ccedil;&atilde;o, altera&ccedil;&atilde;o e baixa de empresas, de modo a prover a certeza quanto &agrave;
+</p>
+<p align="left">
+documenta&ccedil;&atilde;o exig&iacute;vel e quanto &agrave; viabilidade da inscri&ccedil;&atilde;o.
+</p>
+<p align="left">
+Art. 8&ordm; Os procedimentos relativos &agrave; consulta de viabilidade, inscri&ccedil;&atilde;o, altera&ccedil;&atilde;o e baixa de
+</p>
+<p align="left">
+empresas ser&atilde;o realizados por meio de sistemas informatizados, integrado ao Projeto Registro
+</p>
+<p align="left">
+Mercantil Integrado - REGIN.
+</p>
+<p align="left">
+Par&aacute;grafo &uacute;nico. Fica o Chefe do Poder Executivo autorizado a tomar todas as provid&ecirc;ncias
+</p>
+<p align="left">
+necess&aacute;rias para completa integra&ccedil;&atilde;o dos referidos sistemas.
+</p>
+<p align="left">
+4
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+Art. 9&ordm; O Munic&iacute;pio adotar&aacute;, para fins de cadastramento, a codifica&ccedil;&atilde;o prevista na
+</p>
+<p align="left">
+Classifica&ccedil;&atilde;o Nacional de Atividades Econ&ocirc;micas - CNAE.
+</p>
+<p align="left">
+Par&aacute;grafo &uacute;nico. O Chefe do Poder Executivo regulamentar&aacute; a forma de atualiza&ccedil;&atilde;o
+</p>
+<p align="left">
+cadastral das empresas j&aacute; inscritas no Munic&iacute;pio e respectiva vincula&ccedil;&atilde;o &agrave; Classifica&ccedil;&atilde;o Nacional
+</p>
+<p align="left">
+de Atividades Econ&ocirc;micas - CNAE.
+</p>
+<p align="left">
+SE&Ccedil;&Atilde;O II
+</p>
+<p align="left">
+DA CONSULTA DE VIABILIDADE E DA INSCRI&Ccedil;&Atilde;O
+</p>
+<p align="left">
+Art. 10. &Eacute; obrigat&oacute;ria &agrave; realiza&ccedil;&atilde;o da consulta de viabilidade previamente ao pedido de
+</p>
+<p align="left">
+inscri&ccedil;&atilde;o da microempresa, da empresa de pequeno porte e do microempres&aacute;rio individual, a qual
+</p>
+<p align="left">
+ser&aacute; efetivada por meio do sistema Registro Mercantil Integrado - REGIN, dispon&iacute;vel na rede
+</p>
+<p align="left">
+mundial de computadores, e requerida preferencialmente por contador ou t&eacute;cnico cont&aacute;bil
+</p>
+<p align="left">
+devidamente registrado no respectivo conselho de classe.
+</p>
+<p align="left">
+&sect; 1&ordm; A consulta de viabilidade dever&aacute; bastar a que o empres&aacute;rio seja informado pelos &oacute;rg&atilde;os
+</p>
+<p align="left">
+competentes:
+</p>
+<p align="left">
+I - da descri&ccedil;&atilde;o oficial do endere&ccedil;o de seu interesse e da possibilidade de exerc&iacute;cio da
+</p>
+<p align="left">
+atividade econ&ocirc;mica desejada no local escolhido;
+</p>
+<p align="left">
+II - de todos os requisitos a serem cumpridos para obten&ccedil;&atilde;o de licen&ccedil;as de autoriza&ccedil;&atilde;o de
+</p>
+<p align="left">
+funcionamento, segundo a natureza da atividade econ&ocirc;mica pretendida (CNAE), o porte,
+</p>
+<p align="left">
+localiza&ccedil;&atilde;o e o grau de risco devem estar de acordo com a legisla&ccedil;&atilde;o em vigor.
+</p>
+<p align="left">
+&sect; 2&ordm; Os &oacute;rg&atilde;os competentes dispor&atilde;o do prazo de 60 dias, a contar da data da realiza&ccedil;&atilde;o da
+</p>
+<p align="left">
+consulta no REGIN, para emitir o respectivo parecer, o qual poder&aacute; ser pelo:
+</p>
+<p align="left">
+I - Deferimento da consulta de viabilidade, nos casos de atendimento de todas as normas de
+</p>
+<p align="left">
+ocupa&ccedil;&atilde;o do solo, posturas, seguran&ccedil;a p&uacute;blica, vigil&acirc;ncia sanit&aacute;ria e meio ambiente;
+</p>
+<p align="left">
+II - Indeferimento da consulta de viabilidade, nos casos em que n&atilde;o forem atendidas todas
+</p>
+<p align="left">
+as normas de ocupa&ccedil;&atilde;o do solo, posturas, seguran&ccedil;a p&uacute;blica, vigil&acirc;ncia sanit&aacute;ria e meio ambiente.
+</p>
+<p align="left">
+&sect; 3&ordm; Na hip&oacute;tese do inciso II do &sect; 2&ordm; deste artigo, o atendimento de todas as normas de
+</p>
+<p align="left">
+ocupa&ccedil;&atilde;o do solo, posturas, seguran&ccedil;a p&uacute;blica, vigil&acirc;ncia sanit&aacute;ria e meio ambiente, dever&aacute; ser
+</p>
+<p align="left">
+cumprido anteriormente ao pedido de inscri&ccedil;&atilde;o da microempresa, da empresa de pequeno porte ou
+</p>
+<p align="left">
+do micro empreendedor individual.
+</p>
+<p align="left">
+&sect; 4&ordm; O contador ou escrit&oacute;rio de contabilidade optante pelo Regime Especial Unificado de
+</p>
+<p align="left">
+Arrecada&ccedil;&atilde;o de Tributos e Contribui&ccedil;&otilde;es devidos pelas microempresas e empresas de pequeno
+</p>
+<p align="left">
+porte - Simples Nacional dever&aacute; prestar orienta&ccedil;&otilde;es e efetuar o pedido de consulta de viabilidade
+</p>
+<p align="left">
+gratuitamente ao microempreendedor individual, nos termos do artigo 18, &sect; 22-B, inciso I, da Lei
+</p>
+<p align="left">
+Complementar Federal n&ordm;. 123, de 14 de dezembro de 2006.
+</p>
+<p align="left">
+&sect; 5&ordm; O microempreendedor individual dever&aacute; realizar a consulta de viabilidade para o
+</p>
+<p align="left">
+exerc&iacute;cio de atividades econ&ocirc;micas constantes na regulamenta&ccedil;&atilde;o espec&iacute;fica aprovada pelo Comit&ecirc;
+</p>
+<p align="left">
+Gestor do Simples Nacional, nos termos da Lei Complementar Federal n&ordm;. 123, de 14 de dezembro
+</p>
+<p align="left">
+de 2006 e altera&ccedil;&otilde;es.
+</p>
+<p align="left">
+&sect; 6&ordm; A consulta de viabilidade de que trata este artigo ser&aacute; gratuita.
+</p>
+<p align="left">
+5
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+Art. 11. O processo de registro do microempreendedor individual dever&aacute; ter tr&acirc;mite
+</p>
+<p align="left">
+especial na forma disciplinada pelo Comit&ecirc; para Gest&atilde;o da Rede Nacional para a Simplifica&ccedil;&atilde;o do
+</p>
+<p align="left">
+Registro e da Legaliza&ccedil;&atilde;o de Empresas e Neg&oacute;cios.
+</p>
+<p align="left">
+&sect; 1&ordm; A inscri&ccedil;&atilde;o do microempreendedor individual dever&aacute; ser realizada no Portal do
+</p>
+<p align="left">
+Empreendedor, dispon&iacute;vel no s&iacute;tio www.portaldoempreendedor.gov.br, ap&oacute;s a realiza&ccedil;&atilde;o e
+</p>
+<p align="left">
+deferimento da consulta de viabilidade previsto no artigo 6&ordm; desta Lei Complementar.
+</p>
+<p align="left">
+&sect; 2&ordm; A realiza&ccedil;&atilde;o de inscri&ccedil;&atilde;o do microempreendedor individual diretamente no Portal do
+</p>
+<p align="left">
+Empreendedor prescindida da realiza&ccedil;&atilde;o e deferimento da consulta de viabilidade resultar&aacute; no
+</p>
+<p align="left">
+indeferimento da inscri&ccedil;&atilde;o municipal e revoga&ccedil;&atilde;o de eventuais documentos emitidos anteriormente
+</p>
+<p align="left">
+&agrave; an&aacute;lise do pedido de inscri&ccedil;&atilde;o pelo Munic&iacute;pio, em especial dos registros provis&oacute;rios do CNPJ e
+</p>
+<p align="left">
+do NIRE.
+</p>
+<p align="left">
+&sect; 3&ordm; O microempreendedor individual fica isento do pagamento de todas as taxas relativas &agrave;
+</p>
+<p align="left">
+primeira inscri&ccedil;&atilde;o.
+</p>
+<p align="left">
+&sect; 4&ordm; A partir do segundo ano da inscri&ccedil;&atilde;o municipal, aplicar-se-&atilde;o ao microempreendedor
+</p>
+<p align="left">
+individual as disposi&ccedil;&otilde;es legais relativas &agrave; taxas aplic&aacute;veis &agrave;s demais empresas.
+</p>
+<p align="left">
+Art. 12. A inscri&ccedil;&atilde;o da microempresa e da empresa de pequeno porte dever&aacute; ser realizada
+</p>
+<p align="left">
+pela INTERNET ap&oacute;s o deferimento da consulta de viabilidade.
+</p>
+<p align="left">
+Art. 13. Poder&aacute; ser concedido Alvar&aacute; de Funcionamento Provis&oacute;rio para ME, EPP e MEI
+</p>
+<p align="left">
+desde que cumpra as normas de funcionamento e localiza&ccedil;&atilde;o vigente e demais regulamenta&ccedil;&otilde;es
+</p>
+<p align="left">
+cumprindo as disposi&ccedil;&otilde;es do C&oacute;digo Tribut&aacute;rio Municipal nas seguintes situa&ccedil;&otilde;es:
+</p>
+<p align="left">
+I) em resid&ecirc;ncias;
+</p>
+<p align="left">
+II) em &aacute;reas desprovidas de regulariza&ccedil;&atilde;o fundi&aacute;ria ou regulamenta&ccedil;&atilde;o prec&aacute;ria;
+</p>
+<p align="left">
+III) dispensa de Habite-se de obras e constru&ccedil;&atilde;o, para Empreendedores Individuais at&eacute; que
+</p>
+<p align="left">
+permane&ccedil;a seu enquadramento no MEI.
+</p>
+<p align="left">
+&sect; 1&ordm; O Alvar&aacute; de que se trata no caput ser&aacute; concedido num prazo m&aacute;ximo de 180 (cento e
+</p>
+<p align="left">
+oitenta). Posteriormente ser&aacute; concedido Alvar&aacute; definitivo, ressalvado o n&atilde;o atendimento das
+</p>
+<p align="left">
+regulamenta&ccedil;&otilde;es em leis vigentes.
+</p>
+<p align="left">
+&sect; 2&ordm; O Alvar&aacute; provis&oacute;rio n&atilde;o poder&aacute; ser concedido para atividades que sejam consideradas
+</p>
+<p align="left">
+de alto risco, conforme tabela constante do Anexo &Uacute;nico desta Lei Complementar.
+</p>
+<p align="left">
+&sect; 3&ordm; O Alvar&aacute; de Funcionamento Provis&oacute;rio ser&aacute; cancelado se, ap&oacute;s a notifica&ccedil;&atilde;o da
+</p>
+<p align="left">
+fiscaliza&ccedil;&atilde;o orientadora, n&atilde;o forem cumpridas as exig&ecirc;ncias e os prazos estabelecido pelo Comit&ecirc;
+</p>
+<p align="left">
+Gestor Municipal.
+</p>
+<p align="left">
+SE&Ccedil;&Atilde;O III
+</p>
+<p align="left">
+DA SALA DO EMPREENDEDOR
+</p>
+<p align="left">
+Art. 14. Com o objetivo de orientar os empreendedores, simplificando os procedimentos de
+</p>
+<p align="left">
+registro de empresas no munic&iacute;pio, o Chefe do Poder Executivo, por meio de Decreto, poder&aacute; criar
+</p>
+<p align="left">
+a Sala do Empreendedor, com as seguintes atribui&ccedil;&otilde;es:
+</p>
+<p align="left">
+6
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+I - disponi bilizar aos interessados as informa&ccedil;&otilde;es necess&aacute;rias &agrave; emiss&atilde;o da inscri&ccedil;&atilde;o
+</p>
+<p align="left">
+municipal e do alvar&aacute; de funcionamento, mantendo-as atualizadas nos meios eletr&ocirc;nicos de
+</p>
+<p align="left">
+comunica&ccedil;&atilde;o oficial;
+</p>
+<p align="left">
+II - emiss&atilde;o da certid&atilde;o de zoneamento na &aacute;rea do empreendimento;
+</p>
+<p align="left">
+III - orienta&ccedil;&atilde;o a respeito dos procedimentos necess&aacute;rios para a regulariza&ccedil;&atilde;o da situa&ccedil;&atilde;o
+</p>
+<p align="left">
+fiscal e tribut&aacute;ria dos contribuintes;
+</p>
+<p align="left">
+IV - emiss&atilde;o de certid&otilde;es de regularidade fiscal e tribut&aacute;ria.
+</p>
+<p align="left">
+&sect; 1&ordm; Na hip&oacute;tese de indeferimento de inscri&ccedil;&atilde;o municipal, o interessado ser&aacute; informado a
+</p>
+<p align="left">
+respeito dos fundamentos e ser&aacute; oferecida na Sala do Empreendedor orienta&ccedil;&atilde;o para adequa&ccedil;&atilde;o &agrave;
+</p>
+<p align="left">
+exig&ecirc;ncia legal.
+</p>
+<p align="left">
+&sect; 2&ordm; Para a consecu&ccedil;&atilde;o dos seus objetivos, na implanta&ccedil;&atilde;o da Sala do Empreendedor, a
+</p>
+<p align="left">
+administra&ccedil;&atilde;o municipal poder&aacute; firmar parceria com outras institui&ccedil;&otilde;es para oferecer orienta&ccedil;&atilde;o
+</p>
+<p align="left">
+com rela&ccedil;&atilde;o &agrave; abertura, ao funcionamento e ao encerramento de empresas, incluindo apoio para
+</p>
+<p align="left">
+elabora&ccedil;&atilde;o de plano de neg&oacute;cios, pesquisa de mercado, orienta&ccedil;&atilde;o sobre cr&eacute;dito, associativismo e
+</p>
+<p align="left">
+programas de apoio oferecidos no munic&iacute;pio.
+</p>
+<p align="left">
+CAP&Iacute;TULO III
+</p>
+<p align="left">
+DO REGIME TRIBUT&Aacute;RIO
+</p>
+<p align="left">
+Art. 15. As microempresas, as empresas de pequeno porte e os micros empreendedores
+</p>
+<p align="left">
+individuais optantes pelo Regime Especial Unificado de Arrecada&ccedil;&atilde;o de Tributos e Contribui&ccedil;&otilde;es
+</p>
+<p align="left">
+devidos pelas microempresas e empresas de pequeno porte - Simples Nacional, relativamente ao
+</p>
+<p align="left">
+Imposto Sobre Servi&ccedil;os - ISS, cingir-se-&atilde;o &agrave;s disposi&ccedil;&otilde;es fixadas pela Lei Complementar Federal
+</p>
+<p align="left">
+n&ordm; 123, de 14 de dezembro de 2006, e suas altera&ccedil;&otilde;es, e pelas normas expedidas pelo Comit&ecirc;
+</p>
+<p align="left">
+Gestor do Simples Nacional.
+</p>
+<p align="left">
+Art. 16. O valor devido mensalmente a t&iacute;tulo de ISS pelas microempresas optantes pelo
+</p>
+<p align="left">
+Simples Nacional que aufiram receita bruta, no ano calend&aacute;rio anterior, igual ou inferior ao valor
+</p>
+<p align="left">
+definido no &sect; 18, do art. 18, da Lei Complementar n&ordm; 123, de 14 de dezembro de 2006, ser&aacute; por
+</p>
+<p align="left">
+estimativa, no valor mensal de R$ 100,00 (cem reais).
+</p>
+<p align="left">
+&sect; 1&ordm; O valor estimado mensal, nos termos do caput, ser&aacute; aplicado a partir do exerc&iacute;cio
+</p>
+<p align="left">
+seguinte ao da publica&ccedil;&atilde;o desta Lei Complementar.
+</p>
+<p align="left">
+&sect; 2&ordm; As microempresas que possuam mais de um estabelecimento ou que estejam no anocalend&aacute;rio
+</p>
+<p align="left">
+de in&iacute;cio de atividades ficam impedidas de utilizar o disposto neste artigo.
+</p>
+<p align="left">
+&sect; 3&ordm; O valor estimado apurado na forma deste artigo ser&aacute; devido ainda que tenha ocorrido
+</p>
+<p align="left">
+reten&ccedil;&atilde;o ou substitui&ccedil;&atilde;o tribut&aacute;ria.
+</p>
+<p align="left">
+&sect; 4&ordm; O valor estimado apurado na forma deste artigo dever&aacute; ser inclu&iacute;do no valor devido
+</p>
+<p align="left">
+pela microempresa relativamente ao Simples Nacional, quando da gera&ccedil;&atilde;o do Documento de
+</p>
+<p align="left">
+Arrecada&ccedil;&atilde;o do Simples Nacional (DAS).
+</p>
+<p align="left">
+7
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+Art. 17. A reten&ccedil;&atilde;o na fonte de ISS devido pelas microempresas ou pelas empresas de
+</p>
+<p align="left">
+pequeno porte optantes pelo Simples Nacional somente ser&aacute; permitida se observado o disposto no
+</p>
+<p align="left">
+art. 3&ordm; da Lei Complementar n&ordm;. 116, de 31 de julho de 2003, e dever&aacute; observar as seguintes
+</p>
+<p align="left">
+normas:
+</p>
+<p align="left">
+I - a al&iacute;quota aplic&aacute;vel na reten&ccedil;&atilde;o na fonte dever&aacute; ser informada no documento fiscal e
+</p>
+<p align="left">
+corresponder&aacute; ao percentual de ISS previsto nos Anexos III, IV ou V da Lei Complementar n&ordm; 123,
+</p>
+<p align="left">
+de 14 de dezembro de 2006, para a faixa de receita bruta a que a microempresa ou a empresa de
+</p>
+<p align="left">
+pequeno porte estiver sujeita no m&ecirc;s anterior ao da presta&ccedil;&atilde;o;
+</p>
+<p align="left">
+II - na hip&oacute;tese de o servi&ccedil;o sujeito &agrave; reten&ccedil;&atilde;o ser prestado no m&ecirc;s de in&iacute;cio de atividades da
+</p>
+<p align="left">
+microempresa ou da empresa de pequeno porte, dever&aacute; ser aplicada pelo tomador a al&iacute;quota
+</p>
+<p align="left">
+correspondente ao percentual de ISS referente &agrave; menor al&iacute;quota prevista nos Anexos III, IV ou V da
+</p>
+<p align="left">
+Lei Complementar n&ordm;. 123/2006;
+</p>
+<p align="left">
+III - na hip&oacute;tese do inciso II deste artigo, constatando-se que houve diferen&ccedil;a entre a
+</p>
+<p align="left">
+al&iacute;quota utilizada e a efetivamente apurada, caber&aacute; &agrave; microempresa ou empresa de pequeno porte
+</p>
+<p align="left">
+prestadora dos servi&ccedil;os efetuarem o recolhimento dessa diferen&ccedil;a no m&ecirc;s subsequente ao do in&iacute;cio
+</p>
+<p align="left">
+de atividade em guia pr&oacute;pria do Munic&iacute;pio;
+</p>
+<p align="left">
+IV - na hip&oacute;tese de a microempresa ou empresa de pequeno porte estar sujeita &agrave; tributa&ccedil;&atilde;o
+</p>
+<p align="left">
+do ISS no Simples Nacional por valores fixos mensais, n&atilde;o caber&aacute; a reten&ccedil;&atilde;o a que se refere este
+</p>
+<p align="left">
+artigo;
+</p>
+<p align="left">
+V - na hip&oacute;tese de a microempresa ou empresa de pequeno porte n&atilde;o informar a al&iacute;quota de
+</p>
+<p align="left">
+que tratam os incisos I e II deste artigo no documento fiscal, aplicar-se-&aacute; a maior al&iacute;quota
+</p>
+<p align="left">
+correspondente ao percentual de ISS prevista nos Anexos III, IV ou V da Lei Complementar
+</p>
+<p align="left">
+Federal n&ordm;. 123, de 14 de dezembro de 2006;
+</p>
+<p align="left">
+VI - n&atilde;o ser&aacute; eximida a responsabilidade do prestador de servi&ccedil;os quando a al&iacute;quota do ISS
+</p>
+<p align="left">
+informada no documento fiscal for inferior &agrave; devida, hip&oacute;tese em que o recolhimento dessa
+</p>
+<p align="left">
+diferen&ccedil;a ser&aacute; realizado em guia pr&oacute;pria do Munic&iacute;pio;
+</p>
+<p align="left">
+VII - o valor retido, devidamente recolhido, ser&aacute; definitivo, e sobre a receita de presta&ccedil;&atilde;o de
+</p>
+<p align="left">
+servi&ccedil;os que sofreu a reten&ccedil;&atilde;o n&atilde;o haver&aacute; incid&ecirc;ncia de ISS a ser recolhido no Simples Nacional.
+</p>
+<p align="left">
+Art. 18. Os escrit&oacute;rios de contabilidade, mesmo que optantes pelo Simples Nacional,
+</p>
+<p align="left">
+recolher&atilde;o o ISS em de acordo com o C&oacute;digo Tribut&aacute;rio Municipal, por meio de Documento de
+</p>
+<p align="left">
+Arrecada&ccedil;&atilde;o Municipal (DAM).
+</p>
+<p align="left">
+Art. 19. As obriga&ccedil;&otilde;es acess&oacute;rias das Microempresas, Empresas de Pequeno Porte e Micro
+</p>
+<p align="left">
+Empreendedor Individual ficam condicionadas a Resolu&ccedil;&atilde;o CGSN 94, de 29 de novembro de 2011
+</p>
+<p align="left">
+e suas altera&ccedil;&otilde;es.
+</p>
+<p align="left">
+CAP&Iacute;TULO IV
+</p>
+<p align="left">
+DO AGENTE DE DESENVOLVIMENTO
+</p>
+<p align="left">
+Art. 20. O Chefe do Poder Executivo Municipal, por meio de Decreto, designar&aacute; servidor e
+</p>
+<p align="left">
+&aacute;rea respons&aacute;vel em sua estrutura funcional para a efetiva&ccedil;&atilde;o dos dispositivos previstos na presente
+</p>
+<p align="left">
+Lei Complementar.
+</p>
+<p align="left">
+&sect; 1&ordm; A fun&ccedil;&atilde;o de Agente de desenvolvimento caracteriza-se pelo exerc&iacute;cio de articula&ccedil;&atilde;o
+</p>
+<p align="left">
+das a&ccedil;&otilde;es p&uacute;blicas para a promo&ccedil;&atilde;o do desenvolvimento local e territorial, mediante a&ccedil;&otilde;es locais
+</p>
+<p align="left">
+8
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+ou comunit&aacute;rias, in dividuais ou coletivas, que busquem o cumprimento das disposi&ccedil;&otilde;es e diretrizes
+</p>
+<p align="left">
+contidas nesta Lei Complementar, sob a supervis&atilde;o do COGEMPE.
+</p>
+<p align="left">
+&sect; 2&ordm; O agente de desenvolvimento dever&aacute; preencher os seguintes requisitos:
+</p>
+<p align="left">
+I - Residir na &aacute;rea da comunidade em que atuar;
+</p>
+<p align="left">
+II - Ter conclu&iacute;do, com aproveitamento, curso de qualifica&ccedil;&atilde;o b&aacute;sica para a forma&ccedil;&atilde;o de
+</p>
+<p align="left">
+agente de desenvolvimento, ou equivalente;
+</p>
+<p align="left">
+III - Ter conclu&iacute;do, no m&iacute;nimo, o segundo grau.
+</p>
+<p align="left">
+&sect; 3&ordm; Caber&aacute; ao agente de desenvolvimento buscar junto ao Minist&eacute;rio do Desenvolvimento,
+</p>
+<p align="left">
+Ind&uacute;stria e Com&eacute;rcio Exterior, juntamente com as demais entidades municipalistas e de apoio e
+</p>
+<p align="left">
+representa&ccedil;&atilde;o empresarial, o suporte para a&ccedil;&otilde;es de capacita&ccedil;&atilde;o, estudos, pesquisas, publica&ccedil;&otilde;es,
+</p>
+<p align="left">
+promo&ccedil;&atilde;o de interc&acirc;mbio de informa&ccedil;&otilde;es e experi&ecirc;ncias.
+</p>
+<p align="left">
+CAP&Iacute;TULO V
+</p>
+<p align="left">
+DA FISCALIZA&Ccedil;&Atilde;OORIENTADORA
+</p>
+<p align="left">
+Art. 21. A fiscaliza&ccedil;&atilde;o municipal, nos aspectos de posturas, uso do solo, sanit&aacute;rio,
+</p>
+<p align="left">
+ambiental e de seguran&ccedil;a, relativos &agrave;s microempresas, empresas de pequeno porte e demais
+</p>
+<p align="left">
+contribuintes, dever&aacute; ter natureza orientadora, quando a atividade ou situa&ccedil;&atilde;o, por sua natureza,
+</p>
+<p align="left">
+comportar grau de risco compat&iacute;vel com esse procedimento.
+</p>
+<p align="left">
+Art. 22. Nos moldes do artigo anterior, quando da fiscaliza&ccedil;&atilde;o municipal, ser&aacute; observado o
+</p>
+<p align="left">
+crit&eacute;rio de dupla visita para lavratura de auto de infra&ccedil;&atilde;o, exceto na ocorr&ecirc;ncia de reincid&ecirc;ncia,
+</p>
+<p align="left">
+fraude, resist&ecirc;ncia, descumprimento de orienta&ccedil;&otilde;es ou embara&ccedil;o &agrave; fiscaliza&ccedil;&atilde;o.
+</p>
+<p align="left">
+Par&aacute;grafo &uacute;nico. Considera-se reincid&ecirc;ncia, para fins deste artigo, a pr&aacute;tica do mesmo ato
+</p>
+<p align="left">
+no per&iacute;odo de 12 (doze) meses, contados do ato anterior.
+</p>
+<p align="left">
+Art. 23. A dupla visita consiste em uma primeira a&ccedil;&atilde;o, com a finalidade de verificar a
+</p>
+<p align="left">
+regularidade do estabelecimento, e em a&ccedil;&atilde;o posterior de car&aacute;ter punitivo quando, verificada
+</p>
+<p align="left">
+qualquer irregularidade na primeira visita, n&atilde;o for efetuada a respectiva regulariza&ccedil;&atilde;o no prazo
+</p>
+<p align="left">
+determinado.
+</p>
+<p align="left">
+Art. 24. Quando na visita for constatada qualquer irregularidade, ser&aacute; lavrado um termo de
+</p>
+<p align="left">
+verifica&ccedil;&atilde;o e orienta&ccedil;&atilde;o para que o respons&aacute;vel possa efetuar a regulariza&ccedil;&atilde;o no prazo de 30 (trinta)
+</p>
+<p align="left">
+dias, sem aplica&ccedil;&atilde;o de penalidade.
+</p>
+<p align="left">
+&sect; 1&ordm; Quando o prazo referido neste artigo n&atilde;o for suficiente para a regulariza&ccedil;&atilde;o
+</p>
+<p align="left">
+necess&aacute;ria, o interessado dever&aacute; formalizar junto ao &oacute;rg&atilde;o de fiscaliza&ccedil;&atilde;o um termo de ajuste de
+</p>
+<p align="left">
+conduta, no qual, justificadamente, assumir&aacute; o compromisso de efetuar a regulariza&ccedil;&atilde;o dentro do
+</p>
+<p align="left">
+cronograma que for fixado no termo.
+</p>
+<p align="left">
+&sect; 2&ordm; Decorridos os prazos fixados no caput ou no Termo de Ajuste de Conduta (TAC), sem
+</p>
+<p align="left">
+a regulariza&ccedil;&atilde;o necess&aacute;ria, ser&aacute; lavrado auto de infra&ccedil;&atilde;o com aplica&ccedil;&atilde;o de penalidade cab&iacute;vel.
+</p>
+<p align="left">
+Art. 25. Fica autorizado o Munic&iacute;pio de Modelo /SC a firmar conv&ecirc;nio com a Procuradoria-
+</p>
+<p align="left">
+Geral da Fazenda Nacional, para realizar a inscri&ccedil;&atilde;o em d&iacute;vida ativa municipal e a cobran&ccedil;a
+</p>
+<p align="left">
+9
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+judicial dos tributo s municipais a que se refere a Lei Complementar n&ordm; 123, de 14 de dezembro de
+</p>
+<p align="left">
+2006 e altera&ccedil;&otilde;es.
+</p>
+<p align="left">
+CAP&Iacute;TULO VI
+</p>
+<p align="left">
+DOS BENEF&Iacute;CIOS FISCAIS
+</p>
+<p align="left">
+Art. 26. Os MEIs, MEs e EPPs ter&atilde;o os seguintes benef&iacute;cios fiscais:
+</p>
+<p align="left">
+I - redu&ccedil;&atilde;o de 30% (trinta por cento) no pagamento da taxa de licen&ccedil;a e fiscaliza&ccedil;&atilde;o para
+</p>
+<p align="left">
+localiza&ccedil;&atilde;o, instala&ccedil;&atilde;o e funcionamento de microempresas e empresas de pequeno porte;
+</p>
+<p align="left">
+II - ficam reduzidos a 0 (zero) os valores referentes a taxas, emolumentos e demais custos
+</p>
+<p align="left">
+relativos &agrave; abertura, &agrave; inscri&ccedil;&atilde;o, ao registro, ao alvar&aacute;, &agrave; licen&ccedil;a e ao cadastro do
+</p>
+<p align="left">
+microempreendedor individual;
+</p>
+<p align="left">
+III - redu&ccedil;&atilde;o de 30% (trinta por cento) no pagamento do Imposto Predial e Territorial
+</p>
+<p align="left">
+Urbano (IPTU) nos primeiros 12 (doze) meses de instala&ccedil;&atilde;o, incidente sobre &uacute;nico im&oacute;vel pr&oacute;prio,
+</p>
+<p align="left">
+alugado ou cedido que seja utilizado exclusivamente pela microempresa e empresa de pequeno
+</p>
+<p align="left">
+porte ou por Micro Empreendedor Individual;
+</p>
+<p align="left">
+IV - isen&ccedil;&atilde;o do ISSQN para as empresas cuja receita bruta nos &uacute;ltimos 12 (doze) meses n&atilde;o
+</p>
+<p align="left">
+ultrapassar o limite de R$10.000,00 (dez mil reais);
+</p>
+<p align="left">
+V - redu&ccedil;&atilde;o da base de c&aacute;lculo do ISSQN, no percentual de 50% (cinquenta por cento), para
+</p>
+<p align="left">
+as empresas cuja receita bruta nos &uacute;ltimos 12 (doze) meses n&atilde;o ultrapassar o limite de R$
+</p>
+<p align="left">
+50.000,00 (cinquenta mil reais)
+</p>
+<p align="left">
+Art. 27. Os benef&iacute;cios previstos nesta Lei Complementar, n&atilde;o constantes na Lei
+</p>
+<p align="left">
+Complementar Federal n&ordm; 123/06, aplicam-se somente aos fatos geradores ocorridos ap&oacute;s a sua
+</p>
+<p align="left">
+vig&ecirc;ncia, desde que a empresa tenha ingressado no regime geral da ME, EPP e MEI nos termos da
+</p>
+<p align="left">
+Lei Complementar Federal n&ordm; 123/06.
+</p>
+<p align="left">
+Art. 28. As MEs e as EPPs cadastradas com previs&atilde;o de presta&ccedil;&atilde;o de servi&ccedil;os, e que n&atilde;o
+</p>
+<p align="left">
+estejam efetivamente exercendo essa atividade, poder&atilde;o solicitar dispensa de confec&ccedil;&atilde;o de tal&otilde;es
+</p>
+<p align="left">
+de notas fiscais de servi&ccedil;o.
+</p>
+<p align="left">
+CAPITULO VII
+</p>
+<p align="left">
+DA INOVA&Ccedil;&Atilde;O TECNOL&Oacute;GICA
+</p>
+<p align="left">
+SE&Ccedil;&Atilde;O I
+</p>
+<p align="left">
+DO APOIO &Agrave; INOVA&Ccedil;&Atilde;O
+</p>
+<p align="left">
+Art. 29. O Poder P&uacute;blico Municipal, por meio de legisla&ccedil;&atilde;o espec&iacute;fica e regulamentadora,
+</p>
+<p align="left">
+manter&aacute; programas de incentivo &agrave; inova&ccedil;&atilde;o tecnol&oacute;gica, visando o apoio &agrave; inova&ccedil;&atilde;o e &agrave; gest&atilde;o da
+</p>
+<p align="left">
+inova&ccedil;&atilde;o.
+</p>
+<p align="left">
+Par&aacute;grafo &uacute;nico. Para o desenvolvimento da inova&ccedil;&atilde;o e sua gest&atilde;o o Poder P&uacute;blico
+</p>
+<p align="left">
+Municipal buscar&aacute; apoio de institui&ccedil;&otilde;es de pesquisa e ensino, ou outras que puderem dar suporte &agrave;s
+</p>
+<p align="left">
+a&ccedil;&otilde;es de incentivo.
+</p>
+<p align="left">
+10
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+SE&Ccedil;&Atilde;O II
+</p>
+<p align="left">
+DO FOMENTO &Agrave;S INCUBADORAS, CONDOM&Iacute;NIOS
+</p>
+<p align="left">
+EMPRESARIAIS E EMPRESAS DE BASE TECNOL&Oacute;GICA
+</p>
+<p align="left">
+Art. 30. O Poder P&uacute;blico municipal manter&aacute; programa de desenvolvimento empresarial,
+</p>
+<p align="left">
+podendo instituir incubadoras de empresas com a finalidade de desenvolver microempresas e
+</p>
+<p align="left">
+empresas de pequeno porte de v&aacute;rios setores de atividade.
+</p>
+<p align="left">
+&sect; 1&ordm; A Prefeitura Municipal ser&aacute; respons&aacute;vel pela implementa&ccedil;&atilde;o do programa de
+</p>
+<p align="left">
+desenvolvimento empresarial referido no caput deste artigo, por si ou em parceria com entidades de
+</p>
+<p align="left">
+pesquisa e apoio a microempresas e a empresas de pequeno porte, &oacute;rg&atilde;os governamentais, ag&ecirc;ncias
+</p>
+<p align="left">
+de fomento, institui&ccedil;&otilde;es cient&iacute;ficas e tecnol&oacute;gicas, n&uacute;cleos de inova&ccedil;&atilde;o tecnol&oacute;gica e institui&ccedil;&otilde;es
+</p>
+<p align="left">
+de apoio.
+</p>
+<p align="left">
+&sect; 2&ordm; As a&ccedil;&otilde;es vinculadas &agrave; opera&ccedil;&atilde;o de incubadoras ser&atilde;o executadas em local
+</p>
+<p align="left">
+especificamente destinado para tal fim, podendo a municipalidade auxiliar nas despesas com
+</p>
+<p align="left">
+aluguel, manuten&ccedil;&atilde;o predial, fornecimento de &aacute;gua e demais despesas de infraestrutura, a t&iacute;tulo de
+</p>
+<p align="left">
+incentivo.
+</p>
+<p align="left">
+&sect; 3&ordm; O prazo m&aacute;ximo de perman&ecirc;ncia no programa &eacute; de 2 (dois) anos para que as empresas
+</p>
+<p align="left">
+atinjam suficiente capacita&ccedil;&atilde;o t&eacute;cnica, independ&ecirc;ncia econ&ocirc;mica e comercial, podendo ser
+</p>
+<p align="left">
+prorrogado por igual prazo mediante avalia&ccedil;&atilde;o t&eacute;cnica. Findo esse prazo, as empresas participantes
+</p>
+<p align="left">
+se transferir&atilde;o para &aacute;rea de seu dom&iacute;nio ou que venha a ser destinada pelo Poder P&uacute;blico
+</p>
+<p align="left">
+Municipal, com ocupa&ccedil;&atilde;o preferencial por empresas egressas de incubadoras do Munic&iacute;pio.
+</p>
+<p align="left">
+Art. 31. O Poder P&uacute;blico Municipal poder&aacute; criar distritos ou mini distritos industriais em
+</p>
+<p align="left">
+locais adequados, cujas condi&ccedil;&otilde;es para aliena&ccedil;&atilde;o dos lotes a serem ocupados ser&aacute; estabelecido em
+</p>
+<p align="left">
+lei.
+</p>
+<p align="left">
+CAP&Iacute;TULO VIII
+</p>
+<p align="left">
+DO ACESSO AOS MERCADOS
+</p>
+<p align="left">
+SE&Ccedil;&Atilde;O I
+</p>
+<p align="left">
+DAS AQUISI&Ccedil;&Otilde;ES P&Uacute;BLICAS
+</p>
+<p align="left">
+Art. 32. Nas contrata&ccedil;&otilde;es p&uacute;blicas de bens, servi&ccedil;os e obras do munic&iacute;pio, dever&aacute; ser
+</p>
+<p align="left">
+concedido tratamento favorecido, diferenciado e simplificado para as microempresas, empresas de
+</p>
+<p align="left">
+pequeno porte e empreendedores individuais, nos termos do disposto na Lei Complementar Federal
+</p>
+<p align="left">
+n&ordm;123/06.
+</p>
+<p align="left">
+Par&aacute;grafo &uacute;nico. Subordinam-se ao disposto nesta Lei Complementar, al&eacute;m dos &oacute;rg&atilde;os da
+</p>
+<p align="left">
+administra&ccedil;&atilde;o p&uacute;blica municipal direta, os fundos especiais, as autarquias, as funda&ccedil;&otilde;es p&uacute;blicas e
+</p>
+<p align="left">
+demais entes que comp&otilde;em a administra&ccedil;&atilde;o p&uacute;blica indireta.
+</p>
+<p align="left">
+Art. 33.Para a amplia&ccedil;&atilde;o da participa&ccedil;&atilde;o das microempresas e empresas de pequeno porte
+</p>
+<p align="left">
+nas licita&ccedil;&otilde;es, a administra&ccedil;&atilde;o p&uacute;blica municipal dever&aacute;:
+</p>
+<p align="left">
+11
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+I - instituir cadastro pr&oacute;prio, de acesso livre, ou adequar os cadastros existentes para
+</p>
+<p align="left">
+identificar as microempresas e empresas de pequeno porte sediadas regionalmente, com as
+</p>
+<p align="left">
+respectivas linhas de fornecimento, de modo a possibilitar a notifica&ccedil;&atilde;o das licita&ccedil;&otilde;es e facilitar a
+</p>
+<p align="left">
+forma&ccedil;&atilde;o de parcerias e subcontrata&ccedil;&otilde;es;
+</p>
+<p align="left">
+II - divulgar as especifica&ccedil;&otilde;es de bens e servi&ccedil;os contratados de modo a orientar as
+</p>
+<p align="left">
+microempresas e empresas de pequeno porte para que ad&eacute;quem os seus processos produtivos;
+</p>
+<p align="left">
+III - na defini&ccedil;&atilde;o do objeto da contrata&ccedil;&atilde;o, n&atilde;o dever&aacute; utilizar especifica&ccedil;&otilde;es que restrinjam
+</p>
+<p align="left">
+injustificadamente a participa&ccedil;&atilde;o das microempresas e empresas de pequeno porte;
+</p>
+<p align="left">
+IV - estabelecer e divulgar um planejamento anual das contrata&ccedil;&otilde;es p&uacute;blicas a serem
+</p>
+<p align="left">
+realizadas, com a estimativa de quantitativo e de data das contrata&ccedil;&otilde;es.
+</p>
+<p align="left">
+Art. 34. As contrata&ccedil;&otilde;es diretas por dispensas de licita&ccedil;&atilde;o com base nos incisos I e II do
+</p>
+<p align="left">
+artigo 24 da Lei Federal n&ordm; 8.666/93 dever&atilde;o ser preferencialmente realizadas com microempresas e
+</p>
+<p align="left">
+empresas de pequeno porte sediadas no munic&iacute;pio ou na regi&atilde;o.
+</p>
+<p align="left">
+Art. 35. Exigir-se-&aacute; da microempresa e da empresa de pequeno porte, para habilita&ccedil;&atilde;o em
+</p>
+<p align="left">
+quaisquer licita&ccedil;&otilde;es do munic&iacute;pio para fornecimento de bens para pronta entrega ou servi&ccedil;os
+</p>
+<p align="left">
+imediatos, apenas o seguinte:
+</p>
+<p align="left">
+I - ato constitutivo da empresa, devidamente registrado;
+</p>
+<p align="left">
+II - inscri&ccedil;&atilde;o no CNPJ, para fins de qualifica&ccedil;&atilde;o;
+</p>
+<p align="left">
+III - certid&atilde;o atualizada de inscri&ccedil;&atilde;o na Junta Comercial do Estado, com a designa&ccedil;&atilde;o do
+</p>
+<p align="left">
+porte (ME ou EPP).
+</p>
+<p align="left">
+Art. 36. A comprova&ccedil;&atilde;o de regularidade fiscal das ME&#39;s e EPP&#39;s somente ser&aacute; exigida para
+</p>
+<p align="left">
+efeitos de contrata&ccedil;&atilde;o e n&atilde;o como condi&ccedil;&atilde;o para participa&ccedil;&atilde;o na habilita&ccedil;&atilde;o.
+</p>
+<p align="left">
+&sect; 1&ordm; Havendo alguma restri&ccedil;&atilde;o na comprova&ccedil;&atilde;o da regularidade fiscal, ser&aacute; assegurado o
+</p>
+<p align="left">
+prazo de 2 (dois) dias &uacute;teis, cujo termo inicial corresponder&aacute; ao momento em que o proponente for
+</p>
+<p align="left">
+declarado vencedor do certame, para a regulariza&ccedil;&atilde;o da documenta&ccedil;&atilde;o, do pagamento ou do
+</p>
+<p align="left">
+parcelamento do d&eacute;bito, e para a emiss&atilde;o de eventuais certid&otilde;es negativas ou positivas com efeito
+</p>
+<p align="left">
+de certid&atilde;o negativa.
+</p>
+<p align="left">
+&sect; 2&ordm; Entende-se o termo &quot;declarado vencedor&quot; de que trata o par&aacute;grafo anterior o momento
+</p>
+<p align="left">
+imediatamente posterior &agrave; fase de habilita&ccedil;&atilde;o, no caso da modalidade de preg&atilde;o, e, nos demais
+</p>
+<p align="left">
+casos, o momento posterior ao julgamento das propostas, aguardando-se os prazos para
+</p>
+<p align="left">
+regulariza&ccedil;&atilde;o fiscal para a abertura da fase recursal.
+</p>
+<p align="left">
+&sect; 3&ordm; A n&atilde;o-regulariza&ccedil;&atilde;o da documenta&ccedil;&atilde;o, no prazo previsto no &sect; 1&ordm;, implicar&aacute; a preclus&atilde;o
+</p>
+<p align="left">
+do direito &agrave; contrata&ccedil;&atilde;o, sem preju&iacute;zo das san&ccedil;&otilde;es previstas no artigo 81 da Lei n&ordm; 8.666, de
+</p>
+<p align="left">
+21/06/1993, sendo facultado &agrave; administra&ccedil;&atilde;o convocar os licitantes remanescentes, na ordem de
+</p>
+<p align="left">
+classifica&ccedil;&atilde;o, para a assinatura do contrato, ou revogar a licita&ccedil;&atilde;o.
+</p>
+<p align="left">
+&sect; 4&ordm; O disposto no par&aacute;grafo anterior dever&aacute; constar no instrumento convocat&oacute;rio da
+</p>
+<p align="left">
+licita&ccedil;&atilde;o.
+</p>
+<p align="left">
+Art. 37. Nas licita&ccedil;&otilde;es para a aquisi&ccedil;&atilde;o de bens, produtos e servi&ccedil;os de natureza divis&iacute;vel e
+</p>
+<p align="left">
+desde que n&atilde;o haja preju&iacute;zo para o conjunto da contrata&ccedil;&atilde;o, a administra&ccedil;&atilde;o p&uacute;blica municipal
+</p>
+<p align="left">
+poder&aacute; reservar cota de at&eacute; 25% (vinte e cinco por cento) do objeto para a contrata&ccedil;&atilde;o de
+</p>
+<p align="left">
+microempresas e empresas de pequeno porte.
+</p>
+<p align="left">
+12
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+&sect; 1&ordm; O disp osto neste artigo n&atilde;o impede a contrata&ccedil;&atilde;o das microempresas ou empresas de
+</p>
+<p align="left">
+pequeno porte na totalidade do objeto, sendo-lhes reservada exclusividade de participa&ccedil;&atilde;o na
+</p>
+<p align="left">
+disputa de que trata o caput.
+</p>
+<p align="left">
+&sect; 2&ordm; Aplica-se o disposto no caput sempre que houver, local ou regionalmente, o m&iacute;nimo de
+</p>
+<p align="left">
+3 (tr&ecirc;s) fornecedores competitivos enquadrados como microempresa ou empresa de pequeno porte
+</p>
+<p align="left">
+e que atendam &agrave;s exig&ecirc;ncias constantes no instrumento convocat&oacute;rio.
+</p>
+<p align="left">
+&sect; 3&ordm; Admite-se a divis&atilde;o da cota reservada em m&uacute;ltiplas cotas, objetivando-se a amplia&ccedil;&atilde;o
+</p>
+<p align="left">
+da competitividade e observando-se o seguinte:
+</p>
+<p align="left">
+I - a soma dos percentuais de cada cota em rela&ccedil;&atilde;o ao total do objeto n&atilde;o poder&aacute; ultrapassar
+</p>
+<p align="left">
+25% (vinte e cinco por cento);
+</p>
+<p align="left">
+II - N&atilde;o havendo vencedor para a cota reservada, esta poder&aacute; ser adjudicada ao vencedor da
+</p>
+<p align="left">
+cota principal, ou, diante de sua recusa, aos licitantes remanescentes, desde que pratiquem o pre&ccedil;o
+</p>
+<p align="left">
+do primeiro colocado.
+</p>
+<p align="left">
+Art. 38.Nas licita&ccedil;&otilde;es, ser&aacute; assegurado, como crit&eacute;rio de desempate, prefer&ecirc;ncia de
+</p>
+<p align="left">
+contrata&ccedil;&atilde;o para as microempresas e empresas de pequeno porte.
+</p>
+<p align="left">
+&sect; 1&ordm; Entende-se por empate aquelas situa&ccedil;&otilde;es em que as propostas apresentadas pelas
+</p>
+<p align="left">
+microempresas e empresas de pequeno porte sejam iguais ou at&eacute; 10% (dez por cento) superiores &agrave;
+</p>
+<p align="left">
+proposta mais bem classificada.
+</p>
+<p align="left">
+&sect; 2&ordm; Na modalidade de preg&atilde;o, o intervalo percentual estabelecido no &sect; 1&ordm; deste artigo ser&aacute;
+</p>
+<p align="left">
+de at&eacute; 5% (cinco por cento) superior ao melhor pre&ccedil;o.
+</p>
+<p align="left">
+Art. 39. Para efeito do disposto no artigo anterior, ocorrendo o empate, proceder-se-&aacute; da
+</p>
+<p align="left">
+seguinte forma:
+</p>
+<p align="left">
+I - a microempresa ou empresa de pequeno porte melhor classificada poder&aacute; apresentar
+</p>
+<p align="left">
+proposta de pre&ccedil;o inferior &agrave;quela considerada vencedora do certame, situa&ccedil;&atilde;o em que ser&aacute;
+</p>
+<p align="left">
+adjudicado em seu favor o objeto;
+</p>
+<p align="left">
+II - n&atilde;o ocorrendo a contrata&ccedil;&atilde;o da microempresa ou empresa de pequeno porte, na forma
+</p>
+<p align="left">
+do inciso I, ser&atilde;o convocadas as remanescentes que porventura se enquadrem na hip&oacute;tese dos &sect;&sect; 1&ordm;
+</p>
+<p align="left">
+e 2&ordm; do art. 32, na ordem classificat&oacute;ria, para o exerc&iacute;cio do mesmo direito;
+</p>
+<p align="left">
+III - no caso de equival&ecirc;ncia dos valores apresentados pelas microempresas e empresas de
+</p>
+<p align="left">
+pequeno porte que se encontrem nos intervalos estabelecidos nos par&aacute;grafos 1&ordm; e 2&ordm; do art. 32, ser&aacute;
+</p>
+<p align="left">
+realizado sorteio entre elas para que se identifique a que primeiro poder&aacute; apresentar melhor oferta.
+</p>
+<p align="left">
+&sect; 1&ordm; Na hip&oacute;tese da n&atilde;o contrata&ccedil;&atilde;o nos termos previstos nos incisos I, II e III, o contrato
+</p>
+<p align="left">
+ser&aacute; adjudicado em favor da proposta originalmente vencedora do certame.
+</p>
+<p align="left">
+&sect; 2&ordm; O disposto neste artigo somente se aplicar&aacute; quando a melhor oferta inicial n&atilde;o tiver
+</p>
+<p align="left">
+sido apresentada por microempresa ou empresa de pequeno porte.
+</p>
+<p align="left">
+&sect; 3&ordm; No caso de preg&atilde;o, ap&oacute;s o encerramento dos lances, a microempresa ou empresa de
+</p>
+<p align="left">
+pequeno porte melhor classificada ser&aacute; convocada para apresentar nova proposta no prazo m&aacute;ximo
+</p>
+<p align="left">
+de 05 (cinco) minutos por item em situa&ccedil;&atilde;o de empate, sob pena de preclus&atilde;o, observado o disposto
+</p>
+<p align="left">
+no inciso III deste artigo.
+</p>
+<p align="left">
+&sect; 4&ordm; Nas demais modalidades de licita&ccedil;&atilde;o, o prazo para os licitantes apresentarem nova
+</p>
+<p align="left">
+proposta ser&aacute; de (02) dois dias &uacute;teis.
+</p>
+<p align="left">
+13
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+&sect; 5&ordm; No caso de planilhas detalhadas, estas dever&atilde;o ser readequadas pela EPP ou ME e
+</p>
+<p align="left">
+entregues conjuntamente &agrave; nova proposta.
+</p>
+<p align="left">
+Art. 40. O Munic&iacute;pio poder&aacute; realizar processo licitat&oacute;rio destinado exclusivamente &agrave;
+</p>
+<p align="left">
+participa&ccedil;&atilde;o de microempresas e empresas de pequeno porte nas contrata&ccedil;&otilde;es cujo valor total do
+</p>
+<p align="left">
+pre&ccedil;o m&eacute;dio seja igual ou inferior a R$ 80.000,00 (oitenta mil reais).
+</p>
+<p align="left">
+Art. 41. O Munic&iacute;pio poder&aacute;, por meio do instrumento convocat&oacute;rio, dar tratamento
+</p>
+<p align="left">
+diferenciado e simplificado para as microempresas e empresas de pequeno porte objetivando a
+</p>
+<p align="left">
+promo&ccedil;&atilde;o do desenvolvimento econ&ocirc;mico e social no &acirc;mbito municipal e regional, a amplia&ccedil;&atilde;o da
+</p>
+<p align="left">
+efici&ecirc;ncia das pol&iacute;ticas p&uacute;blicas e o incentivo &agrave; inova&ccedil;&atilde;o tecnol&oacute;gica, das seguintes formas:
+</p>
+<p align="left">
+I - Exigindo dos licitantes a subcontrata&ccedil;&atilde;o de microempresa ou de empresa de pequeno
+</p>
+<p align="left">
+porte, desde que o percentual m&aacute;ximo do objeto a ser subcontratado n&atilde;o exceda a 30% (trinta por
+</p>
+<p align="left">
+cento) do total licitado;
+</p>
+<p align="left">
+II - Estabelecendo cota de at&eacute; 25% (vinte e cinco por cento) do objeto para a contrata&ccedil;&atilde;o de
+</p>
+<p align="left">
+microempresas e empresas de pequeno porte, em certames para a aquisi&ccedil;&atilde;o de bens e servi&ccedil;os de
+</p>
+<p align="left">
+natureza divis&iacute;vel.
+</p>
+<p align="left">
+Par&aacute;grafo &uacute;nico. O valor licitado por meio do disposto neste artigo n&atilde;o poder&aacute; exceder a
+</p>
+<p align="left">
+25% (vinte e cinco por cento) do total licitado em cada ano civil.
+</p>
+<p align="left">
+Art. 42. O munic&iacute;pio proporcionar&aacute; a capacita&ccedil;&atilde;o dos pregoeiros, da equipe de apoio e dos
+</p>
+<p align="left">
+membros das comiss&otilde;es de licita&ccedil;&atilde;o da administra&ccedil;&atilde;o municipal sobre o que disp&otilde;e esta Lei
+</p>
+<p align="left">
+Complementar.
+</p>
+<p align="left">
+Art. 43. Em licita&ccedil;&otilde;es para aquisi&ccedil;&atilde;o de produtos para merenda escolar e para os programas
+</p>
+<p align="left">
+sociais de seguran&ccedil;a alimentar, destacadamente aqueles de origem local, a administra&ccedil;&atilde;o p&uacute;blica
+</p>
+<p align="left">
+municipal dever&aacute; utilizar preferencialmente a modalidade de chamada p&uacute;blica ou preg&atilde;o
+</p>
+<p align="left">
+presencial.
+</p>
+<p align="left">
+SE&Ccedil;&Atilde;O II
+</p>
+<p align="left">
+EST&Iacute;MULO AO MERCADO LOCAL
+</p>
+<p align="left">
+Art. 44. A administra&ccedil;&atilde;o p&uacute;blica municipal incentivar&aacute; a realiza&ccedil;&atilde;o de feiras de produtores
+</p>
+<p align="left">
+e artes&atilde;os, assim como apoiar&aacute; miss&otilde;es t&eacute;cnicas para exposi&ccedil;&atilde;o e venda de produtos locais em
+</p>
+<p align="left">
+outros munic&iacute;pios ou estados.
+</p>
+<p align="left">
+CAP&Iacute;TULO IX
+</p>
+<p align="left">
+DO EST&Iacute;MULO AO CR&Eacute;DITO E &Agrave; CAPITALIZA&Ccedil;&Atilde;O
+</p>
+<p align="left">
+Art. 45. A administra&ccedil;&atilde;o municipal, para est&iacute;mulo ao cr&eacute;dito e &agrave; capitaliza&ccedil;&atilde;o dos
+</p>
+<p align="left">
+empreendedores e das empresas de micro e pequeno portes, poder&aacute; reservar, em seu or&ccedil;amento
+</p>
+<p align="left">
+anual, percentual a ser utilizado para apoiar programas de cr&eacute;dito e/ou garantias, isolados ou
+</p>
+<p align="left">
+suplementarmente aos programas institu&iacute;dos pelo Estado ou pela Uni&atilde;o.
+</p>
+<p align="left">
+14
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+Art. 46. A administra&ccedil;&atilde;o p&uacute;blica municipal fomentar&aacute; e apoiar&aacute; a cria&ccedil;&atilde;o e o
+</p>
+<p align="left">
+funcionamento de linhas de microcr&eacute;dito operacionalizadas por meio de institui&ccedil;&otilde;es, tais como
+</p>
+<p align="left">
+cooperativas de cr&eacute;dito, sociedades de cr&eacute;dito ao empreendedor e organiza&ccedil;&otilde;es da sociedade civil
+</p>
+<p align="left">
+dedicadas ao microcr&eacute;dito com atua&ccedil;&atilde;o no &acirc;mbito do Munic&iacute;pio ou da regi&atilde;o.
+</p>
+<p align="left">
+Art. 47. A administra&ccedil;&atilde;o p&uacute;blica municipal fomentar&aacute; e apoiar&aacute; a instala&ccedil;&atilde;o e a
+</p>
+<p align="left">
+manuten&ccedil;&atilde;o, no munic&iacute;pio, de cooperativas de cr&eacute;dito e outras institui&ccedil;&otilde;es financeiras, p&uacute;blicas e
+</p>
+<p align="left">
+privadas, que tenham como principal finalidade a realiza&ccedil;&atilde;o de opera&ccedil;&otilde;es de cr&eacute;dito com
+</p>
+<p align="left">
+microempresas e empresas de pequeno porte.
+</p>
+<p align="left">
+CAP&Iacute;TULO X
+</p>
+<p align="left">
+DA MEDIA&Ccedil;&Atilde;O E ARBITRAGEM
+</p>
+<p align="left">
+Art. 48. O munic&iacute;pio poder&aacute; celebrar parcerias com entidades locais, inclusive com o Poder
+</p>
+<p align="left">
+Judici&aacute;rio, objetivando a estimula&ccedil;&atilde;o e a utiliza&ccedil;&atilde;o dos institutos de concilia&ccedil;&atilde;o pr&eacute;via, media&ccedil;&atilde;o e
+</p>
+<p align="left">
+arbitragem para solu&ccedil;&atilde;o de conflitos de interesse das empresas de pequeno porte e microempresas
+</p>
+<p align="left">
+localizadas em seu territ&oacute;rio.
+</p>
+<p align="left">
+&sect; 1&ordm; O est&iacute;mulo a que se refere o caput deste artigo compreende campanhas de divulga&ccedil;&atilde;o,
+</p>
+<p align="left">
+servi&ccedil;os de esclarecimento e tratamento diferenciado, simplificado e favorecido no tocante aos
+</p>
+<p align="left">
+custos administrativos e aos honor&aacute;rios cobrados.
+</p>
+<p align="left">
+&sect; 2&ordm; Com base no caput deste artigo, o munic&iacute;pio tamb&eacute;m poder&aacute; formar parceria com
+</p>
+<p align="left">
+Poder Judici&aacute;rio, a Ordem dos Advogados do Brasil (OAB) e as universidades, com a finalidade de
+</p>
+<p align="left">
+criar e implantar o setor de concilia&ccedil;&atilde;o extrajudicial.
+</p>
+<p align="left">
+CAP&Iacute;TULO XI
+</p>
+<p align="left">
+DO ASSOCIATIVISMO
+</p>
+<p align="left">
+Art. 49. O Poder Executivo incentivar&aacute; microempresas e empresas de pequeno porte a
+</p>
+<p align="left">
+organizarem-se em cooperativas, na forma das sociedades previstas no artigo 56 da Lei
+</p>
+<p align="left">
+Complementar Federal n&ordm; 123/06, ou outra forma de associa&ccedil;&atilde;o para os fins de desenvolvimento de
+</p>
+<p align="left">
+suas atividades.
+</p>
+<p align="left">
+Art. 50. A administra&ccedil;&atilde;o p&uacute;blica municipal dever&aacute; identificar a voca&ccedil;&atilde;o econ&ocirc;mica do
+</p>
+<p align="left">
+munic&iacute;pio e incentivar o fortalecimento das principais atividades empresariais relacionadas, por
+</p>
+<p align="left">
+meio de associa&ccedil;&otilde;es e cooperativas.
+</p>
+<p align="left">
+Art. 51. O Poder Executivo adotar&aacute; mecanismos de incentivo &agrave;s cooperativas e associa&ccedil;&otilde;es
+</p>
+<p align="left">
+para viabilizar a cria&ccedil;&atilde;o, a manuten&ccedil;&atilde;o e o desenvolvimento do sistema associativo e cooperativo
+</p>
+<p align="left">
+no munic&iacute;pio por meio de:
+</p>
+<p align="left">
+I - est&iacute;mulo &agrave; inclus&atilde;o do estudo do cooperativismo e associativismo nas escolas do
+</p>
+<p align="left">
+munic&iacute;pio, tendo em vista o fortalecimento da cultura empreendedora como forma de organiza&ccedil;&atilde;o
+</p>
+<p align="left">
+de produ&ccedil;&atilde;o, do consumo e do trabalho;
+</p>
+<p align="left">
+II - est&iacute;mulo &agrave; forma cooperativa de organiza&ccedil;&atilde;o social, econ&ocirc;mica e cultural nos diversos
+</p>
+<p align="left">
+ramos de atua&ccedil;&atilde;o, com base nos princ&iacute;pios gerais do associativismo e na legisla&ccedil;&atilde;o vigente;
+</p>
+<p align="left">
+15
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+III - estabe lecimento de mecanismos de triagem e qualifica&ccedil;&atilde;o da informalidade para
+</p>
+<p align="left">
+implementa&ccedil;&atilde;o de associa&ccedil;&otilde;es e sociedades cooperativas de trabalho, tendo em vista a inclus&atilde;o da
+</p>
+<p align="left">
+popula&ccedil;&atilde;o do munic&iacute;pio no mercado produtivo, fomentando alternativas para a gera&ccedil;&atilde;o de trabalho
+</p>
+<p align="left">
+e renda;
+</p>
+<p align="left">
+IV - cria&ccedil;&atilde;o de instrumentos espec&iacute;ficos de est&iacute;mulo &agrave; atividade associativa e cooperativa
+</p>
+<p align="left">
+destinadas &agrave; exporta&ccedil;&atilde;o;
+</p>
+<p align="left">
+V - apoio aos empres&aacute;rios locais para organizarem-se em cooperativas de cr&eacute;dito e
+</p>
+<p align="left">
+consumo;
+</p>
+<p align="left">
+VI - cess&atilde;o de bens m&oacute;veis e im&oacute;veis do Munic&iacute;pio.
+</p>
+<p align="left">
+CAP&Iacute;TULO XII
+</p>
+<p align="left">
+DO PARCELAMENTO DE D&Eacute;BITO DAS MEs, EPPs E MEIs
+</p>
+<p align="left">
+Art. 52. Ser&aacute; concedido parcelamento, em at&eacute; 24 (vinte e quatro) parcelas mensais e
+</p>
+<p align="left">
+sucessivas, dos d&eacute;bitos relativos ao ISSQN e aos demais tributos devidos ao Munic&iacute;pio, de
+</p>
+<p align="left">
+responsabilidade das MEs, EPPs e MEIs, nos termos do C&oacute;digo Tribut&aacute;rio Municipal.
+</p>
+<p align="left">
+&sect; 1&ordm; O valor m&iacute;nimo da parcela mensal ser&aacute; de R$ 30,00 (trinta reais).
+</p>
+<p align="left">
+&sect; 2&ordm; Esse parcelamento alcan&ccedil;a inclusive d&eacute;bitos inscritos em d&iacute;vida ativa, ainda que
+</p>
+<p align="left">
+ajuizada a sua cobran&ccedil;a.
+</p>
+<p align="left">
+&sect; 3&ordm; O parcelamento ser&aacute; requerido ao Setor de Tributa&ccedil;&atilde;o do Munic&iacute;pio e obedecer&aacute; as
+</p>
+<p align="left">
+regras do C&oacute;digo Tribut&aacute;rio Municipal.
+</p>
+<p align="left">
+&sect; 4&ordm; A inadimpl&ecirc;ncia de 03 (tr&ecirc;s) parcelas consecutivas &eacute; causa de rescis&atilde;o dos efeitos do
+</p>
+<p align="left">
+parcelamento, mediante notifica&ccedil;&atilde;o.
+</p>
+<p align="left">
+&sect; 5&ordm; As parcelas ser&atilde;o atualizadas monetariamente, anualmente, com base na varia&ccedil;&atilde;o da
+</p>
+<p align="left">
+Unidade Fiscal Municipal - UFM
+</p>
+<p align="left">
+CAP&Iacute;TULO XIII
+</p>
+<p align="left">
+DAS DISPOSI&Ccedil;&Otilde;ES FINAIS E TRANSIT&Oacute;RIAS
+</p>
+<p align="left">
+Art. 53. O COGEMPE elaborar&aacute; cartilha para ampla divulga&ccedil;&atilde;o dos benef&iacute;cios e das
+</p>
+<p align="left">
+vantagens institu&iacute;dos por esta Lei Complementar, especialmente buscando a formaliza&ccedil;&atilde;o e
+</p>
+<p align="left">
+legaliza&ccedil;&atilde;o dos empreendimentos.
+</p>
+<p align="left">
+Art. 54. A administra&ccedil;&atilde;o p&uacute;blica municipal incentivar&aacute; a cria&ccedil;&atilde;o de programas espec&iacute;ficos
+</p>
+<p align="left">
+de atra&ccedil;&atilde;o de novas empresas, de forma direta ou em parceria com outras entidades p&uacute;blicas ou
+</p>
+<p align="left">
+privadas, da mesma forma que incentivar&aacute; a legaliza&ccedil;&atilde;o e formaliza&ccedil;&atilde;o dos Microempreendedores
+</p>
+<p align="left">
+Individuais.
+</p>
+<p align="left">
+Art. 55. As despesas decorrentes da presente Lei Complementar correr&atilde;o por conta das
+</p>
+<p align="left">
+dota&ccedil;&otilde;es constantes do or&ccedil;amento municipal em cada exerc&iacute;cio financeiro.
+</p>
+<p align="left">
+16
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+Art. 56. Co mpete ao Chefe do Poder Executivo, atrav&eacute;s de decreto, regulamentar a presente
+</p>
+<p align="left">
+Lei Complementar e promover ampla divulga&ccedil;&atilde;o do tratamento diferenciado, simplificado,
+</p>
+<p align="left">
+favorecido e de incentivo &agrave;s microempresas, &agrave;s empresas de pequeno porte e aos
+</p>
+<p align="left">
+microempreendedores individuais.
+</p>
+<p align="left">
+Art. 57. Esta Lei Complementar entra em vigor na data de sua publica&ccedil;&atilde;o.
+</p>
+<p align="left">
+Art. 58. Revoga-se a Lei Complementar Municipal n.1886/2010, de 23 de dezembro de
+</p>
+<p align="left">
+2012, e demais disposi&ccedil;&otilde;es em contr&aacute;rio.
+</p>
+<p align="left">
+Gabinete do Prefeito Municipal de Modelo - SC, em 12 de dezembro de 2012.
+</p>
+<p align="left">
+IMILIO AVILA
+</p>
+<p align="left">
+Prefeito Municipal
+</p>
+<p align="left">
+Registrada e Publicada na data supra
+</p>
+<p align="left">
+ALDECIR ANTONIO BOLIS
+</p>
+<p align="left">
+Diretor de Administra&ccedil;&atilde;o e Fazenda
+</p>
+<p align="left">
+17
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+ANEXO &Uacute;NICO
+</p>
+<p align="left">
+PROJETO DE LEI COMPLEMENTAR 039/2012 DE 26.10.2012.
+</p>
+<p align="left">
+ATIVIDADES CONSIDERADAS DE ALTO GRAU DE RISCO PARA AS QUAIS
+</p>
+<p align="left">
+N&Atilde;O SER&Aacute; CONCEDIDO ALVAR&Aacute; PROVIS&Oacute;RIO.
+</p>
+<p align="left">
+(Codifica&ccedil;&atilde;o da Vigil&acirc;ncia Sanit&aacute;ria)
+</p>
+<p align="left">
+IND&Uacute;STRIA DE ALIMENTOS
+</p>
+<p align="left">
+11010 Conservas de Produtos de Origem Vegetal
+</p>
+<p align="left">
+11029 Doces/Produtos de Confeitaria (c/creme)
+</p>
+<p align="left">
+11037 Massas Frescas
+</p>
+<p align="left">
+11088 Panifica&ccedil;&atilde;o (Fabrica/Distribui&ccedil;&atilde;o)
+</p>
+<p align="left">
+11045 Produtos Aliment&iacute;cios Infantis
+</p>
+<p align="left">
+11096 Produtos Congelados
+</p>
+<p align="left">
+11053 Produtos Diet&eacute;ticos
+</p>
+<p align="left">
+11061 Refei&ccedil;&otilde;es Industriais
+</p>
+<p align="left">
+11070 Sorvetes e Semilares
+</p>
+<p align="left">
+LOCAL DE ELABORA&Ccedil;&Atilde;O E/OU VENDA DE ALIMENTOS
+</p>
+<p align="left">
+22012 A&ccedil;ougue
+</p>
+<p align="left">
+22020 Assadora de Aves e outros Tipos de Carne
+</p>
+<p align="left">
+22047 Casa de Carnes
+</p>
+<p align="left">
+22055 Casa de Frios (Latic&iacute;nios e Embutidos)
+</p>
+<p align="left">
+22098 Casa de Sucos/Caldo de Cana e Semilares
+</p>
+<p align="left">
+22110 Com&eacute;rcio Atacadista/Dep&oacute;s. de Prod. Perec&iacute;veis.
+</p>
+<p align="left">
+22071 Confeitaria
+</p>
+<p align="left">
+22080 Cozinha Clube/Hotel/Motel/Boite/Similares
+</p>
+<p align="left">
+22101 Cozinha de Lact&aacute;rios/Hosp./Mater/Casas Sa&uacute;de
+</p>
+<p align="left">
+22128 Feiras Livre/Comer.Amb.(C/venda carne/Pescado)
+</p>
+<p align="left">
+22136 Lanchonete e Petiscarias
+</p>
+<p align="left">
+22250 Mercado Super/Mini
+</p>
+<p align="left">
+22152 Mercearia/armaz&eacute;m
+</p>
+<p align="left">
+22160 Padaria/panificadora
+</p>
+<p align="left">
+22179 Pastelaria
+</p>
+<p align="left">
+22187 Peixaria (Pescados e Frutos do Mar)
+</p>
+<p align="left">
+22209 Produtos congelados
+</p>
+<p align="left">
+22217 Restaurantes/Buffet/Churrascaria
+</p>
+<p align="left">
+22225 Rotesserie
+</p>
+<p align="left">
+22233 Serv-Carro/drive-in/quiosques/trailler/Similares
+</p>
+<p align="left">
+22241 Sorveteria e/ou posto de venda
+</p>
+<p align="left">
+INDUSTRIA DE PRODUTOS DE INTERESSE DA SA&Uacute;DE
+</p>
+<p align="left">
+33014 Agrot&oacute;xico
+</p>
+<p align="left">
+33022 Cosm&eacute;ticos, Perfumes e produtos de higiene
+</p>
+<p align="left">
+33030 Insumos Farmac&ecirc;uticos
+</p>
+<p align="left">
+33049 Produtos Farmac&ecirc;uticos
+</p>
+<p align="left">
+33057 Produtos biol&oacute;gicos
+</p>
+<p align="left">
+33065 Produtos de uso Laboratorial
+</p>
+<p align="left">
+18
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+33073 Prod utos de uso M&eacute;dico/Hospitalar
+</p>
+<p align="left">
+33081 Produtos de uso Odontol&oacute;gico
+</p>
+<p align="left">
+33090 Pr&oacute;teses (ortp/Est&eacute;tica/Auditiva,etc.)
+</p>
+<p align="left">
+33103 Saneantes Domissanit&aacute;rios
+</p>
+<p align="left">
+COM&Eacute;RCIO DE PRODUTOS DE INTERESSE DA SA&Uacute;DE - 44
+</p>
+<p align="left">
+44016 Agrot&oacute;xicos
+</p>
+<p align="left">
+44024 Com/Distrib. de Medicamentos
+</p>
+<p align="left">
+44032 Com/Disrtrib.de Produtos Laboratoriais
+</p>
+<p align="left">
+44040 Com/Distrib. de Produtos M&eacute;d/Hospitalar
+</p>
+<p align="left">
+44059 Com/Distrib. de Produtos Odontol&oacute;gicos
+</p>
+<p align="left">
+44067 Com/Distrib. de Produtos Veterin&aacute;rios
+</p>
+<p align="left">
+44075 Com/Distrib. de Seneantes/Domissanit&aacute;rios
+</p>
+<p align="left">
+44083 Produtos Qu&iacute;micos
+</p>
+<p align="left">
+PRESTA&Ccedil;&Atilde;O DE SERVI&Ccedil;OS DE SA&Uacute;DE - 55
+</p>
+<p align="left">
+55018 Ambulat&oacute;rio M&eacute;dico
+</p>
+<p align="left">
+55026 Ambulat&oacute;rio Veterin&aacute;rio
+</p>
+<p align="left">
+55034 Banco de Leite Humano
+</p>
+<p align="left">
+55042 Banco de &oacute;rg&atilde;os
+</p>
+<p align="left">
+55050 Cl&iacute;nica M&eacute;dica
+</p>
+<p align="left">
+55069 Cl&iacute;nica Veterin&aacute;ria
+</p>
+<p align="left">
+55077 Hemodi&aacute;lise
+</p>
+<p align="left">
+55093 Policl&iacute;nica
+</p>
+<p align="left">
+55085 Pronto Socorro
+</p>
+<p align="left">
+55093 Medicina Nuclear
+</p>
+<p align="left">
+55107 R&aacute;dioimunoensaio
+</p>
+<p align="left">
+55123 Radioterapia
+</p>
+<p align="left">
+55131 Radiologia M&eacute;dica
+</p>
+<p align="left">
+55140 Radiologia Odontol&oacute;gica
+</p>
+<p align="left">
+55158 Farm&aacute;cia (Alop&aacute;tica)
+</p>
+<p align="left">
+55166 Farm&aacute;cia (Homeop&aacute;tica)
+</p>
+<p align="left">
+55174 Drogaria
+</p>
+<p align="left">
+55182 Posto de Medicamentos
+</p>
+<p align="left">
+55190 Dispens&aacute;rio de Medicamentos
+</p>
+<p align="left">
+55263 Hospital Geral
+</p>
+<p align="left">
+55271 Hospital Infantil
+</p>
+<p align="left">
+55280 Maternidade
+</p>
+<p align="left">
+55298 Laborat&oacute;rio de An&aacute;lises Cl&iacute;nicas
+</p>
+<p align="left">
+55301 Laborat&oacute;rio de An&aacute;lises Bromatol&oacute;gicas
+</p>
+<p align="left">
+55310 Laborat&oacute;rio de Anatomia e Patologia
+</p>
+<p align="left">
+55336 Laborat&oacute;rio Qu&iacute;mico-Toxicol&oacute;gico
+</p>
+<p align="left">
+55395 Laborat&oacute;rio Cito-Gen&eacute;tico
+</p>
+<p align="left">
+55344 Servi&ccedil;os de Hemoterapia
+</p>
+<p align="left">
+55352 Banco de Sangue
+</p>
+<p align="left">
+55360 Posto de Coleta de Sangue
+</p>
+<p align="left">
+55379 Ag&ecirc;ncia Transfucional de Sangue
+</p>
+<p align="left">
+55387 Servi&ccedil;os Industrial Derivados de Sangue
+</p>
+<p align="left">
+19
+</p>
+<p align="left">
+Estado de Santa Catarina
+</p>
+<p align="left">
+PREFEITURA MUNICIPAL DE MODELO
+</p>
+<p align="left">
+PRESTA&Ccedil;&Atilde; O DE SERVI&Ccedil;OS DE INTERESSE DA SA&Uacute;DE - 66
+</p>
+<p align="left">
+66010 Boite
+</p>
+<p align="left">
+66028 Desinsetisadora
+</p>
+<p align="left">
+66036 Desratizadora
+</p>
+<p align="left">
+66044 Esta&ccedil;&atilde;o Hidromineral/termal/climat&eacute;rio
+</p>
+<p align="left">
+66109 Radiologia Industrial
+</p>
+<p align="left">
+66117 Sauna
+</p>
+<p align="left">
+Gabinete do Prefeito Municipal de Modelo aos 12 de dezembro de 2012
+</p>
+<p align="left">
+Imilio Avila
+</p>
+<p>
+Prefeito Municipal
+</p>
+			</div>
+			<br clear="all" />
+		</div>
+		<!---fim integra norma-->
+		<div id="aba3" class="abas">
+			<!---arquivos anexos-->
+							<ul class="arquivos">
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/809589_0.194729001355412727_lei_complementar_nBA_2057_12.pdf">
+			<span class="legenda">0.194729001355412727_lei_complementar_nBA_2057_12.pdf</span>
+            <span class="extensao-tamanho">pdf[204 KB]</span>
+            <span class="data-publicacao">[18/07/2016]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+</ul>
+						
+			<br clear="all" />
+		</div>
+		<!---fim arquivos anexos-->
+		<div id="aba4" class="abas">
+			<!---normas relacionadas-->
+				                    <h3>Não existem normas relacionadas</h3>
+                    			<br clear="all" />
+		</div>
+		<!---fim normas relacionadas-->
+	</div>
+</div>
+<div class="clear"></div>					<div class="informacoes-relacionadas">
+											</div>
+	            </div>
+				<!-- COLUNA LATERAL - FIM -->
+		<br class="clear">
+		</div>
+
+		<div></div>
+	</div>
+	<div class="footer" id="ancoraRodape">
+		<div class="img-footer">
+		</div>
+		<div class="footer-content">
+				<div class="info-municipio" itemscope itemtype="https://schema.org/Organization">
+					<ul>
+						<li><h2 itemprop="name">Município de Modelo<h2></li>
+						<li itemprop="streetAddress">Rua do Comércio, 1304 - Centro</li>
+                        						<li>CEP: <span  itemprop="postalCode">89872-000 </span></li>
+                        						<li>CNPJ: 83.021.832/0001-11</li>
+
+								                    <li class="telefone">
+								<strong>Telefones:</strong>
+								<div>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3137 </span>
+                                        		                            	<span class="identificacao">Principal</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98854-3327 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-5346 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-1136 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-9560 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3272 </span>
+                                        		                            	<span class="identificacao">Comercial</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3121 </span>
+                                        		                            	<span class="identificacao">Comercial</span>
+                                        		                            </span>
+		                        		                        </div>
+		                    </li>
+		                
+					</ul>
+				</div>
+									<div class="horario">
+						<h2>Horário de </br> funcionamento</h2>
+						<p>
+							De segunda a sexta-feira<br />
+das 7h30 às 11h30 e das 13h00 às 17h00.						</p>
+					</div>
+				
+			<div class="logos">
+                					<a target="_blank" href="#"><img src="../../../../../../styles/layouts/pm/landscape/images/redecim.png"></a>
+					<a target="_blank" href="http://www.fecam.org.br/"><img src="../../../../../../styles/layouts/pm/landscape/images/fecam.png"></a>
+								<a target="_blank" href="http://www.amerios.org.br/"><img src="../../../../../../styles/layouts/pm/landscape/images/amerios.png"></a>
+				<br class="clear">
+			</div>
+            <div class="corona-banner">
+                <a href="https://www.fecam.org.br/noticias/index/ver/codMapaItem/74947/codNoticia/606128" target="_blank">
+                    <img src="../../../../../../images/fecam/corona.png">
+                </a>
+            </div>
+			<div class="mapa-site">
+				<span></span>
+				<ul class="navigation">
+    <li>
+        <a class="paginaInicialPm" href="../../../../../../index.html">Início</a>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8498.html">Município</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/9060.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/9049.html">Histórico</a>
+            </li>
+            <li>
+                <a class="agenda" href="../../../../../../agenda/index/index/codMapaItem/9164.html">Agenda</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10377.html">Poder Executivo Municipal</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10380.html">Economia</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10381.html">Dados Geográficos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/19169.html">Plano Diretor Participativo</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8499.html">Governo</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/10383.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/129750.html">Secretaria de Agricultura</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134901.html">Secretaria de Educação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134906.html">Secretaria de Saúde</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134907.html">Departamento Municipal de Estradas e Rodagem</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134912.html">Departamento Municipal de Assistência Social</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134919.html">Departamento de Obras e Serviços Urbanos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134923.html">Departamento Municipal de Esportes</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/134927.html">Secretaria de Administração e Fazenda</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a>
+        <ul>
+            <li>
+                <a class="concursos" href="../../../../../../concursos/index/index/codMapaItem/9098.html">Concursos Públicos </a>
+            </li>
+            <li>
+                <a class="licitacoes" href="../../../../../../licitacoes/index/index/codMapaItem/9110.html">Licitações</a>
+            </li>
+            <li>
+                <a class="contasPublicas" href="../../../../../../contaspublicas/index/index/codMapaItem/9081.html">Contas Públicas e LRF</a>
+            </li>
+            <li>
+                <a class="legislacao" href="../../../../index/codMapaItem/9154.html">Legislação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/54599.html">Parecer Tribunal de Contas</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/69227.html">Contratos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/90738.html">Atas de Registro de Preços</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/105584.html">RELATORIOS IN 20 TCE </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/105690.html">Kit Proposta </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../cms/pagina/ver/codMapaItem/121341.html">CONTROLADORIA MUNICIPAL</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/131944.html">FISCALIZAÇÃO DE CONTRATOS</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../cms/diretorio/index/codMapaItem/134834.html">DESPESAS COM EDUCAÇÃO</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="noticia" href="../../../../../../noticias/index/listar/codMapaItem/8501.html">Notícias</a>
+    </li>
+    <li>
+        <a class="links" href="http://servicos.modelo.sc.gov.br/">Carta de Serviços</a>
+    </li>
+    <li>
+        <a class="links" href="../../../../../../turismo/index.html">Turismo</a>
+    </li>
+    <li>
+        <a class="contatos" href="../../../../../../contatos/index/index/codMapaItem/8504.html">Contato</a>
+    </li>
+</ul>				<br class="clear">
+			</div>
+		</div>
+	</div>
+	<script type='text/javascript'> 
+var _gaq = _gaq || []; 
+_gaq.push(['_setAccount', 'UA-20438101-23']);
+_gaq.push(['_trackPageview'], '/legislacao/index/detalhes/codMapaItem/9154/codNorma/285136');
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+jQuery(document).ajaxComplete(function(e, xhr, settings){
+_gaq.push(['_trackPageview', settings.url]);
+});
+</script>    

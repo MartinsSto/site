@@ -1,0 +1,44 @@
+#arquivosDownload h2 {
+    border-bottom: 1px solid #DDDDDD;
+    text-align: left;
+	
+	margin: 0px; 
+	padding: 0px;
+}
+
+#arquivosDownload h4 {
+    background-image: url(images/seta.png);
+    background-position: 0 3px;
+    background-repeat: no-repeat;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 12px;
+}
+
+.listas {
+	border: 1px solid #EEE;
+    cursor: pointer;
+    height: 100%;
+    margin: 10px 2px;
+    padding: 10px;
+}
+
+.listas:HOVER {
+	background-color: #FFF;
+}
+
+#arquivosDownload p.downloadLink {
+	border-top: 1px solid #DDDDDD;
+    text-align: right;
+}
+
+#arquivosDownload p.downloadLink a{
+    color: #4B9AE8;
+}
+
+.galeria .data-publicacao {
+    margin-left: 0px !important;
+    margin-right: 3px;
+    float: left;
+}

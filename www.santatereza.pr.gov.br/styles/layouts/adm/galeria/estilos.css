@@ -1,0 +1,315 @@
+.clear
+{
+	height:0;
+	line-height:0;
+	font-size:1px;
+	clear:both;
+}
+
+#bancoImagens
+{
+	background-color:#f0f0f0;
+	margin: 0 -10px 0 -10px;
+}
+
+#bancoImagensConteiner
+{
+	padding:10px 10px 0px 10px;
+}
+
+#bancoMenuTopo 
+{
+	float:left;
+	position:absolute;
+}
+
+.opGaleriaOff1
+{
+	background:url(images/op_galeria_off1.png) no-repeat;
+}
+	.opGaleriaOff2
+	{
+		background:url(images/op_galeria_off2.png) no-repeat right;
+	}
+	
+.bancoMenu 
+{
+	width:240px;
+	height:33px;
+	float:left;
+	background-color:#E5E5E5;
+	font-size:16px;
+	border-left:1px solid;
+	border-top:1px solid;
+	border-right:1px solid;
+	border-bottom:1px solid;
+	border-color: #DDDDDD;
+	margin-left:-1px;
+	z-index:1000000000;
+}
+
+.bancoMenu a 
+{
+	line-height:33px;
+	height:33px;
+	display:block;
+	padding-left:45px;
+	color:#333333;
+	text-decoration:none;
+	font-weight:bold;
+	cursor: pointer;
+}
+
+
+.bancoMenu:hover , .ativa 
+{
+	background-color:#fff;
+	border-bottom:1px solid #fff;
+	color:#333333;
+}
+
+#menuImagens a
+{
+	background:url(images/ico_imagens.png) no-repeat 10px 5px;
+}
+
+#menuGalerias a 
+{
+	background:url(images/ico_galerias.png) no-repeat 10px 5px;
+}
+
+#menuUpload a 
+{
+	background:url(images/ico_upload.png) no-repeat 10px 5px;
+}
+
+.tabBancoImagens 
+{
+	border:1px solid #ddd;
+	background:#fff;
+	width: 860px;
+	height: 410px;
+	float:left;
+	z-index:-1000000;
+	margin-top:34px;
+	margin-left:-1px;
+	padding:7px;
+	overflow: hidden;
+}
+
+#bancoBusca 
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+#pesquisa
+{
+	width: 550px;
+}
+
+#pesquisa-element
+{
+	border: 0px;
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+}
+
+#pesquisa-element:hover
+{
+	background: none;
+}
+
+#pesquisa-element .label
+{
+	width: 60px;
+}
+
+#imagensSelecionadasLabel
+{
+	color:#666666;
+	font-size:14px;
+	font-weight:bold;
+	margin-right:7px;
+	margin-top: 5px;
+}
+
+.infoImagem
+{
+	margin-bottom: 5px;
+}
+
+.divImagensDetalhes
+{
+	font-size:12px;
+	background-color: #FFF;
+	color: #333333;
+}
+
+.divImagensDetalhes .divAguarde
+{
+	position: absolute;
+	display: none;
+	width: 95%;
+	height: 95%;
+	text-align: center;
+	background-color: #FFFFFF;
+}
+
+.divImagensDetalhes .divAguarde p
+{
+	padding-top: 50px;
+	color: #FF3333;
+}
+
+.divImagensDetalhes .divImagem
+{
+	text-align: center;
+	width: 150px;
+	min-height: 105px;
+	vertical-align: middle;
+	background-color: #F0F0F0;
+}
+
+.divImagensDetalhes .divAdicionar
+{
+	margin-top: 0px;
+	margin-bottom: 5px;
+	background-color: #E0E0E0;
+	font-weight: bold;
+	color: #666666;
+	padding: 3px;
+}
+
+.divImagensDetalhes .divAdicionar img
+{
+	vertical-align:middle;
+	margin-right: 2px;
+}
+
+.divImagensDetalhes label
+{
+	font-size:11px;
+	color: #888888;
+}
+
+#bancoPaginacao {
+	margin: 3px 3px 15px;
+	width: 100%;
+	overflow-x: scroll;
+	padding: 10px 0;
+}
+
+#bancoPaginacao p
+{
+	margin-top: 3px;
+	margin-right: 2px;
+	float: right;
+	display: none;
+}
+
+#bancoPaginacao ul {
+	padding: 0px;
+} 
+
+#bancoPaginacao ul li
+{
+	float: left;
+    line-height: 20px;
+    list-style: none;
+    text-align: center;
+	margin-left: 5px;
+}
+
+#bancoPaginacao ul li.paginas
+{
+	
+}
+
+#bancoPaginacao ul li a
+{
+	display: block;
+	color: #333333;
+	background-color: #F1F1F1;
+	padding: 0px 6px;
+	border: 1px solid #CCCCCC;
+}
+
+#bancoPaginacao ul li a.ativo
+{
+	color: #000000;
+	background-color: #FAFAFA;
+	border: 1px solid #888888;
+}
+
+#bancoPaginacao ul li a:hover
+{
+	color: #000000;
+	background-color: #FAFAFA;
+	border: 1px solid #888888;
+}
+
+
+#bancoThumbs 
+{
+	clear: both;
+	margin: auto;
+}
+
+#bancoThumbs .divImagensSelecionar
+{
+	border:1px solid #ccc;
+	background:#f1f1f1;
+	padding:5px;
+	margin: 3px 5px;
+	
+	width: 73px;
+	height: 73px;
+	float: left;
+}
+
+#bancoThumbsSelecionados img 
+{
+	margin:3px;
+}
+
+#bancoThumbsSelecionados 
+{
+	border:1px solid #ddd;
+	background:#fff;
+	margin-left:-1px;
+	padding:3px;
+	height: 60px;
+	overflow: auto;
+}
+
+.imgSelecionada
+{
+	margin-right: 5px;
+}
+
+#bancoThumbsSelecionados .imgSelecionada
+{
+	float: left;
+	border:1px solid #ccc;
+	background:#f1f1f1;
+}
+
+#bancoThumbsSelecionados .imgSelecionada .deleteSelecionada
+{
+	width: 53px;
+	height: 56px;
+	background: url(images/btDelete.png) no-repeat;
+    margin-left: 0px;
+    margin-top: 0px;
+    position: absolute;
+	cursor: pointer;
+	display: none;
+}
+
+#btInserir
+{
+	margin-top:5px;
+	text-align: right;
+}

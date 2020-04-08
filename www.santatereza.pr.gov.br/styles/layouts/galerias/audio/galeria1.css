@@ -1,0 +1,138 @@
+.galeriaDestaque
+{
+}
+
+.galeriaAudios h2, .destaque h2, .detalhes h2  
+{
+    border-bottom: 1px solid #DDDDDD;
+    text-align: left;
+	
+	margin: 0px; 
+	padding: 0px;
+}
+
+.galeriaAudios .audios
+{
+	border-left: 1px solid #DDD;
+	padding: 2px 10px;
+	width: 50%;
+	float: right;
+}
+.galeriaAudios .audios audio, .destaque .audios audio, .detalhes .audios audio {
+	width: 100%;
+}
+.galeria-audios .audios .audio , .destaque .audios .audio ,.detalhes .audios .audio {
+	padding: 5px;
+	margin: 5px 0px;	
+	border-bottom: 1px solid #ccc;
+}
+
+.galeria-audios .audios .audio.active, .destaque .audios .audio.active,.detalhes .audios .audio.active  {
+	background-color: #FFF;
+}
+
+.galeria-audios .audios audio ,.destaque .audios audio, .detalhes .audios audio {
+	width: 100%;
+}
+
+.galeria-audios .audios .audio label
+{
+
+}
+
+.galeria-audios .audios .audio span, .destaque .audios .audio span, .detalhes .audios .audio span{
+	float: right;
+	cursor: pointer;
+	margin: 0px 3px;
+	color: #363636;
+}
+
+/*
+    background-image: url(images/seta.png);
+    background-position: 0 3px;
+    background-repeat: no-repeat;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 12px;
+}
+*/
+
+.listas {
+	border: 1px solid #EEE;
+    cursor: pointer;
+    height: 100%;
+    margin: 10px 2px;
+    padding: 10px;
+}
+
+.listas:HOVER {
+	background-color: #FFF;
+}
+
+#arquivosDownload p.downloadLink {
+	border-top: 1px solid #DDDDDD;
+    text-align: right;
+}
+
+#arquivosDownload p.downloadLink a{
+    color: #4B9AE8;
+}
+
+/*font icon */
+@font-face {
+	font-family: 'galeriaaudio';
+	src:url('fonts/galeriaaudio6f20.eot?yzk00p');
+	src:url('fonts/galeriaaudio6f20.eot?yzk00p#iefix') format('embedded-opentype'),
+		url('fonts/galeriaaudio6f20.ttf?yzk00p') format('truetype'),
+		url('fonts/galeriaaudio6f20.woff?yzk00p') format('woff'),
+		url('fonts/galeriaaudio6f20.svg?yzk00p#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'galeriaaudio';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.galeria-download:before {
+	content: "\e900";
+	font-family: 'galeriaaudio';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+}
+.image-play:before {
+	content: "\e902";
+	font-family: 'galeriaaudio';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+}
+.active>.image-play:before {
+	content: "\e901";
+}
+.active>.image-play.pause:before {
+	content: "\e902";
+}
+
+
+.galeria-download:before,.image-play:before,.image-play.pause:before {
+	font-size: 20px;
+}

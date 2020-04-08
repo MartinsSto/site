@@ -1,0 +1,51 @@
+#widgetInfoMunicipio ul {
+  list-style: none inside;
+  padding: 0px;
+}
+#widgetInfoMunicipio li {
+  padding: 3px 0px;
+  border-bottom: 1px solid #EEE;
+  font-size: 12px;
+}
+#widgetInfoMunicipio i {
+  font-size: 10px;
+}
+.informacoes-municipais > strong {
+  background: #999;
+  width: 100%;
+  padding: 3px 0;
+  color: #fff;
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+.informacoes-municipais p {
+  float: left;
+  font-size: 12px;
+  padding: 10px;
+  text-align: center;
+  height: 100px;
+  margin: 0;
+}
+.informacoes-municipais p img {
+  max-width: 100%;
+}
+.informacoes-municipais p.bandeira {
+  border-right: 1px dashed #ccc;
+}
+.informacoes-municipais p {
+  width: 40%;
+}
+.informacoes-municipais.t1 p {
+  width: 41%;
+}
+.informacoes-municipais.t2 p {
+  width: 42%;
+}
+.informacoes-municipais.t3 p {
+  width: 43.7%;
+}
+.bandeira img {
+  margin-top: 10px;
+}

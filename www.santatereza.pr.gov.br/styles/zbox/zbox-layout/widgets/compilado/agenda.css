@@ -1,0 +1,48 @@
+.widget.agenda ul {
+  padding: 0;
+}
+.widget.agenda ul li {
+  padding: 20px 10px;
+  border-bottom: 1px solid #ddd;
+}
+.widget.agenda ul li .data {
+  float: left !important;
+  margin-right: 10px;
+  padding: 1px;
+}
+.widget.agenda ul li .data .dia {
+  font-size: 18px;
+  display: block;
+  text-align: center;
+}
+.widget.agenda ul li .data .mes {
+  text-transform: uppercase;
+  font-size: 12px;
+  display: block;
+  text-align: center;
+}
+.widget.agenda ul li .data .ano {
+  font-size: 10px;
+  display: block;
+  text-align: center;
+}
+.widget.agenda ul li .data .strong {
+  display: none !important;
+}
+.widget.agenda ul li a {
+  font-size: 12px;
+  line-height: 15px;
+  float: left;
+}
+.widget.agenda ul .passado {
+  opacity: 0.5;
+}
+.widget.agenda.t1 li a {
+  width: 74%;
+}
+.widget.agenda.t2 li a {
+  width: 80%;
+}
+.widget.agenda.t3 li a {
+  width: 88%;
+}

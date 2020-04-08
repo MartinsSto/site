@@ -1,0 +1,284 @@
+#carregando-campo
+{
+	display: none;	
+}
+
+.acoesCampo
+{
+	float: right;
+}
+.acoesCampo img
+{
+    cursor: pointer;
+}
+.desativado :not(.acoesCampo)
+{
+    opacity: 0.5;
+}
+.desativado .acoesCampo + div
+{
+    width: 60%;
+}
+.desativado .ordemCampoUp,.ordemCampoDown,.editarCampo,.excluirCampo
+{
+    opacity: 1 !important;
+}
+
+.formulariosCampos
+{
+	display: none;
+}
+
+.grupo .tituloGrupo {
+    color: #555555;
+    font-size: 14px;
+    height: 20px;
+    padding: 2px;
+}
+
+.grupo .controleGrupoCampo
+{
+    border: 1px solid #DDDDDD;
+	background: url(images/ico_mais.png) no-repeat 3px #EEEEEE;
+	padding: 5px 25px;
+	cursor: pointer;
+}
+
+.grupo .tipoCampo
+{
+    border: 1px solid #CCCCCC;
+    float: left;
+    margin: 5px 10px;
+    width: 200px;
+	background: #FFF no-repeat 2px;
+	cursor: pointer;
+}
+
+.grupo .campos
+{
+	display: none;
+}
+
+.grupo .tipoCampo:HOVER
+{
+	background-color: #B0D9FF;
+}
+
+.grupo .titulo
+{
+	background-color: #7099CC;
+    color: #FFF;
+    float: right;
+    font-weight: bold;
+    margin: 0;
+	padding: 7px;
+	width: 160px;
+}
+
+.grupo .tipoCampo.text
+{
+	background-image: url(images/campo-text.png);
+}
+
+.grupo .tipoCampo.textarea
+{
+	background-image: url(images/campo-textarea.png);
+}
+
+.grupo .tipoCampo.editor
+{
+	background-image: url(images/campo-editor.png);
+}
+
+.grupo .tipoCampo.arquivo
+{
+	background-image: url(images/campo-arquivo.png);
+}
+
+.grupo .tipoCampo.data
+{
+	background-image: url(images/campo-date.png);
+}
+
+.grupo .tipoCampo.dataHora
+{
+	background-image: url(images/campo-datetime.png);
+}
+
+.grupo .tipoCampo.select
+{
+	background-image: url(images/campo-select.png);
+}
+
+.grupo .tipoCampo.checkbox
+{
+	background-image: url(images/campo-checkbox.png);
+}
+
+.grupo .tipoCampo.numero
+{
+	background-image: url(images/campo-numero.png);
+}
+
+.grupo .tipoCampo.moeda
+{
+	background-image: url(images/campo-moeda.png);
+}
+
+.grupo .tipoCampo.email
+{
+	background-image: url(images/campo-email.png);
+}
+
+.grupo .tipoCampo.cpf
+{
+	background-image: url(images/campo-cpf.png);
+}
+
+.grupo .tipoCampo.cnpj
+{
+	background-image: url(images/campo-cnpj.png);
+}
+
+.grupo .tipoCampo.url
+{
+	background-image: url(images/campo-url.png);
+}
+
+.grupo .tipoCampo.estadomunicipio
+{
+	background-image: url(images/campo-estadomunicipio.png);
+}
+
+.grupo .tipoCampo.parlamentarLegislatura
+{
+	background-image: url(images/campo-parlamentar.png);
+}
+
+.grupo .tipoCampo.unidadeTramitacao
+{
+	background-image: url(images/campo-unidadeTramitacao.png);
+}
+
+.grupo .tipoCampo.integranteComissao
+{
+	background-image: url(images/campo-integranteComissao.png);
+}
+
+.grupo .tipoCampo.materiaAnexa
+{
+	background-image: url(images/campo-materiaAnexa.png);
+}
+
+.camposDesativados .ordemCampoUp,
+.camposDesativados .ordemCampoDown
+{
+	display: none;
+}
+
+.opcoesSelect
+{
+	float: left;
+}
+
+.formEditorDinamico
+{
+	height: 100px;
+}
+
+.formArquivoElementoDinamico .elementosArquivo
+{
+	width: 500px;
+}
+
+.formArquivoElementoDinamico .elementosArquivo .barraFerramentasImagem
+{
+	width: 400px;
+	float: left;
+}
+
+.formArquivoElementoDinamico .elementosArquivo input
+{
+	width: 245px;
+}
+
+.uploadifyQueueItem {
+    background-color: #F5F5F5;
+    border: 2px solid #E5E5E5;
+    font: 11px Verdana,Geneva,sans-serif;
+    margin-top: 5px;
+    padding: 10px;
+    width: 350px;
+}
+
+.uploadifyQueueItem .cancel{
+	float: right;
+}
+
+.uploadifyProgress {
+    background-color: #E5E5E5;
+    margin-top: 10px;
+    width: 100%;
+    clear: both;
+}
+
+.uploadifyProgressBar {
+    background-color: #0099FF;
+    height: 3px;
+    width: 1px;
+}
+
+.uploadifyQueueItem .percentage
+{
+	display: none;
+}
+
+.legendaFile
+{
+	float: left; 
+	margin-right: 20px;
+}
+
+.legendaFile.disabled
+{
+	font-style: italic;
+	color: #AAA;
+}
+
+.infoFile
+{
+	margin-left: 150px;
+	color: #AAA;
+	padding: 0px;
+	display: none;
+}
+
+.infoFile img
+{
+	margin-right: 10px;
+}
+
+#progresso
+{
+	clear: both;
+}
+
+.multiCheckBox
+{
+	margin-left: 150px;
+}
+
+
+.formElementDataHora input
+{
+	width: 80px;
+}
+
+.mceEditor
+{
+	width: 500px;
+}
+
+.formOptions input[type="text"]{
+	float: left;	
+}

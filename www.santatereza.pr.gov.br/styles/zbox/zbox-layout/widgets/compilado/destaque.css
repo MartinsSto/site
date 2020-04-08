@@ -1,0 +1,22 @@
+.destaque-imagem {
+  float: right;
+  width: 455px;
+  height: 280px;
+  padding: 0;
+  list-style: none;
+}
+.destaque-titulos {
+  float: left;
+  width: 445px;
+  height: 280px;
+  padding: 0;
+  list-style: none;
+}
+.destaque-titulos li {
+  padding: 10px;
+  font-size: 16px;
+  height: 48px;
+}
+.destaque-titulos li a {
+  display: block;
+}

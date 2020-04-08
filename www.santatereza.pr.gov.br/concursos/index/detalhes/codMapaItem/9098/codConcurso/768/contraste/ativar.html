@@ -1,0 +1,855 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.1//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-2.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<!-- Mirrored from www.modelo.sc.gov.br/concursos/index/detalhes/codMapaItem/9098/codConcurso/768/contraste/ativar by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Apr 2020 14:42:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>EDITAL DE PROCESSO SELETIVO SIMPLIFICADO/ESF – ESTRATEGIA DA SAUDE DA FAMILIA - Concursos Públicos  - Município de Modelo</title><link href="../../../../../../../../styles/zbox/todos_sites.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../../../../../../styles/layouts/galerias/arquivo/galeria2.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../../../../../../styles/layouts/pm/landscape/css/compilado/contraste.css" media="" rel="stylesheet" type="text/css" /><script type="text/javascript" src="../../../../../../../../../ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../../../../scripts/json.js"></script>
+<script type="text/javascript" src="../../../../../../../../scripts/ajax.js"></script>
+<script type="text/javascript" src="../../../../../../../../scripts/test-navigator.js"></script>
+<script type="text/javascript" src="../../../../../../../../styles/layouts/pm/landscape/js/landscape.js"></script>
+<script type="text/javascript" src="../../../../../../../../scripts/abas.js"></script><meta property="og:image" content="/images/municipios/brasao/90x90/modelo.png" />
+</head>
+
+<body id="contraste">
+<style>
+	.loading-site:after {
+		background-image: url("../../../../../../../../images/municipios/brasao/90x90/modelo.png");
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+</style>
+<style>
+.header {
+	background-image: url("../../../../../../../../../static.fecam.net.br/thumbs/404/1615402_resize_1999_807.jpg");
+}
+.img-footer {
+	background-image: url("../../../../../../../../../static.fecam.net.br/thumbs/404/1615401_resize_2000_45.png");
+}
+</style>
+	<div class="loading-site"></div>
+	<div class="header">
+        <div class="container-barra">
+            <div id="container-sistema-fecam"></div>
+        </div>
+		<div class="container-head">
+			<div class="cabecalho">
+				<div id="atalhosAcessibilidade">
+					<a href="#ancoraConteudo" accesskey="1">Ir para conteúdo <span>1</span></a>
+					<a href="#ancoraMenu" accesskey="2">Ir para menu <span>2</span></a>
+											<a href="#q">Ir para busca <span>3</span></a>
+										<a href="#ancoraRodape" accesskey="4">Ir para rodapé <span>4</span></a>
+										<a href="../../../../../../../../zbox/acessibilidade.html" accesskey="5">Acessibilidade <span>5</span></a>
+											<a href="desativar.html" accesskey="6">Alto
+											contraste <span>6</span>
+										</a>
+									</div>
+				<div class="cabecalho-cima" style="background:url(../../../../../../../../../static.fecam.net.br/thumbs/404/1616752_resize_937_287.jpg) no-repeat 50% 0;">
+					<div class="logo">
+						<a href="../../../../../../../../index.html">
+							<img src="../../../../../../../../images/municipios/brasao/90x90/modelo.png">
+						</a>
+						<br>
+						<h1>
+							<span>Município de</span>
+							<br>Modelo						</h1>
+					</div>
+					<div id="topo-tempo">
+						<div class="tempo-hoje">
+				    	<span id="previsao-tempo-dia-1-icone"><img src="../../../../../../../../images/loading.png" /></span>
+						<div class="info">
+							<div class="dia">
+								<p class='titulo-previsao' id="previsao-tempo-dia-1"></p>
+								<p class='condicao' id="previsao-tempo-dia-1-previsao">---</p>
+							</div>
+    						<ul class='temperaturas'>
+
+    							<li class="min" id="previsao-tempo-dia-1-min">?</li>
+    							<li class="max" id="previsao-tempo-dia-1-max">?</li>
+
+    						</ul>
+						</div>
+					</div>
+
+					<div class="tempo-amanha">
+						<span id="previsao-tempo-dia-2-icone"><img src="../../../../../../../../images/loading.png" width="35" height="34" /></span>
+						<div class="info">
+							<div class="dia">
+								<p class='titulo-previsao' id="previsao-tempo-dia-2"></p>
+								<p class='condicao' id="previsao-tempo-dia-2-previsao">---</p>
+							</div>
+    						<ul class='temperaturas'>
+    							<li class="min" id="previsao-tempo-dia-2-min">?</li>
+    							<li class="max" id="previsao-tempo-dia-2-max">?</li>
+
+    						</ul>
+						</div>
+					</div>
+						<script type="text/javascript">
+							$(function() {
+
+								//$('#topo-tempo').hide();
+								console.log('https://www.fecam.org.br/tempo.php?codPrevisao=3299');
+								$.ajax({
+									url: 'https://www.fecam.org.br/tempo.php?codPrevisao=3299',
+								    jsonpCallback: 'jsonCallback',
+								    contentType: "application/json",
+    								dataType: 'jsonp',
+                                    cache: 'false',
+
+									success: function(data){
+										data = data['tempo'];
+                                        dc = 0; //Contador de dias;
+										while(dc <= 1){
+											prefix = "#previsao-tempo-dia-"+(dc+1);
+											dia = data['previsao'][dc];
+											$(prefix).html(dia['diaSemana']);
+											$(prefix+'-max').html(dia['maxima']+"C");
+											$(prefix+"-min").html(dia['minima']+"C");
+											$(prefix+"-icone img").attr("src","/styles/layouts/pm/default/images/previsao-tempo/"+dia['tempo']+".png");
+											$(prefix+"-previsao").html(dia['condicao']);
+											console.log(dia);
+											dc++;
+										}
+
+									}
+								});
+							});
+							</script>
+		        	</div>
+						<span id="ancoraMenu"><ul class="navigation">
+    <li>
+        <a class="paginaInicialPm" href="../../../../../../../../index.html">Início</a>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8498.html">Município</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/9060.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/9049.html">Histórico</a>
+            </li>
+            <li>
+                <a class="agenda" href="../../../../../../../../agenda/index/index/codMapaItem/9164.html">Agenda</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10377.html">Poder Executivo Municipal</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10380.html">Economia</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10381.html">Dados Geográficos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/19169.html">Plano Diretor Participativo</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8499.html">Governo</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10383.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/129750.html">Secretaria de Agricultura</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134901.html">Secretaria de Educação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134906.html">Secretaria de Saúde</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134907.html">Departamento Municipal de Estradas e Rodagem</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134912.html">Departamento Municipal de Assistência Social</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134919.html">Departamento de Obras e Serviços Urbanos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134923.html">Departamento Municipal de Esportes</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134927.html">Secretaria de Administração e Fazenda</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a>
+        <ul>
+            <li>
+                <a class="concursos" href="../../../../../../index/codMapaItem/9098.html">Concursos Públicos </a>
+            </li>
+            <li>
+                <a class="licitacoes" href="../../../../../../../../licitacoes/index/index/codMapaItem/9110.html">Licitações</a>
+            </li>
+            <li>
+                <a class="contasPublicas" href="../../../../../../../../contaspublicas/index/index/codMapaItem/9081.html">Contas Públicas e LRF</a>
+            </li>
+            <li>
+                <a class="legislacao" href="../../../../../../../../legislacao/index/index/codMapaItem/9154.html">Legislação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/54599.html">Parecer Tribunal de Contas</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/69227.html">Contratos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/90738.html">Atas de Registro de Preços</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/105584.html">RELATORIOS IN 20 TCE </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/105690.html">Kit Proposta </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/121341.html">CONTROLADORIA MUNICIPAL</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/131944.html">FISCALIZAÇÃO DE CONTRATOS</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/134834.html">DESPESAS COM EDUCAÇÃO</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="noticia" href="../../../../../../../../noticias/index/listar/codMapaItem/8501.html">Notícias</a>
+    </li>
+    <li>
+        <a class="links" href="http://servicos.modelo.sc.gov.br/">Carta de Serviços</a>
+    </li>
+    <li>
+        <a class="links" href="../../../../../../../../turismo/index.html">Turismo</a>
+    </li>
+    <li>
+        <a class="contatos" href="../../../../../../../../contatos/index/index/codMapaItem/8504.html">Contato</a>
+    </li>
+</ul></span>
+					</ul>
+				</div>
+				<div class="cabecalho-baixo">
+					<div class="busca-site">
+													<div id="busca">
+							<form method="GET" action="https://www.modelo.sc.gov.br/pesquisa/">
+    <input class="input-texto" type="text"  name="q" id="q" value="" placeholder="Pesquisar..." accesskey="3" />
+	<button class="input-botao" type="submit"><span></span></button>
+</form>							</div>
+											</div>
+					<div class="social">
+					<h3>Compartilhe: </h3>
+
+					<!-- AddThis Button BEGIN -->
+										    <div class="addthis_toolbox addthis_default_style " >
+					    	<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                    <a class="a2a_button_whatsapp"></a>
+                 </div>
+                 <script async src="../../../../../../../../../static.addtoany.com/menu/page.js"></script>                            <a class="addthis_button_facebook"></a>
+							<a class="addthis_button_twitter"></a>
+							<a class="addthis_button_email" addthis:title="EDITAL DE PROCESSO SELETIVO SIMPLIFICADO%2FESF %3F ESTRATEGIA DA SAUDE DA FAMILIA - Concursos P%FAblicos  - Munic%EDpio de Modelo"></a>
+						<a class="addthis_button_compact"></a>
+						<a class="addthis_counter addthis_bubble_style"></a>
+					</div>
+					<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+					<script type="text/javascript" src="../../../../../../../../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-524f08ae420d606b"></script>
+					<!-- AddThis Button END -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content" id="ancoraConteudo">
+		<div>
+			<!-- COLUNA LATERAL - INICIO -->
+			        		            <div class="col1">
+	            	<h3 class="titulo"><a href="../../../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a></h3><ul class="navigation"><li><a href='../../../../../../index/codMapaItem/9098.html' target='_self'  class='ativo'  >Concursos Públicos </a></li><li><a href='../../../../../../../../licitacoes/index/index/codMapaItem/9110.html' target='_self'  >Licitações</a></li><li><a href='../../../../../../../../contaspublicas/index/index/codMapaItem/9081.html' target='_self'  >Contas Públicas e LRF</a></li><li><a href='../../../../../../../../legislacao/index/index/codMapaItem/9154.html' target='_self'  >Legislação</a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/54599.html' target='_self'  >Parecer Tribunal de Contas</a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/69227.html' target='_self'  >Contratos</a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/90738.html' target='_self'  >Atas de Registro de Preços</a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/105584.html' target='_self'  >RELATORIOS IN 20 TCE </a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/105690.html' target='_self'  >Kit Proposta </a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/121341.html' target='_self'  >CONTROLADORIA MUNICIPAL</a></li><li><a href='../../../../../../../../cms/diretorio/index/codMapaItem/131944.html' target='_self'  >FISCALIZAÇÃO DE CONTRATOS</a></li><li><a href='../../../../../../../../cms/diretorio/index/codMapaItem/134834.html' target='_self'  >DESPESAS COM EDUCAÇÃO</a></li></ul>	            </div>
+	            <div class="col3">
+	            	<a name="ancoraConteudo" id="ancoraConteudo"></a>
+					
+<div class="concursos detalhes">
+	<h1>Concursos Públicos </h1>
+	<h2>EDITAL DE PROCESSO SELETIVO SIMPLIFICADO/ESF – ESTRATEGIA DA SAUDE DA FAMILIA<span>Nº 001/2012</span></h2>
+
+	<h3 class="info-basicas">Informações Básicas</h3>
+	<dl class="info-basicas">
+					<dt class="data">
+				<strong>Data do Concurso:</strong>
+				<span class="dia">29</span>
+				<span class="mes">mai</span>
+				<span class="ano">2012</span>
+			</dt>
+		
+					<dd class="status finalizado"><strong>Finalizado</strong></dd>
+							<dd class="descricao">
+				<div class="texto-editor"><p>&nbsp;</p>
+<p><strong>EDITAL DE PROCESSO SELETIVO SIMPLIFICADO/ESF - ESTRATEGIA DA SAUDE DA FAMILIA</strong></p>
+<p><strong>N&ordm;&nbsp;&nbsp;&nbsp; 001 /2012 &nbsp;&nbsp;DE 29 /05/2012</strong></p>
+<p>&nbsp;</p>
+<p><strong>ABRE INSCRI&Ccedil;&Otilde;ES PARA CARGO TEMPOR&Aacute;RIO PARA&nbsp; A EXECU&Ccedil;&Atilde;O DO PROGRAMA "ESTRAT&Eacute;GIA DA SA&Uacute;DE DA FAM&Iacute;LIA - ESF", CRIADO&nbsp; PELO MINIST&Eacute;RIO DA SA&Uacute;DE DO GOVERNO FEDERAL, CONFORME ESPECIFICA E D&Aacute; OUTRAS PROVIDENCIAS. </strong></p>
+<p>&nbsp;</p>
+<p><strong>IMILIO AVILA,</strong> Prefeito Municipal de&nbsp; Modelo, Estado de Santa Catarina, no uso de suas atribui&ccedil;&otilde;es legais, em&nbsp; especial a Lei Municipal 1.960 DE 28.12.2010 e Normas do Programa da Sa&uacute;de da Fam&iacute;lia&nbsp; - PSF/ESF, Lei Municipal&nbsp; 1513/2002, 971/90,&nbsp;</p>
+<p>Considerando que n&atilde;o houve o preenchimento de todas as vagas atrav&eacute;s do concurso publico 001/2011,</p>
+<p>Considerando que o Munic&iacute;pio de Modelo SC, aprovou a amplia&ccedil;&atilde;o das&nbsp; micro &aacute;reas de atendimento das agentes comunit&aacute;rias de sa&uacute;de pelo Minist&eacute;rio da Sa&uacute;de,</p>
+<p>Considerando a necessidade de garantir a continuidade do servi&ccedil;o e atendimento do programa, provendo as substitui&ccedil;&otilde;es de servidores&nbsp; ocupantes deste cargo, em Licen&ccedil;a legalmente concedidas, afastamento e outras situa&ccedil;&otilde;es, caso e quando houver, de conformidade com as disposi&ccedil;&otilde;es legais,</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>FAZ SABER</strong> aos interessados, que se encontram abertas as inscri&ccedil;&otilde;es para admiss&atilde;o em cargo&nbsp; tempor&aacute;rio&nbsp; para a execu&ccedil;&atilde;o do Programa " ESTRAT&Eacute;GIA DA SA&Uacute;DE DA FAM&Iacute;LIA", criado pelo Governo Federal e convenio com o Munic&iacute;pio de Modelo - SC,</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>1. DAS VAGAS:</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>&nbsp; 1.1. O presente Edital visa selecionar candidato&nbsp; para os&nbsp; cargos tempor&aacute;rio&nbsp; para a execu&ccedil;&atilde;o do Programa " Estrat&eacute;gia de Sa&uacute;de da Fam&iacute;lia&nbsp; -&nbsp; ESF", criado pelo Governo Federal e conveniado com o Munic&iacute;pio de Modelo - SC, conforme a seguir especificado:</p>
+<p>&nbsp;</p>
+<table style="width: 609px;" border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td colspan="6" valign="top" width="609">
+<p><strong><em>SA&Uacute;DE</em></strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="211">
+<p><strong>CARGO / FUN&Ccedil;&Atilde;O</strong></p>
+</td>
+<td valign="top" width="57">
+<p><strong>N&ordm; DE VAGAS</strong></p>
+</td>
+<td valign="top" width="70">
+<p><strong>CARGA</strong></p>
+<p><strong>HOR&Aacute;RIA</strong></p>
+</td>
+<td valign="top" width="85">
+<p align="center"><strong>&Aacute;rea de atua&ccedil;&atilde;o:</strong></p>
+<p align="center"><strong>&nbsp;</strong></p>
+</td>
+<td valign="top" width="76">
+<p><strong>VENCIMENTO R$</strong></p>
+</td>
+<td valign="top" width="110">
+<p><strong>HABILITA&Ccedil;&Atilde;O</strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="211">
+<p>&nbsp;</p>
+<p>Agente Comunit&aacute;rio de Sa&uacute;de</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+<td valign="top" width="57">
+<p>&nbsp;</p>
+<p>02</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+<td valign="top" width="70">
+<p>&nbsp;</p>
+<p>40 hrs.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+<td valign="top" width="85">
+<p>&nbsp;</p>
+<p>ESF- Estrat&eacute;gia da Sa&uacute;de da Fam&iacute;lia - micro &aacute;reas - do Munic&iacute;pio de Modelo SC</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+<td valign="top" width="76">
+<p>&nbsp;</p>
+<p>815,93</p>
+</td>
+<td valign="top" width="110">
+<p>Possuir n&iacute;vel de 1&ordm; grau completo e curso de capacita&ccedil;&atilde;o para o programa de Sa&uacute;de da Fam&iacute;lia PSF</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="211">
+<p>&nbsp;</p>
+</td>
+<td valign="top" width="57">
+<p>&nbsp;</p>
+</td>
+<td valign="top" width="70">
+<p>&nbsp;</p>
+</td>
+<td valign="top" width="85">
+<p>&nbsp;</p>
+</td>
+<td valign="top" width="76">
+<p>&nbsp;</p>
+</td>
+<td valign="top" width="110">
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Observa&ccedil;&atilde;o:</p>
+<p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A escolha da&nbsp; micro &aacute;rea ser&aacute; efetuada conforme ordem de classifica&ccedil;&atilde;o.</p>
+<p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Os classificados al&eacute;m do numero de vagas acima especificado, poder&atilde;o ser convocados para exercer o cargo nas situa&ccedil;&otilde;es de necessidades de excepcional &nbsp;apresentadas, em virtude licen&ccedil;as legalmente concedidas e ou em caso de desist&ecirc;ncia e ou vaga n&atilde;o preenchida em concurso&nbsp; publico, objetivando o atendimento das micro &aacute;reas acima e das demais micro &aacute;reas constantes do programa ESF do Munic&iacute;pio de Modelo SC.&nbsp;</p>
+<p>&nbsp;</p>
+<p>1.2 - As vagas relacionadas ao cargo/fun&ccedil;&atilde;o de Agente Comunit&aacute;rio de Sa&uacute;de se destinam ao atendimento das <strong>micro-&aacute;reas de atua&ccedil;&atilde;o 09 e 10 </strong>&nbsp;de conformidade com rela&ccedil;&atilde;o o ESF &nbsp;e nas demais necessidades de admiss&atilde;o&nbsp; tempor&aacute;rio de excepcional interesse, conforme especificado neste edital. &nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+<p>1.3 - Na ordem de classifica&ccedil;&atilde;o para o cargo de agente comunit&aacute;rio de sa&uacute;de ter&atilde;o prefer&ecirc;ncia os candidatos que possu&iacute;rem conclus&atilde;o do curso de prepara&ccedil;&atilde;o, conforme disp&otilde;e a Emenda Constitucional n. 51 de 14 de fevereiro de 2006 e a Lei Federal 11.350 de 05 de outubro de 2006.</p>
+<p>&nbsp;</p>
+<p>1.4. - A remunera&ccedil;&atilde;o do cargo est&aacute; especificada em&nbsp; Lei Municipal&nbsp; &nbsp;2030/2012, podendo ser alterado conforme reajuste a ser concedido&nbsp; e aprovado atrav&eacute;s de Lei Municipal .</p>
+<p>&nbsp;</p>
+<p>&nbsp; <strong>2. DAS INSCRI&Ccedil;&Otilde;ES:</strong></p>
+<p>&nbsp;</p>
+<p>2.1. As inscri&ccedil;&otilde;es&nbsp; estar&atilde;o abertas no per&iacute;odo de &nbsp;29/05/2012 a 14/06/2012, durante o hor&aacute;rio de expediente e dever&atilde;o ser efetuadas no Departamento Municipal de Sa&uacute;de, sito a Rua Presidente Vargas, n&deg; 20, centro, Modelo - SC., no hor&aacute;rio das&nbsp; 08:00 &agrave;s 11:00&nbsp; horas e das 13:30 &aacute;s 17:00 horas, de segunda a sexta-feira.</p>
+<p>&nbsp;</p>
+<p>2.2.&nbsp; Cada candidato poder&aacute; efetuar uma &uacute;nica inscri&ccedil;&atilde;o.</p>
+<p>&nbsp;</p>
+<p>2.3. Da documenta&ccedil;&atilde;o exigida:</p>
+<p>&nbsp;</p>
+<p>2.3.1.No ato da inscri&ccedil;&atilde;o o candidato dever&aacute; apresentar os seguintes documentos:</p>
+<p>&nbsp;</p>
+<p>a) Preencher formul&aacute;rio de inscri&ccedil;&atilde;o pr&oacute;prio;</p>
+<p>b) C&oacute;pia&nbsp; carteira de identidade e CPF</p>
+<p>c) C&oacute;pia Certid&atilde;o de Nascimento /ou casamento</p>
+<p>d) C&oacute;pia&nbsp; Quita&ccedil;&atilde;o Obriga&ccedil;&atilde;o Servi&ccedil;o Militar</p>
+<p>e) C&oacute;pia Titulo Eleitoral e Comprovante&nbsp; de vota&ccedil;&atilde;o da ultima elei&ccedil;&atilde;o</p>
+<p>d) Comprovante Habilita&ccedil;&atilde;o conforme o cargo</p>
+<p>e) Copia dos comprovantes de escolaridade alem da exigida para o cargo (quando for o caso e de interesse do candidato;</p>
+<p>f) copia do documento comprobat&oacute;rio registro &oacute;rg&atilde;o competente (quando for o caso)&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;2.4. &nbsp;Da inscri&ccedil;&atilde;o por procura&ccedil;&atilde;o:</p>
+<p>&nbsp;</p>
+<p>2.4.1. &nbsp;Ser&aacute; admitida a inscri&ccedil;&atilde;o por terceiros mediante procura&ccedil;&atilde;o simples do interessado, acompanhada de c&oacute;pias leg&iacute;veis dos documentos necess&aacute;rios para inscri&ccedil;&atilde;o. H&aacute; necessidade de reconhecimento de firma na procura&ccedil;&atilde;o.</p>
+<p>&nbsp;</p>
+<p>2.4.2. &nbsp;O comprovante de inscri&ccedil;&atilde;o ser&aacute; entregue ao procurador depois de efetuada a inscri&ccedil;&atilde;o.</p>
+<p>&nbsp;</p>
+<p>2.4.3. &nbsp;O candidato inscrito por procura&ccedil;&atilde;o assume total responsabilidade pelas informa&ccedil;&otilde;es prestadas por seu procurador, arcando com as conseq&uuml;&ecirc;ncias de eventuais erros de seu representante no preenchimento da ficha de inscri&ccedil;&atilde;o e em sua entrega.</p>
+<p>&nbsp;</p>
+<p>2.5.&nbsp; Da apresenta&ccedil;&atilde;o dos documentos para prova de t&iacute;tulos</p>
+<p>&nbsp;</p>
+<p>2.5.1. O Candidato dever&aacute; encaminhar a comiss&atilde;o, os documentos para prova de t&iacute;tulos,&nbsp; na forma deste edital.</p>
+<p>&nbsp;</p>
+<p>2.5.2. Os documentos dever&atilde;o ser relacionados em documento pr&oacute;prio e assinado pelo candidato, devendo ser entregues copias e apresentado a via original para&nbsp; autentica&ccedil;&atilde;o pelo funcion&aacute;rio respons&aacute;vel.</p>
+<p>&nbsp;</p>
+<p>2.5.3 - somente ser&atilde;o aceitos os documentos para prova de t&iacute;tulos at&eacute; &agrave;s 17:00 horas do dia 14/06/2012,&nbsp; data final&nbsp;&nbsp;&nbsp; das inscri&ccedil;&otilde;es. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+<p>2.6. &nbsp;As informa&ccedil;&otilde;es prestadas na ficha de inscri&ccedil;&atilde;o ser&atilde;o de inteira responsabilidade do candidato, bem como os requisitos de inscri&ccedil;&atilde;o, que dever&atilde;o ser comprovados at&eacute; a data do provimento.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>3. REQUISITOS EXIGIDOS</strong></p>
+<p>3.1. S&atilde;o condi&ccedil;&otilde;es para inscri&ccedil;&atilde;o:</p>
+<p>&nbsp;</p>
+<p>3.1.2.&nbsp; Ser brasileiro nato ou naturalizado;</p>
+<p>&nbsp;</p>
+<p>3.1.3.&nbsp; Encontrar-se em pleno exerc&iacute;cio dos direitos pol&iacute;ticos, nos termos do par&aacute;grafo 1&deg;, artigo 12, da Constitui&ccedil;&atilde;o Federal;</p>
+<p>&nbsp;</p>
+<p>3.1.4. Ter idade m&iacute;nima de 18 (dezoito) anos completos, na data da posse;</p>
+<p>&nbsp;</p>
+<p>3.1.5.&nbsp; Estar quite com as obriga&ccedil;&otilde;es eleitorais;</p>
+<p>&nbsp;</p>
+<p>3.1.6.&nbsp; Ter certificado de reservista ou de dispensa de incorpora&ccedil;&atilde;o, em caso de candidato do sexo masculino;</p>
+<p>&nbsp;</p>
+<p>3.1.7.&nbsp; Possuir o n&iacute;vel de escolaridade exigido para o exerc&iacute;cio do cargo/fun&ccedil;&atilde;o na data da posse e curso de capacita&ccedil;&atilde;o para o programa de sa&uacute;de da familia;</p>
+<p>&nbsp;</p>
+<p>3.1.8.&nbsp; Residir na &aacute;rea de atua&ccedil;&atilde;o - Munic&iacute;pio de Modelo SC - (condi&ccedil;&atilde;o para inscrever ao cargo/fun&ccedil;&atilde;o de Agente Comunit&aacute;rio de Sa&uacute;de);</p>
+<p>&nbsp;</p>
+<p>3.1.9.&nbsp; Cumprir as determina&ccedil;&otilde;es deste Edital.</p>
+<p><strong>4 - DA ACEITA&Ccedil;&Atilde;O DAS CLAUSULAS DO EDITAL:</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A inscri&ccedil;&atilde;o implicar&aacute; no conhecimento das instru&ccedil;&otilde;es do presente Edital e&nbsp; na aceita&ccedil;&atilde;o plena das condi&ccedil;&otilde;es explicitadas.</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>5 - DA PROVA DE T&Iacute;TULOS </strong></p>
+<p>&nbsp;</p>
+<p>5.1. &nbsp;Os candidatos dever&atilde;o apresentar os t&iacute;tulos dentro do prazo do per&iacute;odo de inscri&ccedil;&atilde;o do Processo Seletivo. Os t&iacute;tulos ser&atilde;o apresentados atrav&eacute;s de fotoc&oacute;pia, devendo o candidato apresentar o original para autentica&ccedil;&atilde;o por profissional &nbsp;respons&aacute;vel pelo recebimento das inscri&ccedil;&otilde;es.</p>
+<p>&nbsp;</p>
+<p>5.2. &nbsp;Ser&atilde;o considerados como T&iacute;tulos para os candidatos inscritos ao &nbsp;cargos/fun&ccedil;&atilde;o&nbsp; de Agente Comunit&aacute;rio de Saude:</p>
+<p>&nbsp;</p>
+<p>a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Comprovante de cursos al&eacute;m da exig&ecirc;ncia do cargo sendo:</p>
+<p>N&iacute;vel m&eacute;dio/segundo grau - 0,25 (zero v&iacute;rgula vinte e cinco) pontos</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N&iacute;vel superior - 0,50 - (zero v&iacute;rgula cinquenta pontos);</p>
+<p>b)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Comprovante de P&oacute;s-Gradua&ccedil;&atilde;o: 0,50 (zero v&iacute;rgula cinquenta pontos);</p>
+<p>c)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Comprovante de Mestrado: 0,75 (zero v&iacute;rgula setenta e cinco pontos);</p>
+<p>d)&nbsp;&nbsp;&nbsp;&nbsp; Comprovante de Doutorado: 1,0 (um ponto);</p>
+<p>e)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cursos de Aperfei&ccedil;oamento/Atualiza&ccedil;&atilde;o/Capacita&ccedil;&atilde;o na &aacute;rea de atua&ccedil;&atilde;o:</p>
+<p>f)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; At&eacute; 100 horas de curso - 0,25 (zero v&iacute;rgula vinte e cinco) pontos;</p>
+<p>g)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; At&eacute; 200 horas de curso - 0,50 (zero v&iacute;rgula cinq&uuml;enta) pontos;d.3) At&eacute; 300 horas de curso - 0,75 (zero v&iacute;rgula setenta e cinco) pontos;</p>
+<p>h)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; At&eacute; 400 horas de curso ou mais - 1,00 (um) ponto;</p>
+<p align="left">i)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tempo de servi&ccedil;o p&uacute;blico no Munic&iacute;pio de Modelo - SC&nbsp; - Mais de 1 ano:&nbsp; 0,50 ( zero v&iacute;rgula cinquenta pontos)</p>
+<p>&nbsp;</p>
+<p>5.3. &nbsp;Os t&iacute;tulos descritos nas letras "a", "b" e "c" somente ser&atilde;o somados uma &uacute;nica vez, n&atilde;o podendo haver ac&uacute;mulo dos mesmos.</p>
+<p>&nbsp;</p>
+<p>5.4. &nbsp;A apresenta&ccedil;&atilde;o de t&iacute;tulos &eacute; de iniciativa do candidato e somente ser&atilde;o considerados v&aacute;lidos &nbsp;aqueles apresentados, na data da inscri&ccedil;&atilde;o, com original para autentica&ccedil;&atilde;o por profissional respons&aacute;vel pelo recebimento das inscri&ccedil;&otilde;es.</p>
+<p>&nbsp;</p>
+<p>5.5. O candidato, no ato da inscri&ccedil;&atilde;o, quando apresentar seus t&iacute;tulos, dever&aacute; conferir a titula&ccedil;&atilde;o juntamente com o respons&aacute;vel pelo recebimento das inscri&ccedil;&otilde;es, sendo que ap&oacute;s feita a soma n&atilde;o ter&aacute; direito a reclama&ccedil;&otilde;es.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>6 - DA CLASSIFICA&Ccedil;&Atilde;O E C&Ocirc;MPUTO DE PONTOS&nbsp; DE T&Iacute;TULOS E TEMPO DE SERVI&Ccedil;O P&Uacute;BLICO NO MUNIC&Iacute;PIO DE MODELO</strong></p>
+<p>&nbsp;</p>
+<p>A classifica&ccedil;&atilde;o dos candidatos ser&aacute; feita para o cargo,&nbsp; conforme a media alcan&ccedil;ada nos t&iacute;tulos.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.1. Havendo empate entre os candidatos, ap&oacute;s a classifica&ccedil;&atilde;o, dever&aacute; ser aplicado o seguinte crit&eacute;rio:</p>
+<p>1&deg;) o que possuir maior tempo de servi&ccedil;o p&uacute;blico no Munic&iacute;pio de Modelo;</p>
+<p>2&deg;) o que possuir maior n&uacute;mero de dependentes;</p>
+<p>3&deg;) o de maior idade;</p>
+<p>&nbsp;</p>
+<p>4.1.4.&nbsp; Persistindo o empate ser&aacute; feito o sorteio.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>7 -&nbsp; DA PUBLICIDADE</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>A divulga&ccedil;&atilde;o dos inscritos&nbsp; ser&aacute; feita&nbsp; no dia 15/06/2012, a partir das 13;30 horas e da classifica&ccedil;&atilde;o&nbsp; no dia 18/06/2012 a partir das 10:00 horas, no Mural P&uacute;blico do Munic&iacute;pio de Modelo - SC.</p>
+<p>A divulga&ccedil;&atilde;o do presente edital ser&aacute; no Mural P&uacute;blico do Munic&iacute;pio de Modelo - SC, jornal e p&aacute;gina oficial do Munic&iacute;pio na Internet.</p>
+<p><strong>&nbsp;&nbsp; </strong>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>8 - DO EXAME MEDICO ODONTOLOGICO</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;&nbsp;&nbsp; </strong>Os aprovados no processo seletivo conforme este edital e convocados para a fun&ccedil;&atilde;o, &nbsp;dever&atilde;o efetuar Exame M&eacute;dico e Odontol&oacute;gico, &nbsp;com M&eacute;dico e Cirurgi&atilde;o Dentista do quadro de servidores do Munic&iacute;pio de&nbsp; Modelo SC.</p>
+<p>&nbsp;</p>
+<p>Caso o candidato n&atilde;o for aprovado no exame m&eacute;dico ser&aacute; chamado o pr&oacute;ximo candidato conforme ordem de classifica&ccedil;&atilde;o.</p>
+<p>&nbsp;</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>9 - DA NOMEA&Ccedil;&Atilde;O</strong></p>
+<p>&nbsp;</p>
+<p>Os candidatos aprovados&nbsp; ser&atilde;o chamados para ocupar as vagas conforme o cargo constante deste edital, de conformidade com as necessidades apresentadas para a realiza&ccedil;&atilde;o dos trabalhos&nbsp; e determina&ccedil;&atilde;o da administra&ccedil;&atilde;o&nbsp; municipal,&nbsp; para atender necessidade tempor&aacute;ria, para a&nbsp; execu&ccedil;&atilde;o do Programa " Estrat&eacute;gia de Sa&uacute;de da Fam&iacute;lia" - ESF, criado pelo Minist&eacute;rio da Sa&uacute;de do Governo Federal e conv&ecirc;nio com o Munic&iacute;pio e Modelo, &nbsp;com dura&ccedil;&atilde;o contratual de 01 ano, podendo ser rescindido a qualquer tempo por iniciativa do Munic&iacute;pio ou do empregado, n&atilde;o havendo qualquer indeniza&ccedil;&atilde;o ou&nbsp; outra vantagem que n&atilde;o sejam a verbas rescis&oacute;rias de remunera&ccedil;&atilde;o.</p>
+<p>&nbsp;</p>
+<p>A contrata&ccedil;&atilde;o ser&aacute; efetuada conforme necessidade verificado e autorizado pelo Executivo Municipal com requerimento da coordena&ccedil;&atilde;o do ESF.</p>
+<p>&nbsp;</p>
+<p>Os candidatos aprovados al&eacute;m do numero de vagas, ficar&atilde;o &nbsp;na reserva t&eacute;cnica, (cadastro reserva) podendo, &nbsp;de conformidade com o interesse do servi&ccedil;o publico&nbsp; e determina&ccedil;&otilde;es do convenio ESF, serem convocados, &nbsp;mediante a necessidade apresentada, nas licen&ccedil;as legalmente concedidas e ou em caso de desist&ecirc;ncia e ou vaga n&atilde;o preenchida em concurso&nbsp; publico para atendimento das micro-areas do programa ESF do Municipio de Modelo SC.&nbsp;</p>
+<p>&nbsp;</p>
+<p>Para contrata&ccedil;&atilde;o ser&aacute; observada a ordem de classifica&ccedil;&atilde;o na prova de t&iacute;tulos e&nbsp; o candidato dever&aacute; apresentar Atestado M&eacute;dico de que&nbsp; est&aacute;&nbsp; apto para o exerc&iacute;cio do cargo, comprovada capacidade f&iacute;sica e sanidade mental e os demais documentos estabelecidos para a contrata&ccedil;&atilde;o.</p>
+<p>&nbsp;</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>13 - DA COMISS&Atilde;O DO PROCESSO SELETIVO</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>Ficam designados para elaborar&nbsp; aplicar as provas, corre&ccedil;&atilde;o das mesmas, relat&oacute;rio dos inscritos e classificados, observando rigorosamente a legisla&ccedil;&atilde;o e demais normas legais ao perfeito cumprimento deste Edital a seguinte comiss&atilde;o:</p>
+<p><strong>Alidiane Zamprogna - Presidente</strong></p>
+<p><strong>Barbara Geller - Secretaria.</strong></p>
+<p><strong>Aldecir Antonio Bolis - membro</strong></p>
+<p><strong>Volmar Tomazzoni - membro</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>A comiss&atilde;o dever&aacute; providenciar as devidas publica&ccedil;&otilde;es e encaminhar os relat&oacute;rios ao setor de pessoal com os documentos relativos ao processo seletivo, para homologa&ccedil;&atilde;o do Executivo Municipal e a contrata&ccedil;&atilde;o nos termos da Lei.&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>14 - DAS DISPOSI&Ccedil;&Otilde;ES GERAIS</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p>O candidato que apresentar declara&ccedil;&atilde;o, documento falso ou n&atilde;o possuir os requisito para o cargo, ter&aacute; a sua&nbsp; inscri&ccedil;&atilde;o ou admiss&atilde;o cancelada.</p>
+<p>&nbsp;</p>
+<p>A aprova&ccedil;&atilde;o n&atilde;o gera direito a convoca&ccedil;&atilde;o e igualmente as vagas abertas ser&atilde;o preenchidas&nbsp; conforme j&aacute; citado, de conformidade com as necessidades e viabilidade legal observadas as normas do convenio do ESF.</p>
+<p>&nbsp;</p>
+<p>Caso houver mais classificados, constar&atilde;o&nbsp; da lista dos aprovados e poder&atilde;o ser chamados em caso de desist&ecirc;ncia dos chamados e na ordem de classifica&ccedil;&atilde;o, conforme verificada a necessidade de trabalho e atendimento do convenio do ESF e tamb&eacute;m para substitui&ccedil;&atilde;o dos servidores ocupantes deste cargo em licen&ccedil;as legalmente concedidas.</p>
+<p>&nbsp;</p>
+<p>O contrato ter&aacute; como fundamenta&ccedil;&atilde;o legal a Legisla&ccedil;&atilde;o pr&oacute;pria, conforme consta edital e poder&aacute; ser rescindido conforme citado nesta legisla&ccedil;&atilde;o.</p>
+<p>&nbsp;</p>
+<p>O candidato ter&aacute; prazo de 24 horas a contar da data&nbsp; e hor&aacute;rio de divulga&ccedil;&atilde;o para entrar com pedido de reconsidera&ccedil;&atilde;o da classifica&ccedil;&atilde;o e da data de publica&ccedil;&atilde;o para pedido de reconsidera&ccedil;&atilde;o do edital, atrav&eacute;s de requerimento junto ao Departamento Municipal de Sa&uacute;de.</p>
+<p>&nbsp;</p>
+<p>&Eacute; pr&eacute;-requisito para o ato de nomea&ccedil;&atilde;o que o candidato goze de bons antecedentes e apresente a documenta&ccedil;&atilde;o legal exigida para o ato de nomea&ccedil;&atilde;o.</p>
+<p>&nbsp;</p>
+<p>Os casos omissos ser&atilde;o resolvidos pela a comiss&atilde;o de processo seletivo deste edital.</p>
+<p>&nbsp;</p>
+<p>Modelo, aos 29 de maio &nbsp;de 2012.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>IMILIO AVILA</strong></p>
+<p><strong>PREFEITO MUNICIPAL</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>&nbsp;</strong></p>
+<p><strong>VOLMAR TOMAZONI</strong></p>
+<p><strong>Diretor Municipal de Sa&uacute;de</strong></p></div>
+			</dd>
+					<br class="absoluta" clear="all" />
+	</dl>
+
+
+<br class="absoluta" class="clear" />
+
+<script type="text/javascript">
+
+$(function(){
+	$('#abasContainer').abas({classSelected: 'ativo'});
+});
+
+</script>
+
+<!-- a lista de abas 
+ <div id="abasContainer">
+    <ul class="listAbas">
+                <li><a href="#aba1">Aba 1</a></li>
+                <li><a href="#aba2">Aba 2</a></li>
+    </ul>
+ 
+    <div id="aba1" class="abas">
+       Conteudo 1
+    </div>
+    <div id="aba2" class="abas">
+       Conteudo 2
+    </div>
+</div>
+-->
+
+ <div id="abasContainer">
+        <ul class="listAbas">
+				<li><a href="#aba1">Mais informações</a></li>
+				 
+		    </ul>
+        <div id="aba1" class="abas">
+					<dl class="mais-info">
+												<dt>Integra do Edital</dt>
+												<dd class="data-publicacao">Publicado em <span>29/06/2012</span></dd>
+
+						
+												<dd><ul class="arquivos">
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/74573_0.221710001338397111_edital_de_processo_seletivo_simplificado_01_2012.pdf">
+			<span class="legenda">0.221710001338397111_edital_de_processo_seletivo_simplificado_01_2012.pdf</span>
+            <span class="extensao-tamanho">pdf[141 KB]</span>
+            <span class="data-publicacao">[05/02/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+</ul>
+</dd>
+											</dl>
+    </div><!--Fim da #aba1-->
+    <div id="aba2" class="abas">
+    
+    </div><!--Fim #aba2-->
+</div>
+
+</div><!--Fim .concursos-->
+<div class="clear"></div>
+<br class="absoluta" />
+<br class="absoluta" />
+<br class="absoluta" />
+					<div class="informacoes-relacionadas">
+											</div>
+	            </div>
+				<!-- COLUNA LATERAL - FIM -->
+		<br class="clear">
+		</div>
+
+		<div></div>
+	</div>
+	<div class="footer" id="ancoraRodape">
+		<div class="img-footer">
+		</div>
+		<div class="footer-content">
+				<div class="info-municipio" itemscope itemtype="https://schema.org/Organization">
+					<ul>
+						<li><h2 itemprop="name">Município de Modelo<h2></li>
+						<li itemprop="streetAddress">Rua do Comércio, 1304 - Centro</li>
+                        						<li>CEP: <span  itemprop="postalCode">89872-000 </span></li>
+                        						<li>CNPJ: 83.021.832/0001-11</li>
+
+								                    <li class="telefone">
+								<strong>Telefones:</strong>
+								<div>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3137 </span>
+                                        		                            	<span class="identificacao">Principal</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98854-3327 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-5346 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-1136 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-9560 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3272 </span>
+                                        		                            	<span class="identificacao">Comercial</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3121 </span>
+                                        		                            	<span class="identificacao">Comercial</span>
+                                        		                            </span>
+		                        		                        </div>
+		                    </li>
+		                
+					</ul>
+				</div>
+									<div class="horario">
+						<h2>Horário de </br> funcionamento</h2>
+						<p>
+							De segunda a sexta-feira<br />
+das 7h30 às 11h30 e das 13h00 às 17h00.						</p>
+					</div>
+				
+			<div class="logos">
+                					<a target="_blank" href="#"><img src="../../../../../../../../styles/layouts/pm/landscape/images/redecim.png"></a>
+					<a target="_blank" href="http://www.fecam.org.br/"><img src="../../../../../../../../styles/layouts/pm/landscape/images/fecam.png"></a>
+								<a target="_blank" href="http://www.amerios.org.br/"><img src="../../../../../../../../styles/layouts/pm/landscape/images/amerios.png"></a>
+				<br class="clear">
+			</div>
+            <div class="corona-banner">
+                <a href="https://www.fecam.org.br/noticias/index/ver/codMapaItem/74947/codNoticia/606128" target="_blank">
+                    <img src="../../../../../../../../images/fecam/corona.png">
+                </a>
+            </div>
+			<div class="mapa-site">
+				<span></span>
+				<ul class="navigation">
+    <li>
+        <a class="paginaInicialPm" href="../../../../../../../../index.html">Início</a>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8498.html">Município</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/9060.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/9049.html">Histórico</a>
+            </li>
+            <li>
+                <a class="agenda" href="../../../../../../../../agenda/index/index/codMapaItem/9164.html">Agenda</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10377.html">Poder Executivo Municipal</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10380.html">Economia</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10381.html">Dados Geográficos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/19169.html">Plano Diretor Participativo</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8499.html">Governo</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10383.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/129750.html">Secretaria de Agricultura</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134901.html">Secretaria de Educação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134906.html">Secretaria de Saúde</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134907.html">Departamento Municipal de Estradas e Rodagem</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134912.html">Departamento Municipal de Assistência Social</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134919.html">Departamento de Obras e Serviços Urbanos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134923.html">Departamento Municipal de Esportes</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134927.html">Secretaria de Administração e Fazenda</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a>
+        <ul>
+            <li>
+                <a class="concursos" href="../../../../../../index/codMapaItem/9098.html">Concursos Públicos </a>
+            </li>
+            <li>
+                <a class="licitacoes" href="../../../../../../../../licitacoes/index/index/codMapaItem/9110.html">Licitações</a>
+            </li>
+            <li>
+                <a class="contasPublicas" href="../../../../../../../../contaspublicas/index/index/codMapaItem/9081.html">Contas Públicas e LRF</a>
+            </li>
+            <li>
+                <a class="legislacao" href="../../../../../../../../legislacao/index/index/codMapaItem/9154.html">Legislação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/54599.html">Parecer Tribunal de Contas</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/69227.html">Contratos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/90738.html">Atas de Registro de Preços</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/105584.html">RELATORIOS IN 20 TCE </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/105690.html">Kit Proposta </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/121341.html">CONTROLADORIA MUNICIPAL</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/131944.html">FISCALIZAÇÃO DE CONTRATOS</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/134834.html">DESPESAS COM EDUCAÇÃO</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="noticia" href="../../../../../../../../noticias/index/listar/codMapaItem/8501.html">Notícias</a>
+    </li>
+    <li>
+        <a class="links" href="http://servicos.modelo.sc.gov.br/">Carta de Serviços</a>
+    </li>
+    <li>
+        <a class="links" href="../../../../../../../../turismo/index.html">Turismo</a>
+    </li>
+    <li>
+        <a class="contatos" href="../../../../../../../../contatos/index/index/codMapaItem/8504.html">Contato</a>
+    </li>
+</ul>				<br class="clear">
+			</div>
+		</div>
+	</div>
+	<script type='text/javascript'> 
+var _gaq = _gaq || []; 
+_gaq.push(['_setAccount', 'UA-20438101-23']);
+_gaq.push(['_trackPageview'], '/concursos/index/detalhes/codMapaItem/9098/codConcurso/768/contraste/ativar');
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+jQuery(document).ajaxComplete(function(e, xhr, settings){
+_gaq.push(['_trackPageview', settings.url]);
+});
+</script>    

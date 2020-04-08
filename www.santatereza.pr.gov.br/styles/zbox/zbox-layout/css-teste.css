@@ -1,0 +1,46 @@
+#conteudoLayout
+{
+	border: none;
+	width: 950px;
+}
+#conteudoLayout .zl-divisao
+{
+	border: none;
+}
+
+#conteudoLayout .zl-celula
+{
+	border: none;
+	margin: 0px;
+}
+
+#conteudoLayout .zl-divisao
+{
+	padding: 0px;	
+}
+
+#conteudoLayout #zl-divisao-2
+{
+	width: 685px;
+}
+
+.zl-delete-widget,
+.zl-config-widget
+{
+	display: none;
+}
+
+.zl-list-widGet
+{
+	margin: 0px;
+}
+
+.zl-list-widGet .zl-tituloWidget
+{
+	background-color: #B3C073;
+	color: #FFFFFF;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    padding: 3px 10px;
+}

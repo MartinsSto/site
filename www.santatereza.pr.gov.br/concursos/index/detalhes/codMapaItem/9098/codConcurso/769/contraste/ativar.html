@@ -1,0 +1,727 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.1//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-2.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<!-- Mirrored from www.modelo.sc.gov.br/concursos/index/detalhes/codMapaItem/9098/codConcurso/769/contraste/ativar by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 Apr 2020 14:41:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title>EDITAL DE PROCESSO SELETIVO EDUCAÇÃO - Concursos Públicos  - Município de Modelo</title><link href="../../../../../../../../styles/zbox/todos_sites.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../../../../../../styles/layouts/galerias/arquivo/galeria2.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="../../../../../../../../styles/layouts/pm/landscape/css/compilado/contraste.css" media="" rel="stylesheet" type="text/css" /><script type="text/javascript" src="../../../../../../../../../ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../../../../scripts/json.js"></script>
+<script type="text/javascript" src="../../../../../../../../scripts/ajax.js"></script>
+<script type="text/javascript" src="../../../../../../../../scripts/test-navigator.js"></script>
+<script type="text/javascript" src="../../../../../../../../styles/layouts/pm/landscape/js/landscape.js"></script>
+<script type="text/javascript" src="../../../../../../../../scripts/abas.js"></script><meta property="og:image" content="/images/municipios/brasao/90x90/modelo.png" />
+</head>
+
+<body id="contraste">
+<style>
+	.loading-site:after {
+		background-image: url("../../../../../../../../images/municipios/brasao/90x90/modelo.png");
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+</style>
+<style>
+.header {
+	background-image: url("../../../../../../../../../static.fecam.net.br/thumbs/404/1615402_resize_1999_807.jpg");
+}
+.img-footer {
+	background-image: url("../../../../../../../../../static.fecam.net.br/thumbs/404/1615401_resize_2000_45.png");
+}
+</style>
+	<div class="loading-site"></div>
+	<div class="header">
+        <div class="container-barra">
+            <div id="container-sistema-fecam"></div>
+        </div>
+		<div class="container-head">
+			<div class="cabecalho">
+				<div id="atalhosAcessibilidade">
+					<a href="#ancoraConteudo" accesskey="1">Ir para conteúdo <span>1</span></a>
+					<a href="#ancoraMenu" accesskey="2">Ir para menu <span>2</span></a>
+											<a href="#q">Ir para busca <span>3</span></a>
+										<a href="#ancoraRodape" accesskey="4">Ir para rodapé <span>4</span></a>
+										<a href="../../../../../../../../zbox/acessibilidade.html" accesskey="5">Acessibilidade <span>5</span></a>
+											<a href="desativar.html" accesskey="6">Alto
+											contraste <span>6</span>
+										</a>
+									</div>
+				<div class="cabecalho-cima" style="background:url(../../../../../../../../../static.fecam.net.br/thumbs/404/1616752_resize_937_287.jpg) no-repeat 50% 0;">
+					<div class="logo">
+						<a href="../../../../../../../../index.html">
+							<img src="../../../../../../../../images/municipios/brasao/90x90/modelo.png">
+						</a>
+						<br>
+						<h1>
+							<span>Município de</span>
+							<br>Modelo						</h1>
+					</div>
+					<div id="topo-tempo">
+						<div class="tempo-hoje">
+				    	<span id="previsao-tempo-dia-1-icone"><img src="../../../../../../../../images/loading.png" /></span>
+						<div class="info">
+							<div class="dia">
+								<p class='titulo-previsao' id="previsao-tempo-dia-1"></p>
+								<p class='condicao' id="previsao-tempo-dia-1-previsao">---</p>
+							</div>
+    						<ul class='temperaturas'>
+
+    							<li class="min" id="previsao-tempo-dia-1-min">?</li>
+    							<li class="max" id="previsao-tempo-dia-1-max">?</li>
+
+    						</ul>
+						</div>
+					</div>
+
+					<div class="tempo-amanha">
+						<span id="previsao-tempo-dia-2-icone"><img src="../../../../../../../../images/loading.png" width="35" height="34" /></span>
+						<div class="info">
+							<div class="dia">
+								<p class='titulo-previsao' id="previsao-tempo-dia-2"></p>
+								<p class='condicao' id="previsao-tempo-dia-2-previsao">---</p>
+							</div>
+    						<ul class='temperaturas'>
+    							<li class="min" id="previsao-tempo-dia-2-min">?</li>
+    							<li class="max" id="previsao-tempo-dia-2-max">?</li>
+
+    						</ul>
+						</div>
+					</div>
+						<script type="text/javascript">
+							$(function() {
+
+								//$('#topo-tempo').hide();
+								console.log('https://www.fecam.org.br/tempo.php?codPrevisao=3299');
+								$.ajax({
+									url: 'https://www.fecam.org.br/tempo.php?codPrevisao=3299',
+								    jsonpCallback: 'jsonCallback',
+								    contentType: "application/json",
+    								dataType: 'jsonp',
+                                    cache: 'false',
+
+									success: function(data){
+										data = data['tempo'];
+                                        dc = 0; //Contador de dias;
+										while(dc <= 1){
+											prefix = "#previsao-tempo-dia-"+(dc+1);
+											dia = data['previsao'][dc];
+											$(prefix).html(dia['diaSemana']);
+											$(prefix+'-max').html(dia['maxima']+"C");
+											$(prefix+"-min").html(dia['minima']+"C");
+											$(prefix+"-icone img").attr("src","/styles/layouts/pm/default/images/previsao-tempo/"+dia['tempo']+".png");
+											$(prefix+"-previsao").html(dia['condicao']);
+											console.log(dia);
+											dc++;
+										}
+
+									}
+								});
+							});
+							</script>
+		        	</div>
+						<span id="ancoraMenu"><ul class="navigation">
+    <li>
+        <a class="paginaInicialPm" href="../../../../../../../../index.html">Início</a>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8498.html">Município</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/9060.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/9049.html">Histórico</a>
+            </li>
+            <li>
+                <a class="agenda" href="../../../../../../../../agenda/index/index/codMapaItem/9164.html">Agenda</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10377.html">Poder Executivo Municipal</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10380.html">Economia</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10381.html">Dados Geográficos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/19169.html">Plano Diretor Participativo</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8499.html">Governo</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10383.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/129750.html">Secretaria de Agricultura</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134901.html">Secretaria de Educação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134906.html">Secretaria de Saúde</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134907.html">Departamento Municipal de Estradas e Rodagem</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134912.html">Departamento Municipal de Assistência Social</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134919.html">Departamento de Obras e Serviços Urbanos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134923.html">Departamento Municipal de Esportes</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134927.html">Secretaria de Administração e Fazenda</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a>
+        <ul>
+            <li>
+                <a class="concursos" href="../../../../../../index/codMapaItem/9098.html">Concursos Públicos </a>
+            </li>
+            <li>
+                <a class="licitacoes" href="../../../../../../../../licitacoes/index/index/codMapaItem/9110.html">Licitações</a>
+            </li>
+            <li>
+                <a class="contasPublicas" href="../../../../../../../../contaspublicas/index/index/codMapaItem/9081.html">Contas Públicas e LRF</a>
+            </li>
+            <li>
+                <a class="legislacao" href="../../../../../../../../legislacao/index/index/codMapaItem/9154.html">Legislação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/54599.html">Parecer Tribunal de Contas</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/69227.html">Contratos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/90738.html">Atas de Registro de Preços</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/105584.html">RELATORIOS IN 20 TCE </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/105690.html">Kit Proposta </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/121341.html">CONTROLADORIA MUNICIPAL</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/131944.html">FISCALIZAÇÃO DE CONTRATOS</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/134834.html">DESPESAS COM EDUCAÇÃO</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="noticia" href="../../../../../../../../noticias/index/listar/codMapaItem/8501.html">Notícias</a>
+    </li>
+    <li>
+        <a class="links" href="http://servicos.modelo.sc.gov.br/">Carta de Serviços</a>
+    </li>
+    <li>
+        <a class="links" href="../../../../../../../../turismo/index.html">Turismo</a>
+    </li>
+    <li>
+        <a class="contatos" href="../../../../../../../../contatos/index/index/codMapaItem/8504.html">Contato</a>
+    </li>
+</ul></span>
+					</ul>
+				</div>
+				<div class="cabecalho-baixo">
+					<div class="busca-site">
+													<div id="busca">
+							<form method="GET" action="https://www.modelo.sc.gov.br/pesquisa/">
+    <input class="input-texto" type="text"  name="q" id="q" value="" placeholder="Pesquisar..." accesskey="3" />
+	<button class="input-botao" type="submit"><span></span></button>
+</form>							</div>
+											</div>
+					<div class="social">
+					<h3>Compartilhe: </h3>
+
+					<!-- AddThis Button BEGIN -->
+										    <div class="addthis_toolbox addthis_default_style " >
+					    	<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                    <a class="a2a_button_whatsapp"></a>
+                 </div>
+                 <script async src="../../../../../../../../../static.addtoany.com/menu/page.js"></script>                            <a class="addthis_button_facebook"></a>
+							<a class="addthis_button_twitter"></a>
+							<a class="addthis_button_email" addthis:title="EDITAL DE PROCESSO SELETIVO EDUCA%C7%C3O - Concursos P%FAblicos  - Munic%EDpio de Modelo"></a>
+						<a class="addthis_button_compact"></a>
+						<a class="addthis_counter addthis_bubble_style"></a>
+					</div>
+					<script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+					<script type="text/javascript" src="../../../../../../../../../s7.addthis.com/js/300/addthis_widget.js#pubid=ra-524f08ae420d606b"></script>
+					<!-- AddThis Button END -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="content" id="ancoraConteudo">
+		<div>
+			<!-- COLUNA LATERAL - INICIO -->
+			        		            <div class="col1">
+	            	<h3 class="titulo"><a href="../../../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a></h3><ul class="navigation"><li><a href='../../../../../../index/codMapaItem/9098.html' target='_self'  class='ativo'  >Concursos Públicos </a></li><li><a href='../../../../../../../../licitacoes/index/index/codMapaItem/9110.html' target='_self'  >Licitações</a></li><li><a href='../../../../../../../../contaspublicas/index/index/codMapaItem/9081.html' target='_self'  >Contas Públicas e LRF</a></li><li><a href='../../../../../../../../legislacao/index/index/codMapaItem/9154.html' target='_self'  >Legislação</a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/54599.html' target='_self'  >Parecer Tribunal de Contas</a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/69227.html' target='_self'  >Contratos</a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/90738.html' target='_self'  >Atas de Registro de Preços</a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/105584.html' target='_self'  >RELATORIOS IN 20 TCE </a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/105690.html' target='_self'  >Kit Proposta </a></li><li><a href='../../../../../../../../cms/pagina/ver/codMapaItem/121341.html' target='_self'  >CONTROLADORIA MUNICIPAL</a></li><li><a href='../../../../../../../../cms/diretorio/index/codMapaItem/131944.html' target='_self'  >FISCALIZAÇÃO DE CONTRATOS</a></li><li><a href='../../../../../../../../cms/diretorio/index/codMapaItem/134834.html' target='_self'  >DESPESAS COM EDUCAÇÃO</a></li></ul>	            </div>
+	            <div class="col3">
+	            	<a name="ancoraConteudo" id="ancoraConteudo"></a>
+					
+<div class="concursos detalhes">
+	<h1>Concursos Públicos </h1>
+	<h2>EDITAL DE PROCESSO SELETIVO EDUCAÇÃO<span>Nº 001/2013</span></h2>
+
+	<h3 class="info-basicas">Informações Básicas</h3>
+	<dl class="info-basicas">
+					<dt class="data">
+				<strong>Data do Concurso:</strong>
+				<span class="dia">03</span>
+				<span class="mes">jan</span>
+				<span class="ano">2013</span>
+			</dt>
+		
+					<dd class="status finalizado"><strong>Finalizado</strong></dd>
+							<dd class="descricao">
+				<div class="texto-editor"><p><strong><span style="font-size: 12pt;">EDITAL N&deg; 001/2013 DE 03.01.2013</span></strong><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><strong><span style="font-size: 12pt;">ABRE INSCRI&Ccedil;&Otilde;ES E BAIXA NORMAS PARA O PROCESSO SELETIVO SIMPLIFICADO DE T&Iacute;TULOS, PARA ADMISSAO EM CAR&Aacute;TER TEMPOR&Aacute;RIO DE EXCEPCIONAL INTERESSE P&Uacute;BLICO, DE MEMBRO DO MAGIST&Eacute;RIO SENDO PROFESSOR ENSINO SUPERIOR, OBJETIVANDO O ATENDIMENTO DA EDUCA&Ccedil;&Atilde;O INFANTIL E ENSINO FUNDAMENTAL, DO MUNIC&Iacute;PIO DE MODELO - SC, CONFORME ESPECIFICA E D&Aacute; OUTRAS PROVID&Ecirc;NCIAS.</span></strong><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><strong><span style="font-size: 12pt;">RICARDO LUIS MALDANER</span></strong><span style="font-size: 12pt;">, Prefeito Municipal de Modelo, Estado de Santa Catarina, no uso das atribui&ccedil;&otilde;es legais, em especial de conformidade com</span><span style="font-size: 12pt;">o art. 42 VII. da Lei Org&acirc;nica Municipal, de 05 de Abril de 1990, artigo 37 da Constitui&ccedil;&atilde;o Federal,<span>&nbsp; </span>Art. 108 da Lei Municipal 971/1990, 1513/2002, 1592/2005, 1883/2009, 1906/2010 e<span>&nbsp; </span>em especial a Lei Municipal 1386/99 e demais disposi&ccedil;&otilde;es legais pertinentes a mat&eacute;ria,</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><strong><span style="font-size: 12pt;">TORNA P&Uacute;BLICO</span></strong><span style="font-size: 12pt;"> que se encontra aberto o Processo Seletivo simplificado de t&iacute;tulos,</span><strong><span style="font-size: 12pt;">PARA ADMISSAO EM CARATER TEMPOR&Aacute;RIO DE EXCEPCIONAL INTERESSE P&Uacute;BLICO, DE MEMBRO DO MAGIST&Eacute;RIO, SENDO PROFESSOR ENSINO SUPERIOR,<a title="_GoBack" name="_GoBack"></a>PARA ATENDIMENTO DA EDUCA&Ccedil;&Atilde;O INFANTIL E ENSINO FUNDAMENTAL, PARA O EXERC&Iacute;CIO DE 2013,</span></strong><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><strong><span style="font-size: 12pt;">1. LOCAL DAS INSCRI&Ccedil;&Otilde;ES, PER&Iacute;ODO, HOR&Aacute;RIO E VAGAS E DISPOSI&Ccedil;&Otilde;ES GERAIS&nbsp;</span></strong><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.1<strong>&ndash; LOCAL</strong>: Secretaria Municipal de Educa&ccedil;&atilde;o, Cultura e Esportes, sita &agrave; Rua Crist&oacute;v&atilde;o Colombo, n&deg;360, junto a Escola Reunida Municipal Professora Griseldi Maria M&uuml;ller, Modelo-SC.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.2. <strong>&ndash; PER&Iacute;ODO E HOR&Aacute;RIO</strong>: Nos dias 23, 24 e 25de janeiro de 2013, <span>&nbsp;</span>no hor&aacute;rio das 8:00 &agrave;s 11:30 horas e das 13:30 &agrave;s 17:00.</span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.3. -<strong>VAGAS:</strong></span><strong><span style="font-size: 12pt;">&nbsp;</span></strong><strong><span style="font-size: 12pt;">&nbsp;</span></strong></p>
+<p><strong><span style="font-size: 12pt;">1.3.1.<span>&nbsp; </span>PROFESSOR ENSINO SUPERIOR</span></strong><span style="font-size: 12pt;">- Curso: Pedagogia ou Normal Superior com habilita&ccedil;&atilde;o em series iniciais<span>&nbsp; </span>- de 1&deg; ao 5&deg;<span>&nbsp; </span>ano do ensino fundamental, <span>&nbsp;</span>(anos iniciais), com carga hor&aacute;ria de 20<span>&nbsp; </span>horas semanais, lota&ccedil;&atilde;o no Departamento Municipal de Educa&ccedil;&atilde;o. </span></p>
+<p><strong><span style="font-size: 12pt;">1.3.2.<span>&nbsp; </span>PROFESSOR ENSINO SUPERIOR</span></strong><span style="font-size: 12pt;">&ndash; com habilita&ccedil;&atilde;o em <strong>EDUCA&Ccedil;&Atilde;O F&Iacute;SICA</strong>, carga hor&aacute;ria de 10 ou 20 horas semanais, lota&ccedil;&atilde;o no Departamento de Educa&ccedil;&atilde;o.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><strong><span style="font-size: 12pt;">1.3.3.<span>&nbsp; </span>PROFESSOR ENSINO SUPERIOR</span></strong><span style="font-size: 12pt;"> com habilita&ccedil;&atilde;o em <strong>ARTES/EDUCA&Ccedil;&Atilde;O ART&Iacute;STICA,</strong> com carga hor&aacute;ria de 10 ou 20 horas semanais, lota&ccedil;&atilde;o no Departamento Municipal de Educa&ccedil;&atilde;o.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;"><span>1.3.4.<span style="font: 7pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><strong><span style="font-size: 12pt;">PROFESSOR ENSINO SUPERIOR </span></strong><span style="font-size: 12pt;">com habilita&ccedil;&atilde;o<strong> EM L&Iacute;NGUA ESTRANGEIRA (INGLES</strong>), com carga hor&aacute;ria de 20 horas semanais, lota&ccedil;&atilde;o na Secretaria Municipal de Educa&ccedil;&atilde;o, Cultura e Esportes.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;"><span>1.3.5.<span style="font: 7pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><strong><span style="font-size: 12pt;"><span>&nbsp;</span>PROFESSOR ENSINO SUPERIOR</span></strong><span style="font-size: 12pt;">&ndash;Curso: Pedagogia ou Normal Superior, para atua&ccedil;&atilde;o na disciplina<span>&nbsp; </span>de INFORM&Aacute;TICA EDUCATIVA, com carga hor&aacute;ria de<span>&nbsp; </span>20 horas semanais, lota&ccedil;&atilde;o no Departamento de Educa&ccedil;&atilde;o, no turno matutino e vespertino.</span></p>
+<p><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;"><span>1.3.6.<span style="font: 7pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><strong><span style="font-size: 12pt;">PROFESSOR ENSINO SUPERIOR</span></strong><span style="font-size: 12pt;">&ndash; Curso: Pedagogia ou Normal Superior,com habilita&ccedil;&atilde;o EM EDUCA&Ccedil;&Atilde;O INFANTIL, com carga hor&aacute;ria de 10, 20, 30 ou 40 horas semanais, lota&ccedil;&atilde;o no Departamento de Educa&ccedil;&atilde;o, conforme necessidade .</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><strong><span style="font-size: 12pt;">1.4 &ndash; DA INSCRI&Ccedil;&Atilde;O&nbsp;</span></strong></p>
+<p><span style="font-size: 12pt;">1.4.1 A inscri&ccedil;&atilde;o do candidato dever&aacute; ser para uma &uacute;nica<span>&nbsp; </span>&aacute;rea de habilita&ccedil;&atilde;o.</span></p>
+<p><span style="font-size: 12pt;">1.4.2<strong>.DOS REQUISITOS</strong>:</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">I). Ser brasileiro nato ou naturalizado;</span><span style="font-size: 12pt;">II). Ter idade m&iacute;nima de 18 (dezoito) anos;</span><span style="font-size: 12pt;">III). Estar em dia com o servi&ccedil;o militar (sexo masculino);</span><span style="font-size: 12pt;">IV). Estar em dia com as obriga&ccedil;&otilde;es eleitorais;</span><span style="font-size: 12pt;">V). Ter sanidade mental e capacidade f&iacute;sica;</span><span style="font-size: 12pt;">VI). Ter conclu&iacute;do o curso com habilita&ccedil;&atilde;o na &aacute;reaou disciplina em que pretende<span>&nbsp; </span>atuar.</span><span style="font-size: 12pt;">VII). Estar matriculado e frequentando curso de gradua&ccedil;&atilde;o na &aacute;rea ou disciplina que pretende atuar (para classifica&ccedil;&atilde;o comon&atilde;o habilitado);</span><span style="font-size: 12pt;">VIII) &ndash; Cumprir as determina&ccedil;&otilde;es do presente Edital e normas legais pertinentes a mat&eacute;ria e da comiss&atilde;o nomeada atrav&eacute;s do Decreto<span>&nbsp; </span>018/2013.</span><span style="font-size: 12pt;">IX) Apresentar original e copia dos documentos necess&aacute;rios &agrave; inscri&ccedil;&atilde;o;</span><span style="font-size: 12pt;">1.4.2.1 &ndash; Ser&aacute; aceito inscri&ccedil;&atilde;o de interessados que estejam cursando as &aacute;reas especificasconstante das disposi&ccedil;&otilde;es de Vagas,<span>&nbsp;&nbsp; </span>para forma&ccedil;&atilde;o de cadastro de reserva de<span>&nbsp; </span>professor n&atilde;o habilitado e ser&aacute; efetuado classifica&ccedil;&atilde;o pr&oacute;pria conforme disposto neste edital.</span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.4.3. <strong>DA DOCUMENTA&Ccedil;&Atilde;O</strong>:</span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;">Documentos a serem apresentados para inscri&ccedil;&atilde;o de que disp&otilde;e este edital: </span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;">I). Diploma de gradua&ccedil;&atilde;o, p&oacute;s-gradua&ccedil;&atilde;o, mestrado e doutorado, devidamente registrados no &oacute;rg&atilde;o competente, ou documento equivalente que comprove a conclus&atilde;o do curso, devendo o candidato juntar o diploma ao processo de sele&ccedil;&atilde;o at&eacute; o dia da escolha das vagas, conforme disposto neste Edital.</span><span style="font-size: 12pt;">Caso o candidato n&atilde;o apresentar o diploma de conclus&atilde;o do curso, at&eacute; a data de escolha de vagas, n&atilde;o ser&aacute; considerado v&aacute;lido o documento para comprovante da habilita&ccedil;&atilde;o. </span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;">II). Comprovante de estar matriculado e frequentando curso de gradua&ccedil;&atilde;o na &aacute;rea que pretende atuar.</span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;">III. atestado de tempo de servi&ccedil;o no magist&eacute;rio, expresso em anos, meses e dias, at&eacute; 31.12.2012, <span>&nbsp;</span>expedidos pelos seguintes &oacute;rg&atilde;os:</span><span style="font-size: 12pt;"><span>-<span style="font: 7pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt;">Unidade escolar, quando se tratar de magist&eacute;rio p&uacute;blico Estadual ou Federal;</span><span style="font-size: 12pt;"><span>-<span style="font: 7pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt;">Secretaria Municipal de Educa&ccedil;&atilde;o ou Setor de pessoal do Munic&iacute;pio, quando se tratar de tempo de servi&ccedil;o Municipal.</span><span style="font-size: 12pt;"><span>-<span style="font: 7pt 'Times New Roman';">&nbsp; </span></span></span><span style="font-size: 12pt;">O tempo de servi&ccedil;o do servidor aposentado ser&aacute; considerado somente aquele exercido ap&oacute;s a concess&atilde;o do benef&iacute;cio de aposentadoria.<span>&nbsp; </span></span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>IV). Carteira de identidade;</span><span style="font-size: 12pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>V). C.P.F.</span><span style="font-size: 12pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>VI). Certid&atilde;o de casamento;</span><span style="font-size: 12pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>VII). Certid&atilde;ode nascimento dos filhos;</span><span style="font-size: 12pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>VIII). Certid&atilde;o de reservista;</span><span style="font-size: 12pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>IX).<span>&nbsp; </span>Comprovante de quita&ccedil;&atilde;o eleitoral;</span><span style="font-size: 12pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>X).<span>&nbsp; </span>Declara&ccedil;&atilde;o de compatibilidade como servi&ccedil;o p&uacute;blico;</span><span style="font-size: 12pt;">XI). Comprovante das horas de cursos de aperfei&ccedil;oamento e atualiza&ccedil;&atilde;o, espec&iacute;ficos na &aacute;rea de atua&ccedil;&atilde;o, de conformidade com a respectiva inscri&ccedil;&atilde;o eda &aacute;rea de educa&ccedil;&atilde;o especial.</span><span style="font-size: 12pt;">1.4.3.1. OsComprovante<span>&nbsp; </span>de cursos de aperfei&ccedil;oamento na &aacute;rea de educa&ccedil;&atilde;o especial, poder&atilde;o ser computados na respectiva &aacute;rea de inscri&ccedil;&atilde;o, conforme quadro de vagas<span>&nbsp; </span>de que disp&otilde;e este edital. </span><span style="font-size: 12pt;">1.4.3.2. Os documentos de que trata este Edital,dever&atilde;o ser apresentados em c&oacute;pia e original para autentica&ccedil;&atilde;o.&nbsp;</span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></p>
+<p><span style="font-size: 12pt;"><span>&nbsp;</span>1.5 .<strong>DA CLASSIFICA&Ccedil;&Atilde;O</strong>.</span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></p>
+<p><span style="font-size: 12pt;">1.5.1. A classifica&ccedil;&atilde;o dar-se-&aacute;de acordo com os seguintes crit&eacute;rios:</span><span style="font-size: 12pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1.5.1.1.<span>&nbsp; </span>Habilita&ccedil;&atilde;o profissional, nos termos deste Edital:</span><span style="font-size: 12pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>a). Doutorado na &aacute;rea espec&iacute;fica 10,0 (dez)pontos;</span><span style="font-size: 12pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>b). Mestrado na &aacute;rea espec&iacute;fica 8,0 (oito)pontos;</span><span style="font-size: 12pt;">c). P&oacute;s-Gradua&ccedil;&atilde;ona &aacute;rea espec&iacute;fica 6,0 (seis) pontos;</span><span style="font-size: 12pt;">d).<span>&nbsp; </span>Gradua&ccedil;&atilde;o de licenciatura em pedagogia na &aacute;rea espec&iacute;fica 5,0 (cinco)pontos;</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.5.2 No c&aacute;lculo de pontos para a classifica&ccedil;&atilde;o de professores habilitados, computar-se-&aacute;:</span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;"><span>a)<span style="font: 7pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt;">O tempo de servi&ccedil;o no magist&eacute;rio ter&aacute; valor igual a 2 (dois) pontos, para cada ano de servi&ccedil;o profissional<span>&nbsp; </span>ou fra&ccedil;&atilde;o igual ou superior a 06 (seis) meses.</span><span style="font-size: 12pt;"><span>b)<span style="font: 7pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt;">A fra&ccedil;&atilde;o de 15 (quinze) diasou mais ser&aacute; considerado<span>&nbsp; </span>(01) um m&ecirc;s;</span><span style="font-size: 12pt;"><span>c)<span style="font: 7pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span style="font-size: 12pt;">Ser&aacute; atribu&iacute;do 1,0 (um) ponto para cada 40 (quarenta) horas de curso na &aacute;rea de atua&ccedil;&atilde;o, realizados no per&iacute;odo de 2010, 2011 e 2012, podendo ser inclu&iacute;do cursos na &aacute;rea de educa&ccedil;&atilde;o especial.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.5.2.1 &ndash; A classifica&ccedil;&atilde;o dos professores cursando gradua&ccedil;&atilde;o (n&atilde;o habilitados),ser&aacute; efetuada, <span>&nbsp;</span>considerando:</span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;">a) &ndash; Cursando gradua&ccedil;&atilde;o na &aacute;rea de atua&ccedil;&atilde;o-0,2 pontos para cada per&iacute;odo/semestre cursado at&eacute; o dia da inscri&ccedil;&atilde;o;</span><span style="font-size: 12pt;">b) &ndash;O tempo de servi&ccedil;o no magist&eacute;rio ter&aacute; valor igual a 2 (dois) pontos, para cada ano de servi&ccedil;o profissional<span>&nbsp; </span>ou fra&ccedil;&atilde;o igual ou superior a 06 (seis) meses.</span><span style="font-size: 12pt;">c) - Ser&aacute; atribu&iacute;do 1,0(hum) ponto para cada 40 (quarenta) horas de curso na &aacute;rea de atua&ccedil;&atilde;o, realizados no per&iacute;odo de 2010, 2011 e 2012.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.5.3. Havendo empate entre os candidatos, ap&oacute;s a classifica&ccedil;&atilde;o, dever&aacute; ser aplicado o seguinte crit&eacute;rio:</span><span style="font-size: 12pt;">1&deg;) o que possuir maior tempo de servi&ccedil;o no magist&eacute;rio p&uacute;blico municipal;</span><span style="font-size: 12pt;">2&deg;) o que possuir maior n&uacute;mero de dependentes;</span><span style="font-size: 12pt;">3&deg;) o de maior idade;</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.5.3.1. Persistindo o empate ser&aacute; feito o sorteio.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.5.4.<span>&nbsp; </span>A classifica&ccedil;&atilde;o se dar&aacute; poritens e levar-se-&aacute; em conta a seguinte ordem de sele&ccedil;&atilde;o dos candidatos/t&iacute;tulos:</span><span style="font-size: 12pt;">1&deg;). Habilita&ccedil;&atilde;o;</span><span style="font-size: 12pt;">2&deg;). Tempo de servi&ccedil;o no magist&eacute;rio;</span><span style="font-size: 12pt;">3&ordm;). Cursos.</span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><strong><span style="font-size: 12pt;">1.6. DA ESCOLHA DAS VAGAS:</span></strong><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span><span>1.6.1<span style="font: 7pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span><span>&nbsp;&nbsp;</span>A escolha das vagas se dar&aacute; no dia 04.02.2013, no hor&aacute;rio das 9:00 horas, junto a sala do Departamento de Educa&ccedil;&atilde;o, sita &agrave; Rua Crist&oacute;v&atilde;o Colombo, n&deg; 360,<span>&nbsp; </span>Modelo-SC.</span></p>
+<p><span style="font-size: 12pt;">&nbsp;</span><span><span>1.6.2<span style="font: 7pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span>A chamada dos candidatos ser&aacute; feita obedecendo a ordem de classifica&ccedil;&atilde;o, at&eacute; o preenchimento das vagas existentes por ocasi&atilde;o da escolha das vagas.&nbsp;</span></p>
+<p><span>&nbsp;</span><span><span>1.6.3<span style="font: 7pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span>Caso, no decorrer do ano, surgiremnovas vagas, o professor que estiver atuando n&atilde;o poder&aacute; desistir da mesma para participar da nova escolha.</span><span>&nbsp;</span><span>&nbsp;</span></p>
+<p><span><span>1.6.4<span style="font: 7pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span>Caber&aacute; a Comiss&atilde;o de Sele&ccedil;&atilde;o, nomeada por decreto do Executivo Municipal, a responsabilidade pela coordena&ccedil;&atilde;o da sele&ccedil;&atilde;o dos professores, juntamente com a Secretaria de Educa&ccedil;&atilde;o.&nbsp;</span><span>&nbsp;</span></p>
+<p><span><span>1.6.5<span style="font: 7pt 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><span>O quadro de vagas ser&aacute; afixado no Mural do Departamento de Educa&ccedil;&atilde;o, no dia da escolha de vagas.</span><span>&nbsp;</span><span style="font-size: 12pt;">&nbsp;</span><span>&nbsp;</span><span style="font-size: 12pt;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></p>
+<p><span style="font-size: 12pt;"><span>&nbsp;</span><strong>1.7. DAS DISPOSI&Ccedil;&Otilde;ES GERAIS E FINAIS:</strong></span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.1. A inscri&ccedil;&atilde;o dos candidatos dar-se-&aacute;mediante o preenchimento de ficha pr&oacute;pria, a disposi&ccedil;&atilde;o no local da inscri&ccedil;&atilde;o, na qual dever&atilde;o ser anexados c&oacute;pia dos documentos exigidos no item 03.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.2. Em hip&oacute;tese alguma, admitir-se-&aacute; inscri&ccedil;&atilde;o por correspond&ecirc;ncia, admitindo-se, no entanto, por procura&ccedil;&atilde;o, a qual dever&aacute; ser anexada &agrave; ficha de inscri&ccedil;&atilde;o.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.3.<span>&nbsp;&nbsp; </span>O candidato que apresentar declara&ccedil;&atilde;o ou outro documento falso ter&aacute; sua inscri&ccedil;&atilde;o cancelada e anulada todos os atos dela decorrentes.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.4.<span>&nbsp;&nbsp; </span>As listas classificat&oacute;rias ser&atilde;o afixadas no Mural P&uacute;blico Municipal, junto a Prefeitura Municipal e Mural do Departamento de Educa&ccedil;&atilde;o, no dia30.01.2013 &ndash; &agrave;s 16:00 horas.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.5.<span>&nbsp;&nbsp; </span>O candidato ter&aacute; o prazo de 01 (um) dia &uacute;til, a contar da data de divulga&ccedil;&atilde;o das listagens para entrar com pedido de reconsidera&ccedil;&atilde;o da classifica&ccedil;&atilde;o, protocolado junto a Secretaria de Educa&ccedil;&atilde;o, Cultura e Esportes, em hor&aacute;rio de expediente da Secretaria, por requerimento fundamentado e assinado pelo candidato.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.6.<span>&nbsp;&nbsp; </span>A chamada dos candidatos selecionados ser&aacute; feita obedecendo &agrave; ordem de classifica&ccedil;&atilde;o, mediante a exist&ecirc;ncia de vagas.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.7.<span>&nbsp;&nbsp; </span>A chamadados candidatos relacionados como n&atilde;o habilitados, deve ocorrer ap&oacute;s esgotadas<span>&nbsp; </span>as possibilidade de admiss&atilde;o dos candidatos relacionados como habilitados.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.8. O candidato selecionado que no momento da escolha n&atilde;o aceitar a vaga dispon&iacute;vel ou n&atilde;o comparecer no dia da escolha e no hor&aacute;rio previsto neste Edital e durante o ano letivo de 2013, passar&aacute; automaticamente para o &uacute;ltimo lugar da listagem em que est&aacute; classificado.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.8.1 A sequencia para chamada da escolha seguir&aacute; a ordem de classifica&ccedil;&atilde;o e da continuidade pela ultima convoca&ccedil;&atilde;o at&eacute; o final da listapara<span>&nbsp; </span>os n&atilde;o habilitados caso houver necessidade e recome&ccedil;a novamente a lista ap&oacute;s esgotadas as convoca&ccedil;&otilde;es </span><span style="font-size: 12pt;">Se n&atilde;o houver interessados ao final das convoca&ccedil;&otilde;es o Munic&iacute;pio dever&aacute; assegurar conforme disposi&ccedil;&otilde;es legais a atendimento e continuidade dos servi&ccedil;os da Educa&ccedil;&atilde;o.</span></p>
+<p><span style="font-size: 12pt;">1.7.9. A sele&ccedil;&atilde;o de que trata este Edital ser&aacute; para o ano letivo de 2013, podendo ser prorrogado no atendimento do interesse publico.</span><span>&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.10 . O vencimento a ser pago aos professores contratados temporariamente &eacute; o previsto no plano de cargos e sal&aacute;rios dos servidores p&uacute;blicos do Munic&iacute;pio de Modelo, sendo:.</span><span>PROFESSOR ENSINO SUPERIOR -CARGA HORARIA 20 HORAS &ndash; VENCIMENTO BASE R$ 1.109,66.<span>&nbsp;&nbsp;</span></span><span>&nbsp;</span><span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></p>
+<p><span>1.7.11.<span>&nbsp; </span>O vencimento a ser pago caso ocorra contrata&ccedil;&atilde;o de professor n&atilde;o habilitado ser&aacute; de conformidade com a Lei1883/2009 em seu anexo II.</span><span>&nbsp;</span></p>
+<p><span>1.7.12. A rescis&atilde;o do contrato tempor&aacute;rio poder&aacute; ocorrer a qualquer tempo, por inciativa do contratadodesde que devidamente justificado, ou pelo Munic&iacute;pio, no atendimento do interesse publico, <span>&nbsp;</span>ou pelo termo final ou ainda por motivo de concurso p&uacute;blico.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.13.<span>&nbsp; </span>O Munic&iacute;pio elaborar&aacute; o quadro de vagas a ser preenchida , conforme as necessidades, sendo para o inicio do ano letivo de 2013 e durante o exerc&iacute;cio de 2013, podendo ocorrer nos seguinte casos:</span><span style="font-size: 12pt;">I &ndash; Em virtude de exist&ecirc;ncia de vaga n&atilde;opreenchida em concurso publico;</span><span style="font-size: 12pt;">II &ndash; Por imperativo deConvenio;</span><span style="font-size: 12pt;">III &ndash;Por impedimento legal do titular;</span><span style="font-size: 12pt;">IV - Em decorr&ecirc;nciade abertura de novas vagas por cria&ccedil;&atilde;o, por desdobramento de turma, conforme estabelecido em legisla&ccedil;&atilde;o especifica, ou por dispensa de seu ocupante;</span><span style="font-size: 12pt;">V &ndash; Por licen&ccedil;alegalmente concedida;</span><span style="font-size: 12pt;">VI &ndash; Para suprir vagas em disciplina especifica nagrade curricular II parte diversificada;</span><span style="font-size: 12pt;">VII - Para atuar durante a hora atividade do professor do ensino fundamental e educa&ccedil;&atilde;o infantil, conforme LDB e Lei Municipal 1347/98;</span><span style="font-size: 12pt;">VIII &ndash; Implantar programas ouatividades de relevante valor social;</span><span style="font-size: 12pt;">IX &ndash; Para substitui&ccedil;&atilde;o de Professor conforme previsto lei municipal 1347/98</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.14. <span>&nbsp;</span>O regime de trabalho semanal do membro do magist&eacute;rio admitido em car&aacute;ter tempor&aacute;rio de excepcional interesse publica, poder&aacute; ser de 10, 20, 30 ou 40, podendo completar a carga horaria em mais unidades de ensino, conforme verificado a necessidade e o quadro de abertura de vagas.<span>&nbsp;&nbsp;</span></span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.15 &ndash; Ser&aacute; admitida a inscri&ccedil;&atilde;o por terceiros mediante procura&ccedil;&atilde;o com firma reconhecida, acompanhada dos documentos necess&aacute;rios a inscri&ccedil;&atilde;o.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.5.15.1 &ndash; O candidato inscrito por procura&ccedil;&atilde;o assume total responsabilidade pelas informa&ccedil;&otilde;esprestados por seu procurador, arcando com as consequ&ecirc;ncias de eventuais erros de seu representante no preenchimento da ficha de inscri&ccedil;&atilde;o. </span></p>
+<p><span style="font-size: 12pt;">1.7.16 &ndash; Ser&aacute; fornecido protocolo depois de efetuada a inscri&ccedil;&atilde;o.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.19 &ndash; O candidato inscrito por procura&ccedil;&atilde;o assume total responsabilidade pelas informa&ccedil;&otilde;es prestadas por seu procurador, assumindo as consequ&ecirc;ncias de eventuais erros de seu representante no preenchimento da ficha de inscri&ccedil;&atilde;o e em sua entrega.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.20&ndash; As informa&ccedil;&otilde;es na ficha de inscri&ccedil;&atilde;o ser&atilde;o de inteira responsabilidade do candidato.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.21&ndash; &Eacute; vedada<span>&nbsp;&nbsp; </span>a<span>&nbsp; </span>inscri&ccedil;&atilde;o condicional e/ou extempor&acirc;nea, por qualquer motivo.</span></p>
+<p><span style="font-size: 12pt;">1.7.22 &ndash; Verificada, a qualquertempo, inexatid&atilde;o nas informa&ccedil;&otilde;es, irregularidade, inidoneidade ou falta de documentos exig&iacute;veis, proceder-se-&aacute; a elimina&ccedil;&atilde;o do candidato(a), anulando-se todos os atos decorrentes das inscri&ccedil;&otilde;es.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.23 &ndash; N&atilde;o ser&atilde;o aceitas inscri&ccedil;&otilde;esvia fax, sedex, postal, internet e/ou correio eletr&ocirc;nico.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.24 -As inscri&ccedil;&otilde;es ser&atilde;o analisadas pela comiss&atilde;o especial e, a homologa&ccedil;&atilde;o da inscri&ccedil;&atilde;o ser&aacute; divulgadas nas datas e local estabelecidos neste edital.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.25 &ndash; Os candidatos que tiverem suas inscri&ccedil;&otilde;es indeferidas (n&atilde;o homologadas), ter&atilde;o prazo,para<span>&nbsp; </span>querendo, interpor recursos a ser protocolado conforme disposto neste edital.<span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span></p>
+<p><span style="font-size: 12pt;">1.7.26.Os casos omissos ser&atilde;o resolvidos pela Comiss&atilde;o especialmente designada para elabora&ccedil;&atilde;o do processo seletivo e pelo Departamento de Educa&ccedil;&atilde;o.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.27. <span>&nbsp;</span>Para as vagas que ocorrerem durante o exerc&iacute;cio de 2013, ser&aacute; notificado o interessado conforme a ordem de classifica&ccedil;&atilde;o, devendo o candidatomanifestar de imediato o aceite ou n&atilde;o, considerando a urg&ecirc;ncia na garantia da continuidade do atendimento da educa&ccedil;&atilde;o.</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.28. O Candidato classificado como n&atilde;o habilitado,e que venha a ser<span>&nbsp; </span>convocado<span>&nbsp; </span>e<span>&nbsp; </span>comprovar no ato do provimento/da nomea&ccedil;&atilde;o ACT,<span>&nbsp;&nbsp; </span>a<span>&nbsp; </span>habilita&ccedil;&atilde;o para o respectivo cargo, a remunera&ccedil;&atilde;o ser&aacute;<span>&nbsp; </span>a de professor habilitado, conforme disposto neste Edital.<span>&nbsp;&nbsp;&nbsp;</span></span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;"><span>&nbsp;</span></span></p>
+<p><span style="font-size: 12pt;">1.7.29. O candidato convocado, dever&aacute; apresentar os documentos necess&aacute;riospara a respectiva nomea&ccedil;&atilde;o.<span>&nbsp;&nbsp;</span></span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">1.7.30. Este Edital entra em vigor na data de sua publica&ccedil;&atilde;o, no &oacute;rg&atilde;o de divulga&ccedil;&atilde;o oficial do Munic&iacute;pio.</span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">Modelo(SC), 03 de janeiro de 2013.</span><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">_____________________________________</span></p>
+<p><strong><span style="font-size: 12pt;">RICARDO LUIS MALDANER</span></strong></p>
+<p><strong><span style="font-size: 12pt;">Prefeito Municipal</span></strong><span style="font-size: 12pt;">&nbsp;</span></p>
+<p><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;">______________________________________</span></p>
+<p><span><strong>ADILSON CESAR BRAUN</strong></span></p>
+<p><span style="font-family: 'Times New Roman','serif'; font-size: 10pt;"><strong>SECRETARIO DA EDUCA&Ccedil;&Atilde;O</strong></span></p></div>
+			</dd>
+					<br class="absoluta" clear="all" />
+	</dl>
+
+
+<br class="absoluta" class="clear" />
+
+<script type="text/javascript">
+
+$(function(){
+	$('#abasContainer').abas({classSelected: 'ativo'});
+});
+
+</script>
+
+<!-- a lista de abas 
+ <div id="abasContainer">
+    <ul class="listAbas">
+                <li><a href="#aba1">Aba 1</a></li>
+                <li><a href="#aba2">Aba 2</a></li>
+    </ul>
+ 
+    <div id="aba1" class="abas">
+       Conteudo 1
+    </div>
+    <div id="aba2" class="abas">
+       Conteudo 2
+    </div>
+</div>
+-->
+
+ <div id="abasContainer">
+        <ul class="listAbas">
+				<li><a href="#aba1">Mais informações</a></li>
+				 
+		    </ul>
+        <div id="aba1" class="abas">
+					<dl class="mais-info">
+												<dt>ANEXOS</dt>
+												<dd class="data-publicacao">Publicado em <span>03/01/2013</span></dd>
+
+						
+												<dd><ul class="arquivos">
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/74574_0.672497001357835327_ficha_processo_seletivo.pdf">
+			<span class="legenda">0.672497001357835327_ficha_processo_seletivo.pdf</span>
+            <span class="extensao-tamanho">pdf[99 KB]</span>
+            <span class="data-publicacao">[05/02/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/74575_0.616048001357846483_edital_educacao_001_2013.pdf">
+			<span class="legenda">0.616048001357846483_edital_educacao_001_2013.pdf</span>
+            <span class="extensao-tamanho">pdf[141 KB]</span>
+            <span class="data-publicacao">[05/02/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/74576_0.624781001358247655_declaracao_compatibilidade.doc">
+			<span class="legenda">0.624781001358247655_declaracao_compatibilidade.doc</span>
+            <span class="extensao-tamanho">doc[108 KB]</span>
+            <span class="data-publicacao">[05/02/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/74577_0.521933001359737863_aditivo_001_ao_edital_educacao.pdf">
+			<span class="legenda">0.521933001359737863_aditivo_001_ao_edital_educacao.pdf</span>
+            <span class="extensao-tamanho">pdf[96 KB]</span>
+            <span class="data-publicacao">[05/02/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/74578_0.268641001359740686_decreto__nBA_018_comissao_avaliacao_educacao.pdf">
+			<span class="legenda">0.268641001359740686_decreto__nBA_018_comissao_avaliacao_educacao.pdf</span>
+            <span class="extensao-tamanho">pdf[98 KB]</span>
+            <span class="data-publicacao">[05/02/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/74579_0.511511001359743118_comunicado_classificacao_educacao.pdf">
+			<span class="legenda">0.511511001359743118_comunicado_classificacao_educacao.pdf</span>
+            <span class="extensao-tamanho">pdf[68 KB]</span>
+            <span class="data-publicacao">[05/02/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/74580_0.950853001360091922_comunicado_suspensao.pdf">
+			<span class="legenda">0.950853001360091922_comunicado_suspensao.pdf</span>
+            <span class="extensao-tamanho">pdf[68 KB]</span>
+            <span class="data-publicacao">[05/02/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/74581_0.753784001360362541_decreto_nBA_045___08.02.pdf">
+			<span class="legenda">0.753784001360362541_decreto_nBA_045___08.02.pdf</span>
+            <span class="extensao-tamanho">pdf[95 KB]</span>
+            <span class="data-publicacao">[05/02/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/74582_0.522652001360423957_reclassificacao_processo_seletivo_edital_nBA_001_educacao.pdf">
+			<span class="legenda">0.522652001360423957_reclassificacao_processo_seletivo_edital_nBA_001_educacao.pdf</span>
+            <span class="extensao-tamanho">pdf[48 KB]</span>
+            <span class="data-publicacao">[05/02/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/74583_0.993554001360872029_ata_de_homologacao_final_educacao.pdf">
+			<span class="legenda">0.993554001360872029_ata_de_homologacao_final_educacao.pdf</span>
+            <span class="extensao-tamanho">pdf[2 MB]</span>
+            <span class="data-publicacao">[05/02/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/74584_0.856274001360873658_decreto_nBA_053_escolha_das_vagas.pdf">
+			<span class="legenda">0.856274001360873658_decreto_nBA_053_escolha_das_vagas.pdf</span>
+            <span class="extensao-tamanho">pdf[102 KB]</span>
+            <span class="data-publicacao">[05/02/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+	<li>	
+		<a href="https://static.fecam.net.br/uploads/404/arquivos/74585_0.342306001361359491_tac_educacao.pdf">
+			<span class="legenda">0.342306001361359491_tac_educacao.pdf</span>
+            <span class="extensao-tamanho">pdf[6 MB]</span>
+            <span class="data-publicacao">[05/02/2014]</span>
+			<br class="clear" />
+		</a>
+	</li>		
+</ul>
+</dd>
+											</dl>
+    </div><!--Fim da #aba1-->
+    <div id="aba2" class="abas">
+    
+    </div><!--Fim #aba2-->
+</div>
+
+</div><!--Fim .concursos-->
+<div class="clear"></div>
+<br class="absoluta" />
+<br class="absoluta" />
+<br class="absoluta" />
+					<div class="informacoes-relacionadas">
+											</div>
+	            </div>
+				<!-- COLUNA LATERAL - FIM -->
+		<br class="clear">
+		</div>
+
+		<div></div>
+	</div>
+	<div class="footer" id="ancoraRodape">
+		<div class="img-footer">
+		</div>
+		<div class="footer-content">
+				<div class="info-municipio" itemscope itemtype="https://schema.org/Organization">
+					<ul>
+						<li><h2 itemprop="name">Município de Modelo<h2></li>
+						<li itemprop="streetAddress">Rua do Comércio, 1304 - Centro</li>
+                        						<li>CEP: <span  itemprop="postalCode">89872-000 </span></li>
+                        						<li>CNPJ: 83.021.832/0001-11</li>
+
+								                    <li class="telefone">
+								<strong>Telefones:</strong>
+								<div>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3137 </span>
+                                        		                            	<span class="identificacao">Principal</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98854-3327 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-5346 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-1136 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 98853-9560 </span>
+                                        		                            	<span class="identificacao">Celular</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3272 </span>
+                                        		                            	<span class="identificacao">Comercial</span>
+                                        		                            </span>
+		                        		                            <span class="bloco-telefones">
+		                            	<span class="numero">(49) 3365-3121 </span>
+                                        		                            	<span class="identificacao">Comercial</span>
+                                        		                            </span>
+		                        		                        </div>
+		                    </li>
+		                
+					</ul>
+				</div>
+									<div class="horario">
+						<h2>Horário de </br> funcionamento</h2>
+						<p>
+							De segunda a sexta-feira<br />
+das 7h30 às 11h30 e das 13h00 às 17h00.						</p>
+					</div>
+				
+			<div class="logos">
+                					<a target="_blank" href="#"><img src="../../../../../../../../styles/layouts/pm/landscape/images/redecim.png"></a>
+					<a target="_blank" href="http://www.fecam.org.br/"><img src="../../../../../../../../styles/layouts/pm/landscape/images/fecam.png"></a>
+								<a target="_blank" href="http://www.amerios.org.br/"><img src="../../../../../../../../styles/layouts/pm/landscape/images/amerios.png"></a>
+				<br class="clear">
+			</div>
+            <div class="corona-banner">
+                <a href="https://www.fecam.org.br/noticias/index/ver/codMapaItem/74947/codNoticia/606128" target="_blank">
+                    <img src="../../../../../../../../images/fecam/corona.png">
+                </a>
+            </div>
+			<div class="mapa-site">
+				<span></span>
+				<ul class="navigation">
+    <li>
+        <a class="paginaInicialPm" href="../../../../../../../../index.html">Início</a>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8498.html">Município</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/9060.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/9049.html">Histórico</a>
+            </li>
+            <li>
+                <a class="agenda" href="../../../../../../../../agenda/index/index/codMapaItem/9164.html">Agenda</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10377.html">Poder Executivo Municipal</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10380.html">Economia</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10381.html">Dados Geográficos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/19169.html">Plano Diretor Participativo</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8499.html">Governo</a>
+        <ul>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/10383.html">Apresentação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/129750.html">Secretaria de Agricultura</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134901.html">Secretaria de Educação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134906.html">Secretaria de Saúde</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134907.html">Departamento Municipal de Estradas e Rodagem</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134912.html">Departamento Municipal de Assistência Social</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134919.html">Departamento de Obras e Serviços Urbanos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134923.html">Departamento Municipal de Esportes</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/134927.html">Secretaria de Administração e Fazenda</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/8500.html">Transparência</a>
+        <ul>
+            <li>
+                <a class="concursos" href="../../../../../../index/codMapaItem/9098.html">Concursos Públicos </a>
+            </li>
+            <li>
+                <a class="licitacoes" href="../../../../../../../../licitacoes/index/index/codMapaItem/9110.html">Licitações</a>
+            </li>
+            <li>
+                <a class="contasPublicas" href="../../../../../../../../contaspublicas/index/index/codMapaItem/9081.html">Contas Públicas e LRF</a>
+            </li>
+            <li>
+                <a class="legislacao" href="../../../../../../../../legislacao/index/index/codMapaItem/9154.html">Legislação</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/54599.html">Parecer Tribunal de Contas</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/69227.html">Contratos</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/90738.html">Atas de Registro de Preços</a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/105584.html">RELATORIOS IN 20 TCE </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/105690.html">Kit Proposta </a>
+            </li>
+            <li>
+                <a class="paginaBasica" href="../../../../../../../../cms/pagina/ver/codMapaItem/121341.html">CONTROLADORIA MUNICIPAL</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/131944.html">FISCALIZAÇÃO DE CONTRATOS</a>
+            </li>
+            <li>
+                <a class="diretorio" href="../../../../../../../../cms/diretorio/index/codMapaItem/134834.html">DESPESAS COM EDUCAÇÃO</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a class="noticia" href="../../../../../../../../noticias/index/listar/codMapaItem/8501.html">Notícias</a>
+    </li>
+    <li>
+        <a class="links" href="http://servicos.modelo.sc.gov.br/">Carta de Serviços</a>
+    </li>
+    <li>
+        <a class="links" href="../../../../../../../../turismo/index.html">Turismo</a>
+    </li>
+    <li>
+        <a class="contatos" href="../../../../../../../../contatos/index/index/codMapaItem/8504.html">Contato</a>
+    </li>
+</ul>				<br class="clear">
+			</div>
+		</div>
+	</div>
+	<script type='text/javascript'> 
+var _gaq = _gaq || []; 
+_gaq.push(['_setAccount', 'UA-20438101-23']);
+_gaq.push(['_trackPageview'], '/concursos/index/detalhes/codMapaItem/9098/codConcurso/769/contraste/ativar');
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+jQuery(document).ajaxComplete(function(e, xhr, settings){
+_gaq.push(['_trackPageview', settings.url]);
+});
+</script>    
